@@ -39,7 +39,7 @@
 				
 
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
-						<input class="input100" type="text" name="email">
+						<input class="input100" type="text" name="email" id = "txt_email_2">
 						<span class="focus-input100" data-placeholder="Email"></span>
 					</div>
 
@@ -48,7 +48,7 @@
 							<i class="zmdi zmdi-eye"></i>
 							SHOW PASSWORD STUFF CAN'T GET TO WORK :(
 						</span>-->
-					  <input class="input100" type="password" name="pass">
+					  <input class="input100" type="password" name="pass" id = "txt_pass_2">
 						<span class="focus-input100" data-placeholder="Password"></span>
 					</div>
 
@@ -58,14 +58,14 @@
 							<i class="zmdi zmdi-eye"></i>
 							SHOW PASSWORD STUFF CAN'T GET TO WORK :(
 						</span>-->
-					  <input class="input100" type="password" name="pass">
+					  <input class="input100" type="password" name="pass" id = "txt_conf_pass">
 						<span class="focus-input100" data-placeholder="Confirm Password"></span>
 					</div>
 					
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 						  <div class="login100-form-bgbtn"></div>
-							<button class="login100-form-btn">
+							<button class="login100-form-btn" id = "btn_sign_up">
 								Create an Account
 							</button>
 						</div>
@@ -104,5 +104,74 @@
 
 	<script src="js/main.js"></script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+    
+<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBApfToTzoqqENAUZkaoe75ArPH6OEqbgM",
+    authDomain: "rentshack-d2f8f.firebaseapp.com",
+    databaseURL: "https://rentshack-d2f8f.firebaseio.com",
+    projectId: "rentshack-d2f8f",
+    storageBucket: "",
+    messagingSenderId: "474356914191"
+  };
+  firebase.initializeApp(config);
+    
+    
+</script>
+    
+<script> 
+(function() {
+    	
+var config = {
+    apiKey: "AIzaSyBApfToTzoqqENAUZkaoe75ArPH6OEqbgM",
+    authDomain: "rentshack-d2f8f.firebaseapp.com",
+    databaseURL: "https://rentshack-d2f8f.firebaseio.com",
+    projectId: "rentshack-d2f8f",
+    storageBucket: "",
+    messagingSenderId: "474356914191"
+  };
+  firebase.initializeApp(config);
+    
+  const txt_email = document.getElementById('txt_email');
+  const txt_pass = document.getElementById('txt_pass'); 
+  const btn_login = document.getElementById('btn_login');
+  const btn_sign_up = document.getElementById('btn_sign_up');
+  const txt_email_2 = document.getElementById('txt_email_2');
+  const txt_pass_2 = document.getElementById('txt_pass_2');  
+  
+btn_login.addEventListener('click', e => {
+    const email = text_email.value;
+    const pass = text_pass.value;
+    const auth = firebase.auth(); 
+    
+    const promise = auth.signInWithEmailAndPassword(email, pass);
+    
+    promise.catch(e => console.log(e.message));
+    
+});
+
+btn_sign_up.addEventListener('click', e=>{
+    const email = txt_email_2.value;
+    const pass = txt_pass_2.value;
+    const auth = firebase.auth(); 
+    
+    const promise = auth.createUserWithEmailAndPassword(email, pass);
+    
+    promise
+        .catch(e => console.log(e.message));
+    
+});
+    
+firebase.auth().OnAuthStateChanged(firebaseUser => {
+    if (firebaseUser){
+        console.log(firebaseUser);
+    } else { 
+        console.log('not logged in');
+    }
+});
+})();  
+    </script>    
 </body>
 </html>
