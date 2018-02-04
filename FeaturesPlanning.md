@@ -8,4 +8,8 @@
 * location services(zip codes)
 * User rating system
 
+# Deadlines
 
+**Feb 2**
+* Requirements Analysis - Omer
+* 
