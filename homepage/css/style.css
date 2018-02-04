@@ -659,3 +659,9 @@ header {
 	margin-left: -1.2em;
 	margin-right: 1em;
 }
+
+.card-price {
+	font-size: 18px;
+	font-weight: 500;
+	color: #048612;
+}
