@@ -1169,7 +1169,7 @@
 }
 
 .ti-face-smile:before {
-    content: "\e71f";
+    content: attr(src= "images/client.png");
 }
 
 .ti-face-sad:before {
