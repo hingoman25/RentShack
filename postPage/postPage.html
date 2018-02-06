@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="en">
-<!--
+
 
 <head>
-    <title>RentShack</title>
+    <title>Post</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -29,7 +29,7 @@
 <body data-spy="scroll" data-target="#navbar" data-offset="30">
 
     <!-- Nav Menu -->
-
+<div id="gallery">
     <div class="nav-menu fixed-top">
         <div class="container">
             <div class="row">
@@ -56,8 +56,6 @@
 
     <header class="bg-gradient" id="home">
     </header>
-    <div id="gallery">
-    </div>
 
 <br>
 <br>
@@ -70,6 +68,63 @@
     </div>
         
 
+<!-- ===================Post Form===================== -->
+
+<form class="post-form">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Title Post</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Title">
+    <small id="emailHelp" class="form-text text-muted"></small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Price</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="$">
+  </div>
+  <div class="form-group">
+    <label for="exampleTextarea">Describe your Item</label>
+    <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+  </div>
+  <div class="form-group">
+    <label class="condition" for="exampleInputFile">Item Condition</label>
+  <div class="form-check form-check-inline">
+  <label class="form-check-label">
+    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+  </label>
+</div>
+<div class="form-check form-check-inline">
+  <label class="form-check-label">
+    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+  </label>
+</div>
+<div class="form-check form-check-inline">
+  <label class="form-check-label">
+    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+  </label>
+</div>
+<div class="form-check form-check-inline">
+  <label class="form-check-label">
+    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4"> 4
+  </label>
+</div>
+<div class="form-check form-check-inline">
+  <label class="form-check-label">
+    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5"> 5
+  </label>
+</div>
+</div>
+
+  <div class="form-group">
+    <label for="exampleInputFile">File input</label>
+    <label class="file-choose">Choose File
+        <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+    </label>
+
+<!--     <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level</small>
+ -->  </div>
+  <button type="submit" class="btn btn-primary submit">Submit</button>
+</form>
+
+<!-- ===================Contact===================== -->
     <div class="light-bg py-5" >
         <div class="container">
             <div class="row">
@@ -111,6 +166,8 @@
         </small>
     </footer>
 
+</div>
+
     <!-- jQuery and Bootstrap -->
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
@@ -118,6 +175,7 @@
     <script src="js/owl.carousel.min.js"></script>
     <!-- Custom JS -->
     <script src="js/script.js"></script>
+    <script src="js/custom-file-input.js"></script>
 
 </body>
 

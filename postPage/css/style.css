@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 
+
 /* GLOBAL
 ----------------------*/
 
@@ -150,8 +151,6 @@ p.lead {
     }
 }
 
-
-
 /*  FOOTER
 ----------------------*/
 
@@ -185,15 +184,51 @@ p.lead {
     }
 }
 .listpics {
-	width: 18%;
-	margin-left: -1.2em;
-	margin-right: 1em;
+    width: 18%;
+    margin-left: -1.2em;
+    margin-right: 1em;
 }
 
 .card-price {
-	font-size: 18px;
-	font-weight: 500;
-	color: #048612;
+    font-size: 18px;
+    font-weight: 500;
+    color: #048612;
 }
 
 
+/* ==========Form ==========================*/
+
+.post-form {
+    left: 25%;
+    position: relative;
+    width: 50%;
+    padding-bottom: 30px;
+}
+
+
+.form-control-file {
+    border-radius: 10px;
+}
+
+.condition {
+    padding-right: 5px;
+}
+
+.submit {
+    background-color: #f2784b;
+}
+
+.file-choose{
+    padding: 5px;
+    background: red; 
+    display: table;
+    border: 1.5px solid #f2784b;
+    border-radius: 3px;
+    color: #f2784b;
+    background-color: white;
+}
+
+
+input[type="file"] {
+    display: none;
+}
