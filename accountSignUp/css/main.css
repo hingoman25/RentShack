@@ -498,3 +498,7 @@ iframe {
 	margin: auto;
 	margin-left: -10em;
 }
+
+#alertMessage {
+	display: none;
+}

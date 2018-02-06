@@ -113,7 +113,10 @@
         console.log(error);
         // [END_EXCLUDE]
       });
-		alert('Account was created! Press log-in to be redirected');
+		//alert('Account was created! Press log-in to be redirected');
+		createAccountAlert();
+		createAccountAlert();
+
 		
       // [END createwithemail]
     }
@@ -207,15 +210,17 @@
     };
   </script>
 	
-	
+
+		 
+
 	
 </head>
 <body>
 	
 	<div class="limiter">
-		<div class="alert alert-success" role="alert">
-Well done! You successfully read this important alert message.
-</div>
+		<div id="alertMessage" class="alert alert-success" role="alert">
+			You successfully created an account! Please log in now.
+		</div>
 		<div class="container-login100">
 			
 			<div class="wrap-login100">
@@ -253,7 +258,7 @@ Well done! You successfully read this important alert message.
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 						  <div class="login100-form-bgbtn"></div>
-							<button class="login100-form-btn" id = "signup">
+							<button  class="login100-form-btn" id = "signup" >
 								Create an Account
 							</button>
 						</div>
@@ -294,5 +299,18 @@ Well done! You successfully read this important alert message.
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
     
 
+	<script>
+	
+function createAccountAlert() {
+    var x = document.getElementById("alertMessage");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+	
 </body>
 </html>
