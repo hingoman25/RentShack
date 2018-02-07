@@ -24,6 +24,11 @@
     <!-- Main css -->
     <link href="css/style.css" rel="stylesheet">
     <link href="../css/nav.css" rel="stylesheet">
+	<link href="css/nprogress.css" rel="stylesheet" /> <!--FOR LOADING PROCESS BAR-->
+
+	
+	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script> <!--FOR LOADING PROCESS BAR-->
+	<script src="js/nprogress.js"></script> <!--FOR LOADING PROCESS BAR-->
 </head>
 
 <body data-spy="scroll" data-target="#navbar" data-offset="30">
@@ -202,6 +207,20 @@
     <script src="js/owl.carousel.min.js"></script>
     <!-- Custom JS -->
     <script src="js/script.js"></script>
+	
+			<!--	SCRIPT FOR LOADING BAR   -->
+	  <script>
+    $('body').show();
+    $('.version').text(NProgress.version);
+    NProgress.start();
+    setTimeout(function() { NProgress.done(); $('.fade').removeClass('out'); }, 1000);
+
+    $("#b-0").click(function() { NProgress.start(); });
+    $("#b-40").click(function() { NProgress.set(0.4); });
+    $("#b-inc").click(function() { NProgress.inc(); });
+    $("#b-100").click(function() { NProgress.done(); });
+  </script>
+	<!--	SCRIPT FOR LOADING BAR   -->
 
 </body>
 
