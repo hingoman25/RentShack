@@ -14,7 +14,13 @@
 	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link href="css/nprogress.css" rel="stylesheet" /> <!--FOR LOADING PROCESS BAR-->
 
+	
+	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script> <!--FOR LOADING PROCESS BAR-->
+	<script src="js/nprogress.js"></script> <!--FOR LOADING PROCESS BAR-->
+	
+	
 <!--FIREBASECODE-->	
 	
 <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-app.js"></script>
@@ -311,6 +317,20 @@ function createAccountAlert() {
     }
 }
 </script>
+	
+			<!--	SCRIPT FOR LOADING BAR   -->
+	  <script>
+    $('body').show();
+    $('.version').text(NProgress.version);
+    NProgress.start();
+    setTimeout(function() { NProgress.done(); $('.fade').removeClass('out'); }, 300); <!-- CHANGE NUMBER TO ADJUST SPEED -->
+
+    $("#b-0").click(function() { NProgress.start(); });
+    $("#b-40").click(function() { NProgress.set(0.4); });
+    $("#b-inc").click(function() { NProgress.inc(); });
+    $("#b-100").click(function() { NProgress.done(); });
+  </script>
+	<!--	SCRIPT FOR LOADING BAR   -->
 	
 </body>
 </html>
