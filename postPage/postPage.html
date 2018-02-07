@@ -75,7 +75,7 @@
 
 <!-- ===================Post Form===================== -->
 
-<form class="post-form">
+<form class="post-form" id="message-form">
   <div class="form-group">
     <label for="exampleInputEmail1">Title Post</label>
     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Title">
@@ -83,11 +83,11 @@
   </div>
   <div class="form-group">
     <label>Price per Hour</label>
-    <input type="number" class="form-control" placeholder="$">
+    <input type="number" class="form-control" placeholder="$" id="pricePerHour">
   </div>
   <div class="form-group">
     <label for="exampleTextarea">Describe your Item</label>
-    <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+    <textarea id="itemDescription" class="form-control" id="exampleTextarea" rows="3"></textarea>
   </div>
   <div class="form-group">
     <label class="condition" for="exampleInputFile">Item Condition</label>
@@ -126,7 +126,7 @@
 
 <!--     <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level</small>
  -->  </div>
-  <button type="submit" class="btn btn-primary submit">Submit</button>
+  <button type="submit" id="submit" class="btn btn-primary submit">Submit</button>
 </form>
 
 <!-- ===================Contact===================== -->
