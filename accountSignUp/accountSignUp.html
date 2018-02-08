@@ -96,12 +96,18 @@
     function handleSignUp() {
       var email = document.getElementById('email').value;
       var password = document.getElementById('password').value;
+      var conf_pass = document.getElementById('txt_conf_pass').value;
+        
       if (email.length < 4) {
         alert('Please enter an email address.');
         return;
       }
       if (password.length < 4) {
         alert('Please enter a password.');
+        return;
+      }
+      if (conf_pass != password) {
+        alert('The passwords you entered do not match please try again');
         return;
       }
       // Sign in with email and pass.
@@ -121,8 +127,7 @@
       });
 		//alert('Account was created! Press log-in to be redirected');
 		createAccountAlert();
-		createAccountAlert();
-
+		
 		
       // [END createwithemail]
     }
@@ -228,9 +233,8 @@
 			<strong>Success!</strong> You created an account! Please log in to access your account.
 		</div>
 		<div class="container-login100">
-			
+<!--			<form class="login100-form validate-form">-->
 			<div class="wrap-login100">
-				<form class="login100-form validate-form">
 					<span class="login100-form-title p-b-26">
 					<img class="rentshacklogo" src="../images/rentshacklogo.png" alt="">
 
@@ -277,10 +281,10 @@
 
 						<a class="txt2" href="../landingPage/landingPage.html">
 							Log in
-						</a>
-					</div>
-				</form>
+				</a>
+                </div> 
 			</div>
+<!--            </form>-->
 		</div>
 	</div>
 	
