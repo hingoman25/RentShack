@@ -29,6 +29,38 @@
 	
 	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script> <!--FOR LOADING PROCESS BAR-->
 	<script src="js/nprogress.js"></script> <!--FOR LOADING PROCESS BAR-->
+	<script src="js/main.js"></script>
+	
+	<!--FIREBASECODE-->	
+	
+<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-messaging.js"></script>
+
+<!-- Leave out Storage -->
+<!-- <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-storage.js"></script> -->
+
+
+<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBApfToTzoqqENAUZkaoe75ArPH6OEqbgM",
+    authDomain: "rentshack-d2f8f.firebaseapp.com",
+    databaseURL: "https://rentshack-d2f8f.firebaseio.com",
+    projectId: "rentshack-d2f8f",
+    storageBucket: "rentshack-d2f8f.appspot.com",
+    messagingSenderId: "474356914191"
+  };
+  firebase.initializeApp(config);
+</script>
+		
+<!--FIREBASECODE	
+-->	
+	
+	
 </head>
 
 <body data-spy="scroll" data-target="#navbar" data-offset="30">
@@ -41,11 +73,9 @@
                 <div class="col-md-12">
                     <nav class="navbar navbar-light bg-company navbar-expand-lg">
                         <a class="navbar-brand" href="../homePage/homePage.html"><img src="../images/logo1.png" class="img-fluid" alt="logo"></a>
-                       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
 
-                       <div class="topnav">
-                          <input type="text" placeholder="Search...">
-                        </div>
+
+                       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
 
                         <div class="collapse navbar-collapse" id="navbar">
                             <ul class="navbar-nav ml-auto">
