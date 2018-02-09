@@ -1,5 +1,7 @@
 # RentShack
 
+firebase quickstarts (FOR IMPLEMENTING POST PAGE) - https://github.com/firebase/quickstart-js
+
 ## Group 4: The Conrads
 * Terrell Marshall [*theonlyt3* | `tbmarshall97@gmail.com`]
 * Sahil Hingorani [*hingoman25* | `sahilhingorani25@gmail.com`]
