@@ -13,10 +13,11 @@ var listeningFirebaseRefs = [];
 
 
 
-function writeNewPost(uid, email, titlePost, itemDescription) {
+function writeNewPost(uid, username, email, titlePost, itemDescription) {
   // A post entry.
   var postData = {
     uid: uid,
+	username: username,
 	email: email,
 	itemDescription: itemDescription,
     titlePost: titlePost
@@ -59,7 +60,7 @@ function onAuthStateChanged(user) {
 
     currentUID = user.uid;
     //splashPage.style.display = 'none';
-    writeUserData(user.uid, user.displayName, user.email, user.photoURL);
+    //writeUserData(user.uid, user.displayName, user.email, user.photoURL);
     //startDatabaseQueries();
   } else {
     // Set currentUID to null.
@@ -76,7 +77,7 @@ function newPostForCurrentUser(titlePost, itemDescription) {
   return firebase.database().ref('/users/' + userId).once('value').then(function(snapshot) {
     var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
     // [START_EXCLUDE]
-    return writeNewPost(firebase.auth().currentUser.uid, firebase.auth().currentUser.email,
+    return writeNewPost(firebase.auth().currentUser.uid, username, firebase.auth().currentUser.email,
         titlePost, itemDescription);
     // [END_EXCLUDE]
   });

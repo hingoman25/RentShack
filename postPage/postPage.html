@@ -68,18 +68,20 @@
 	  	if (user) {
           // User is signed in.
          // var displayName = user.username;
-			var displayName = user.displayName;
+		  var displayName = user.displayName;
           var email = user.email;
           var emailVerified = user.emailVerified;
           var photoURL = user.photoURL;
           var isAnonymous = user.isAnonymous;
           var uid = user.uid;
           var providerData = user.providerData;
-			console.log(uid);
-/*			console.log(displayName);
-*/			console.log(email);
-			
-			
+						
+		  return firebase.database().ref('/users/' + uid).once('value').then(function(snapshot) {
+  			var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
+  			console.log(uid);
+			console.log(username);
+			console.log(email);
+		  });			
 		}
 	  });
 	}
