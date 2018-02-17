@@ -100,8 +100,7 @@
                 <!-- SIDEBAR USER TITLE -->
                 <div class="profile-usertitle">
                     <div class="profile-usertitle-name">
-                        Mr.Bonrad
-                    </div>
+                        <p id="username-field"> Mr. Omer test</p>
                     <div class="profile-usertitle-job">
                         Developer
                     </div>
@@ -199,7 +198,73 @@
     $("#b-100").click(function() { NProgress.done(); });
   </script>
 	<!--	SCRIPT FOR LOADING BAR   -->
+    <!--Firebase imports-->	
 	
+<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-messaging.js"></script>
+
+<!-- Leave out Storage -->
+<!-- <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-storage.js"></script> -->
+<!-- Leave out Storage -->
+<!-- <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-storage.js"></script> -->
+      <!-- Leave out Storage -->
+<!-- <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-storage.js"></script> -->
+
+      
+      
+      
+<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBApfToTzoqqENAUZkaoe75ArPH6OEqbgM",
+    authDomain: "rentshack-d2f8f.firebaseapp.com",
+    databaseURL: "https://rentshack-d2f8f.firebaseio.com",
+    projectId: "rentshack-d2f8f",
+    storageBucket: "rentshack-d2f8f.appspot.com",
+    messagingSenderId: "474356914191"
+  };
+    firebase.initializeApp(config);
+</script>
+
+<script> 
+    function initApp() {
+      firebase.auth().onAuthStateChanged(function(user) {
+
+
+        console.log("omer is cool");
+
+        if (user) {
+            
+          var email = user.email;
+            var user_name = document.getElementById('user_name').value;
+          var emailVerified = user.emailVerified;
+          var photoURL = user.photoURL;
+          var isAnonymous = user.isAnonymous;
+          var uid = user.uid;
+          var providerData = user.providerData;
+			
+            
+        var userId = firebase.auth().currentUser.uid;
+        return firebase.database().ref('/users/' + userId).once('value').then(function(snapshot) {
+        var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
+            console.log(username);
+            console.log(uid);
+            console.log(email);
+        });
+       }
+      }
+    )}; 
+    
+   window.onload = function() {
+      initApp();
+    };
+  </script>
+
+      
 </body>
 
 </html>
