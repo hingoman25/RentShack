@@ -97,7 +97,7 @@
       var email = document.getElementById('email').value;
       var password = document.getElementById('password').value;
       var conf_pass = document.getElementById('txt_conf_pass').value;
-	  //var username = document.getElementById('user-name').value;
+	  var username = document.getElementById('user_name').value;
       //var database = firebase.database();
         
       if (email.length < 4) {
@@ -139,10 +139,10 @@
       // [END createwithemail]
     }
 	//function writeUserData(name,email) {
-	  function writeUserData(email) {
+	  function writeUserData(email , username) {
 		var uid = firebase.auth().currentUser.uid;
   firebase.database().ref('users/' + uid/*name*/).set({
-    //username: name,
+    username: username,
     email: email,
 	uid: uid
   });
@@ -208,18 +208,19 @@
         if (user) {
           // User is signed in.
          // var displayName = user.username;
-			var displayName = user.displayName;
+			//var displayName = user.displayName;
           var email = user.email;
+			var user_name = document.getElementById('user_name').value;
           var emailVerified = user.emailVerified;
           var photoURL = user.photoURL;
           var isAnonymous = user.isAnonymous;
           var uid = user.uid;
           var providerData = user.providerData;
 			console.log(uid);
-/*			console.log(displayName);
-*/			console.log(email);
+			console.log(user_name);
+			console.log(email);
 				
-				writeUserData(email);
+				writeUserData(email , user_name);
 				  /*firebase.database().ref('users/' + name).set({
     				username: name,
     				email: email,
@@ -284,7 +285,10 @@
 					    <input class="input100" type="text"  id = "user-name">
 						<span class="focus-input100" data-placeholder="Username"></span>
 					</div>-->
-				
+					<div class="wrap-input100 validate-input" data-validate="Enter username">
+					  <input class="input100" type="text" id = "user_name">
+						<span class="focus-input100" data-placeholder="Username"></span>
+					</div>
 				
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
 						<input class="input100" type="text" name="email" id = "email">
