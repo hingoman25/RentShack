@@ -97,6 +97,8 @@
       var email = document.getElementById('email').value;
       var password = document.getElementById('password').value;
       var conf_pass = document.getElementById('txt_conf_pass').value;
+	  //var username = document.getElementById('user-name').value;
+      //var database = firebase.database();
         
       if (email.length < 4) {
         alert('Please enter an email address.');
@@ -127,10 +129,32 @@
       });
 		//alert('Account was created! Press log-in to be redirected');
 		createAccountAlert();
-		
+		createAccountAlert();
+		//writeUserData(username,email);
+		//writeUserData(email);
+	
+  
+
 		
       // [END createwithemail]
     }
+	//function writeUserData(name,email) {
+	  function writeUserData(email) {
+		var uid = firebase.auth().currentUser.uid;
+  firebase.database().ref('users/' + uid/*name*/).set({
+    //username: name,
+    email: email,
+	uid: uid
+  });
+}
+		 
+		 
+/*	function writeUserID(name,email) {
+  firebase.database().ref('users/' + name).set({
+    username: name,
+    email: email,
+  });
+}*/
     /**
      * Sends an email verification to the user.
      */
@@ -177,17 +201,33 @@
       // [START authstatelistener]
       firebase.auth().onAuthStateChanged(function(user) {
         // [START_EXCLUDE silent]
-/*        document.getElementById('quickstart-verify-email').disabled = true;
-*/        // [END_EXCLUDE]
+/*        document.getElementById('quickstart-verify-email').disabled = true;*/ 
+		    user.sendEmailVerification(); 
+
+       // [END_EXCLUDE]
         if (user) {
           // User is signed in.
-          var displayName = user.displayName;
+         // var displayName = user.username;
+			var displayName = user.displayName;
           var email = user.email;
           var emailVerified = user.emailVerified;
           var photoURL = user.photoURL;
           var isAnonymous = user.isAnonymous;
           var uid = user.uid;
           var providerData = user.providerData;
+			console.log(uid);
+/*			console.log(displayName);
+*/			console.log(email);
+				
+				writeUserData(email);
+				  /*firebase.database().ref('users/' + name).set({
+    				username: name,
+    				email: email,
+  					});*/
+			
+			
+			
+			
           // [START_EXCLUDE]
           /*document.getElementById('quickstart-sign-in-status').textContent = 'Signed in';
           document.getElementById('quickstart-sign-in').textContent = 'Sign out';
@@ -213,7 +253,7 @@
       // [END authstatelistener]
 /*      document.getElementById('quickstart-sign-in').addEventListener('click', toggleSignIn, false);*/
       document.getElementById('signup').addEventListener('click', handleSignUp, false);
-      document.getElementById('signup').addEventListener('click', sendEmailVerification, false);
+      //document.getElementById('signup').addEventListener('click', sendEmailVerification, false);
     /*  document.getElementById('quickstart-password-reset').addEventListener('click', sendPasswordReset, false);*/
     }
     window.onload = function() {
@@ -240,7 +280,12 @@
 
 					</span>
 				
-
+					<!--<div class="wrap-input100 validate-input" data-validate = "Enter username">
+					    <input class="input100" type="text"  id = "user-name">
+						<span class="focus-input100" data-placeholder="Username"></span>
+					</div>-->
+				
+				
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
 						<input class="input100" type="text" name="email" id = "email">
 						<span class="focus-input100" data-placeholder="Email"></span>
