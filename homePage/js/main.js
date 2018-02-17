@@ -5,15 +5,6 @@ var titlePost = document.getElementById('titlePost');
 var itemDescription = document.getElementById('itemDescription');
 
 
-// var ref = firebase.database().ref();
-
-// ref.on("value", function(snapshot) {
-// 	console.log(snapshot.val());
-// }, function (error) {
-// 	console.log("Error: " + error.code);
-// });
-
-
 var playersRef = firebase.database().ref("/posts");
 
 playersRef.on("child_added", function(data, prevChildKey) {
@@ -24,8 +15,8 @@ playersRef.on("child_added", function(data, prevChildKey) {
    var titlePost = document.getElementById('titlePost').innerHTML =
    user.titlePost;
 
-   	var itemDescription = document.getElementById('itemDescription').innerHTML =
-   	user.itemDescription;
+   var itemDescription = document.getElementById('itemDescription').innerHTML =
+   user.itemDescription;
 
 });
 

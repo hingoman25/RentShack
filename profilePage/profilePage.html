@@ -31,6 +31,22 @@
 	
 	  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script> <!--FOR LOADING PROCESS BAR-->
 	  <script src="js/nprogress.js"></script> <!--FOR LOADING PROCESS BAR-->
+
+
+      
+<script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBApfToTzoqqENAUZkaoe75ArPH6OEqbgM",
+    authDomain: "rentshack-d2f8f.firebaseapp.com",
+    databaseURL: "https://rentshack-d2f8f.firebaseio.com",
+    projectId: "rentshack-d2f8f",
+    storageBucket: "rentshack-d2f8f.appspot.com",
+    messagingSenderId: "474356914191"
+  };
+  firebase.initializeApp(config);
+</script>
 </head>
 
 <body data-spy="scroll" data-target="#navbar" data-offset="30">
@@ -100,7 +116,8 @@
                 <!-- SIDEBAR USER TITLE -->
                 <div class="profile-usertitle">
                     <div class="profile-usertitle-name">
-                        <p id="username-field"> Mr. Omer test</p>
+                        <h4 id="username">Mr. Bonrad</h4>
+                    </div> 
                     <div class="profile-usertitle-job">
                         Developer
                     </div>
@@ -183,6 +200,7 @@
     <script src="js/owl.carousel.min.js"></script>
     <!-- Custom JS -->
     <script src="js/script.js"></script>
+    <script src="js/main.js"></script>
 
 	
 <!--	SCRIPT FOR LOADING BAR   -->
@@ -214,23 +232,8 @@
 <!-- <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-storage.js"></script> -->
 
       
-      
-      
-<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyBApfToTzoqqENAUZkaoe75ArPH6OEqbgM",
-    authDomain: "rentshack-d2f8f.firebaseapp.com",
-    databaseURL: "https://rentshack-d2f8f.firebaseio.com",
-    projectId: "rentshack-d2f8f",
-    storageBucket: "rentshack-d2f8f.appspot.com",
-    messagingSenderId: "474356914191"
-  };
-    firebase.initializeApp(config);
-</script>
-
-<script> 
+    
+<!-- <script> 
     function initApp() {
       firebase.auth().onAuthStateChanged(function(user) {
 
@@ -262,7 +265,7 @@
    window.onload = function() {
       initApp();
     };
-  </script>
+  </script> -->
 
       
 </body>
