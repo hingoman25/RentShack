@@ -166,7 +166,12 @@
 						<input type="file" id="file" name="file"/>
 						<h6>File URL:</h6>
 						<span id="linkbox"></span>
-         			</div>
+						
+						<div style="display: none" id="alertMessage" class="alert alert-success" role="alert">
+							<strong>Success!</strong> Your file has been uploaded!
+						</div>
+         			
+					</div>
 				
 				  
 
@@ -274,6 +279,7 @@
 		  setURL(url);
         console.log('File available at', url);
         // [START_EXCLUDE]
+		  fileUploadedAlert();
         document.getElementById('linkbox').innerHTML = '<a  href="' +  url + '" target="_blank">Click For File</a>';
         // [END_EXCLUDE]
       }).catch(function(error) {
@@ -284,7 +290,19 @@
       // [END oncomplete]
     }
 
+	function fileUploadedAlert() {
+    var x = document.getElementById("alertMessage");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+
+    } else {
+        x.style.display = "none";
+    }
+}
+
     window.onload = function() {
+		var x = document.getElementById("alertMessage");
+		x.style.display = "none";
       document.getElementById('file').addEventListener('change', handleFileSelect, false);
       document.getElementById('file').disabled = true;
 
@@ -300,17 +318,9 @@
       });
     }
   </script>
-	
-	
-	
-	
-	
-	
-	
-	
-	<script src="js/main.js"></script>
 
-	<script src="js/form-main.js"></script>
+<script src="js/main.js"></script>
+<script src="js/form-main.js"></script>
 	
 	
 	
