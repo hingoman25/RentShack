@@ -5,15 +5,20 @@ var messageForm = document.getElementById('messageForm'); //IMPLEMENTED IN HTML
 var titlePost = document.getElementById("titlePost"); //IMPLEMENTED IN HTML
 var pricePerHour = document.getElementById('pricePerHour'); //IMPLEMENTED IN HTML
 var itemDescription = document.getElementById('itemDescription'); //IMPLEMENTED IN HTML
+var imageURL = "https://www.google.com/";
 /*var submit = document.getElementById('submit');*/ //IMPLEMENTED IN HTML
 /*var itemCondition = document.getElementById('inlineRadio1');*/ //IMPLEMENTED IN HTML
 /*var fileUpload = document.getElementById('exampleInputFile');*/ //IMPLEMENTED IN HTML
 
 var listeningFirebaseRefs = [];
 
+function setURL(url) {
+	imageURL = url;
+	console.log("imageURL has been set to" + imageURL);
+}
 
 
-function writeNewPost(uid, username, email, titlePost, itemDescription, pricePerHour) {
+function writeNewPost(uid, username, email, titlePost, itemDescription, pricePerHour, imgURL) {
   // A post entry.
   var postData = {
     uid: uid,
@@ -21,7 +26,8 @@ function writeNewPost(uid, username, email, titlePost, itemDescription, pricePer
 	email: email,
 	itemDescription: itemDescription,
 	pricePerHour: pricePerHour,
-    titlePost: titlePost
+    titlePost: titlePost,
+	imageURL: imgURL
     //starCount: 0, PERHAPS ADD ITEMAVALIABILITY VARIABLE??? 
   };
 
@@ -79,7 +85,7 @@ function newPostForCurrentUser(titlePost, itemDescription, pricePerHour) {
     var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
     // [START_EXCLUDE]
     return writeNewPost(firebase.auth().currentUser.uid, username, firebase.auth().currentUser.email,
-        titlePost, itemDescription, pricePerHour);
+        titlePost, itemDescription, pricePerHour, imageURL);
     // [END_EXCLUDE]
   });
   // [END single_value_read]

@@ -181,9 +181,9 @@ iframe {
   font-family: Poppins-Bold;
   font-size: 39px;
   color: #333333;
-  line-height: 1.2;
+  line-height: 0;
   text-align: center;
-  padding-bottom: 90px;
+  padding-bottom: 85px;
 }
 
 
@@ -439,4 +439,13 @@ textarea.input2 + .focus-input2::after {
     visibility: visible;
     opacity: 1;
   }
+}
+#messagesDiv {
+	margin-bottom: 2em;
+}
+
+
+
+#alertMessage {
+	margin-bottom: -1.5em;
 }
