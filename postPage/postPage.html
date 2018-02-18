@@ -30,6 +30,11 @@
 	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script> <!--FOR LOADING PROCESS BAR-->
 	<script src="js/nprogress.js"></script> <!--FOR LOADING PROCESS BAR-->
 	
+    <link href="css/main.css"rel="stylesheet">
+    <link href="css/util.css" rel="stylesheet">
+
+	
+	
 	<!--FIREBASECODE-->	
 	
 <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-app.js"></script>
@@ -128,23 +133,45 @@
 <br>
 <br>
 
-    <div class="container">
-        <div class="section-title">
-            <h3>Post</h3>
-        </div>
-    </div>
+
         
 
 <!-- ===================Post Form===================== -->
-	<form id = "messageForm" action="#">
-	  Title:<br>
-	  <input type="text" id="titlePost" ><br><br>
-	  Description:<br>
-		<textarea rows="3" type="text" id="itemDescription" ></textarea><br><br>
-	  <button type="submit">
-       Add post
-      </button>
-	</form>
+	<div class="bg-contact2">
+		<div class="container-contact2">
+			<div class="wrap-contact2">
+				<form class="contact2-form validate-form" id="messageForm" action="#">
+					<span class="contact2-form-title">
+						Rent Out Your Item
+					</span>
+
+					<div class="wrap-input2 validate-input" data-validate="Name is required">
+						<input class="input2" type="text" id="titlePost">
+						<span class="focus-input2" data-placeholder="TITLE OF ITEM"></span>
+					</div>
+
+					<div class="wrap-input2 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input2" type="text" id="pricePerHour" >
+						<span class="focus-input2" data-placeholder="PRICE OF ITEM"></span>
+					</div>
+
+					<div class="wrap-input2 validate-input" data-validate = "Message is required">
+						<textarea class="input2" id="itemDescription" name="message"></textarea>
+						<span class="focus-input2" data-placeholder="DESCRIBE YOUR ITEM"></span>
+					</div>
+
+					<div class="container-contact2-form-btn">
+						<div class="wrap-contact2-form-btn">
+							<div class="contact2-form-bgbtn"></div>
+							<button class="contact2-form-btn" type="submit">
+								Post Your Item
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div> 
 <!-- ===================Contact===================== -->
     <div class="light-bg py-5" >
         <div class="container">
@@ -213,6 +240,7 @@
 	<!--	SCRIPT FOR LOADING BAR   -->
 	<script src="js/main.js"></script>
 
+	<script src="js/form-main.js"></script>
 	
 </body>
 
