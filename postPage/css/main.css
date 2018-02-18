@@ -183,7 +183,7 @@ iframe {
   color: #333333;
   line-height: 1.2;
   text-align: center;
-  padding-bottom: 90px;
+  padding-bottom: 60px;
 }
 
 
@@ -439,4 +439,7 @@ textarea.input2 + .focus-input2::after {
     visibility: visible;
     opacity: 1;
   }
+}
+#messagesDiv {
+	margin-bottom: 2em;
 }

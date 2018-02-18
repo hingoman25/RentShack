@@ -33,6 +33,7 @@
     <link href="css/main.css"rel="stylesheet">
     <link href="css/util.css" rel="stylesheet">
 
+
 	
 	
 	<!--FIREBASECODE-->	
@@ -153,12 +154,21 @@
 							<p id="dollar-sign">$</p>
 							<input class="input2" type="text" id="pricePerHour" >
 							<span class="focus-input2" data-placeholder="PRICE PER HOUR"></span>
+
 						</div>
 					</div>
 					<div class="wrap-input2 validate-input" data-validate = "Message is required">
 						<textarea class="input2" id="itemDescription" name="message"></textarea>
 						<span class="focus-input2" data-placeholder="DESCRIBE YOUR ITEM"></span>
 					</div>
+					
+					<div class="mdl-card__supporting-text mdl-color-text--grey-600" id="messagesDiv">
+						<input type="file" id="file" name="file"/>
+						<h6>File URL:</h6>
+						<span id="linkbox"></span>
+         			</div>
+				
+				  
 
 					<div class="container-contact2-form-btn">
 						<div class="wrap-contact2-form-btn">
@@ -172,6 +182,9 @@
 			</div>
 		</div>
 	</div> 
+	
+	
+	
 <!-- ===================Contact===================== -->
     <div class="light-bg py-5" >
         <div class="container">
@@ -238,9 +251,68 @@
     $("#b-100").click(function() { NProgress.done(); });
   </script>
 	<!--	SCRIPT FOR LOADING BAR   -->
+	
+	  <script>
+    var auth = firebase.auth();
+    var storageRef = firebase.storage().ref();
+
+    function handleFileSelect(evt) {
+      evt.stopPropagation();
+      evt.preventDefault();
+      var file = evt.target.files[0];
+
+      var metadata = {
+        'contentType': file.type
+      };
+
+      // Push to child path.
+      // [START oncomplete]
+      storageRef.child('images/' + file.name).put(file, metadata).then(function(snapshot) {
+        console.log('Uploaded', snapshot.totalBytes, 'bytes.');
+        console.log(snapshot.metadata);
+        var url = snapshot.downloadURL;
+		  setURL(url);
+        console.log('File available at', url);
+        // [START_EXCLUDE]
+        document.getElementById('linkbox').innerHTML = '<a  href="' +  url + '" target="_blank">Click For File</a>';
+        // [END_EXCLUDE]
+      }).catch(function(error) {
+        // [START onfailure]
+        console.error('Upload failed:', error);
+        // [END onfailure]
+      });
+      // [END oncomplete]
+    }
+
+    window.onload = function() {
+      document.getElementById('file').addEventListener('change', handleFileSelect, false);
+      document.getElementById('file').disabled = true;
+
+      auth.onAuthStateChanged(function(user) {
+        if (user) {
+          console.log('Anonymous user signed-in.', user);
+          document.getElementById('file').disabled = false;
+        } else {
+          console.log('There was no anonymous session. Creating a new anonymous user.');
+          // Sign the user in anonymously since accessing Storage requires the user to be authorized.
+          auth.signInAnonymously();
+        }
+      });
+    }
+  </script>
+	
+	
+	
+	
+	
+	
+	
+	
 	<script src="js/main.js"></script>
 
 	<script src="js/form-main.js"></script>
+	
+	
 	
 </body>
 
