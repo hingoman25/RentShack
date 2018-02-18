@@ -78,13 +78,18 @@
 /*			console.log(displayName);
 */			console.log(email);
 			
+			return firebase.database().ref('/users/' + uid).once('value').then(function(snapshot) {
+  			var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
+  			document.getElementById('username').innerHTML = username;
+			document.getElementById('profilePic').src = (snapshot.val() && snapshot.val().profilePic);
+
+		  });		
+			
 			
 		}
 	  });
 	}
-	window.onload = function() {
-      initApp();
-    };	
+
 	
 	</script>
     </head>
@@ -145,9 +150,9 @@
                     <input class="file-upload" type="file" accept="image/*"/> -->
 
                     <div class="profile-upload">
-                        <img class="profile-pic"/>
+                        <img id="profilePic" src="" class="profile-pic"/>
                         <div class="upload-button">Upload Image</div>
-                        <input class="file-upload" type="file"/>
+                        <input style="display: none" class="file-upload" id="file" type="file"/>
                     </div>
                     
                     
@@ -156,7 +161,7 @@
                 <!-- SIDEBAR USER TITLE -->
                 <div class="profile-usertitle">
                     <div class="profile-usertitle-name">
-                        <h4 id="username">Mr. Bonrad</h4>
+                        <h4 id="username"></h4>
                     </div> 
                     <div class="profile-usertitle-job">
                         Developer
@@ -301,6 +306,102 @@
       initApp();
     };
   </script> -->
+	
+		  <script>
+    var auth = firebase.auth();
+    var storageRef = firebase.storage().ref();
+
+    function handleFileSelect(evt) {
+      evt.stopPropagation();
+      evt.preventDefault();
+      var file = evt.target.files[0];
+
+      var metadata = {
+        'contentType': file.type
+      };
+
+      // Push to child path.
+      // [START oncomplete]
+      storageRef.child('images/' + file.name).put(file, metadata).then(function(snapshot) {
+        console.log('Uploaded', snapshot.totalBytes, 'bytes.');
+        console.log(snapshot.metadata);
+        
+		var url = snapshot.downloadURL;
+		var uid = firebase.auth().currentUser.uid;
+		  
+		 var username_glob;
+		  var email_glob;
+		  
+		    firebase.database().ref('/users/' + uid).once('value').then(function(snapshot) {
+  				username_glob = (snapshot.val() && snapshot.val().username) || 'Anonymous';
+				console.log('username is ' + username_glob);
+				email_glob = (snapshot.val() && snapshot.val().email) || 'Anonymous';
+			 	console.log('email is ' + email_glob);
+				console.log('profilePic ' + url);
+				console.log('uid ' + uid);
+
+				
+				firebase.database().ref('users/' + uid/*name*/).set({
+    				profilePic: url,
+					username: username_glob,
+					email: email_glob,
+					uid: uid
+							
+				});		
+
+			    firebase.database().ref('/users/' + uid).once('value').then(function(snapshot) {
+					document.getElementById('profilePic').src = (snapshot.val() && snapshot.val().profilePic);
+				
+				
+				});
+
+  			});
+		  
+		  
+		  
+		  
+		  
+        console.log('File available at', url);
+        // [START_EXCLUDE]
+        // [END_EXCLUDE]
+      }).catch(function(error) {
+        // [START onfailure]
+        console.error('Upload failed:', error);
+        // [END onfailure]
+      });
+      // [END oncomplete]
+    }
+
+	function fileUploadedAlert() {
+    var x = document.getElementById("alertMessage");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+
+    } else {
+        x.style.display = "none";
+    }
+}
+
+    window.onload = function() {
+		/*var x = document.getElementById("alertMessage");
+		x.style.display = "none";*/
+		initApp();
+      document.getElementById('file').addEventListener('change', handleFileSelect, false);
+      document.getElementById('file').disabled = true;
+
+      auth.onAuthStateChanged(function(user) {
+        if (user) {
+          console.log('Anonymous user signed-in.', user);
+          document.getElementById('file').disabled = false;
+			
+        } else {
+          console.log('There was no anonymous session. Creating a new anonymous user.');
+          // Sign the user in anonymously since accessing Storage requires the user to be authorized.
+          auth.signInAnonymously();
+        }
+      });
+    }
+  </script>
 
       
 </body>
