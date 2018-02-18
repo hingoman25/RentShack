@@ -239,3 +239,31 @@ input[type="file"] {
 
 
 
+
+.input-icon {
+	position: relative;
+
+}
+
+.input-icon > i {
+	  position: absolute;
+  display: block;
+  transform: translate(0, -50%);
+  top: 50%;
+  pointer-events: none;
+  width: 25px;
+  text-align: center;
+	font-style: normal;
+}
+
+.input-icon > input {
+	  padding-left: 15px;
+	padding-right: 0;
+}
+
+
+
+#dollar-sign {
+	padding-top: 3em;
+	margin-bottom: -2.5em;
+}
