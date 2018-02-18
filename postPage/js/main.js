@@ -3,7 +3,7 @@
 
 var messageForm = document.getElementById('messageForm'); //IMPLEMENTED IN HTML
 var titlePost = document.getElementById("titlePost"); //IMPLEMENTED IN HTML
-/*var pricePerHour = document.getElementById('pricePerHour');*/ //IMPLEMENTED IN HTML
+var pricePerHour = document.getElementById('pricePerHour'); //IMPLEMENTED IN HTML
 var itemDescription = document.getElementById('itemDescription'); //IMPLEMENTED IN HTML
 /*var submit = document.getElementById('submit');*/ //IMPLEMENTED IN HTML
 /*var itemCondition = document.getElementById('inlineRadio1');*/ //IMPLEMENTED IN HTML
@@ -13,13 +13,14 @@ var listeningFirebaseRefs = [];
 
 
 
-function writeNewPost(uid, username, email, titlePost, itemDescription) {
+function writeNewPost(uid, username, email, titlePost, itemDescription, pricePerHour) {
   // A post entry.
   var postData = {
     uid: uid,
 	username: username,
 	email: email,
 	itemDescription: itemDescription,
+	pricePerHour: pricePerHour,
     titlePost: titlePost
     //starCount: 0, PERHAPS ADD ITEMAVALIABILITY VARIABLE??? 
   };
@@ -71,14 +72,14 @@ function onAuthStateChanged(user) {
 }
 
 
-function newPostForCurrentUser(titlePost, itemDescription) {
+function newPostForCurrentUser(titlePost, itemDescription, pricePerHour) {
   // [START single_value_read]
   var userId = firebase.auth().currentUser.uid;
   return firebase.database().ref('/users/' + userId).once('value').then(function(snapshot) {
     var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
     // [START_EXCLUDE]
     return writeNewPost(firebase.auth().currentUser.uid, username, firebase.auth().currentUser.email,
-        titlePost, itemDescription);
+        titlePost, itemDescription, pricePerHour);
     // [END_EXCLUDE]
   });
   // [END single_value_read]
@@ -106,14 +107,14 @@ window.addEventListener('load', function() {
     //var text = messageInput.value;
     //var title = titleInput.value;
 	var title = titlePost.value;
-	//var pricePerHour = pricePerHour.value;
+	var price = pricePerHour.value;
 	var description = itemDescription.value;
 	//var condition = itemCondition.value;
 	//var upload = fileUpload.value;
 	
     //if (text && title) {
-	  if ( title && description) {
-      newPostForCurrentUser(title, description).then(function() {
+	  if ( title && description && price) {
+      newPostForCurrentUser(title, description, price).then(function() {
        // myPostsMenuButton.click();
       });
       titlePost.value = '';
