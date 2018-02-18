@@ -445,3 +445,7 @@ textarea.input2 + .focus-input2::after {
 }
 
 
+
+#alertMessage {
+	margin-bottom: -1.5em;
+}
