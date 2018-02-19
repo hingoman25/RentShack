@@ -19,8 +19,6 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Themify Icons -->
     <link rel="stylesheet" href="css/themify-icons.css">
-    <!-- Owl carousel -->
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
     <!-- Main css -->
     <link href="css/style.css" rel="stylesheet">
     <link href="../css/nav.css" rel="stylesheet">
@@ -46,6 +44,8 @@
 
 
 <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
 <script>
   // Initialize Firebase
   var config = {
@@ -59,9 +59,7 @@
   firebase.initializeApp(config);
 </script>
 	
-	
-	<script>
-		console.log('hello world');
+<script>
 		
 	function initApp() {
       // Listening for auth state changes.
@@ -80,8 +78,7 @@
 			console.log(uid);
 /*			console.log(displayName);
 */			console.log(email);
-			
-			
+					
 		}
 	  });
 	}
@@ -89,10 +86,7 @@
       initApp();
     };	
 	
-	</script>
-	
-	
-	
+</script>
 	
 	
 </head>
@@ -137,58 +131,16 @@
     <div class="container">
             <div class="section-title">
                 <h3>Rent an item</h3>
-        </div>
-
-            <div class="col-md-offset-2">
-                <div class="col-12 col-lg-4">
-                    <div class="card features">
-                        <div class="card-body">
-                            <div class="media">
-								<img src="../images/bed.jpeg" class="listpics" alt="">
-                                <div class="media-body">
-                                    <h4 class="card-title" id="titlePost"></h4>
-									<h5 class = "card-price">$100/hr</h5>
-                                    <p class="card-text" id="itemDescription"></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+             </div>
+            <div id="rentList">
             </div>
-        </div>
+    </div>
 
     <br>
     <br>
     <br>
     <br>
     <br>
-
-   <!--  <div class="section pt-0">
-        <div class="container">
-            <div class="section-title">
-                <h3>Frequently Asked Questions</h3>
-            </div>
-
-            <div class="row pt-4">
-                <div class="col-md-6">
-                    <h4 class="mb-3">Can I try before I buy?</h4>
-                    <p class="light-font mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante. </p>
-                    <h4 class="mb-3">What payment methods do you accept?</h4>
-                    <p class="light-font mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante. </p>
-
-                </div>
-                <div class="col-md-6">
-                    <h4 class="mb-3">Can I change my plan later?</h4>
-                    <p class="light-font mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante. </p>
-                    <h4 class="mb-3">Do you have a contract?</h4>
-                    <p class="light-font mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante. </p>
-
-                </div>
-            </div>
-        </div>
-
-    </div> -->
-    <!-- // end .section -->
 
     <div class="light-bg py-5" id="contact">
         <div class="container">
