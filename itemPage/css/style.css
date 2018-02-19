@@ -16,8 +16,8 @@
 }
 
 @font-face {
-  font-family: Poppins-Bold;
-  src: url('../fonts/poppins/Poppins-Bold.ttf'); 
+  font-family: Poppins-Light;
+  src: url('../fonts/poppins/Poppins-Light.ttf'); 
 }
 
 
@@ -400,7 +400,7 @@ p.lead {
 
 #postPrice {
   display: block;
-  font-family: Poppins-Medium;
+  font-family: Poppins-Regular;
   font-size: 20px;
   color: #0C7E00;
   line-height: 0;

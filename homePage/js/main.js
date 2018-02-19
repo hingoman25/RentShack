@@ -46,7 +46,8 @@ firebase.database().ref('/posts').on('value', function(snapshot) {
 
 
 	   rentList.innerHTML += 
-						   '<div class="col-md-offset-2">' +
+		   '<a id="anchor" style="text-decoration:none" style="display:block" href="file:///C:/Users/Daddy/Desktop/rentshack/site/itemPage/itemPage.html">' +
+						   '<div  class="col-md-offset-2">' +
 						                '<div class="col-12 col-lg-4">' +
 						                    '<div class="card features">' +
 						                        '<div class="card-body">' +
@@ -61,13 +62,11 @@ firebase.database().ref('/posts').on('value', function(snapshot) {
 						                        '</div>' +
 						                    '</div>' +
 						                '</div>' +
-						            '</div>';
+						            '</div>' +
+			'</a>';
 
     }
 });
-
-
-
 
 
 

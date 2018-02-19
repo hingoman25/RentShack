@@ -19,7 +19,12 @@ function setURL(url) {
 
 
 function writeNewPost(uid, username, email, titlePost, itemDescription, pricePerHour, imgURL) {
-  // A post entry.
+
+
+  // Get a key for a new Post.
+  var newPostKey = firebase.database().ref().child('posts').push().key;
+  
+	// A post entry.
   var postData = {
     uid: uid,
 	username: username,
@@ -27,13 +32,10 @@ function writeNewPost(uid, username, email, titlePost, itemDescription, pricePer
 	itemDescription: itemDescription,
 	pricePerHour: pricePerHour,
     titlePost: titlePost,
+	pid: newPostKey,
 	imageURL: imgURL
     //starCount: 0, PERHAPS ADD ITEMAVALIABILITY VARIABLE??? 
   };
-
-  // Get a key for a new Post.
-  var newPostKey = firebase.database().ref().child('posts').push().key;
-
   // Write the new post's data simultaneously in the posts list and the user's post list.
   var updates = {};
   updates['/posts/' + newPostKey] = postData;
