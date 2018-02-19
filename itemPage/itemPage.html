@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+    <title>RentShack</title>
+    <!--Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Mobland - Mobile App Landing Page Template">
+    <meta name="keywords" content="HTML5, bootstrap, mobile, app, landing, ios, android, responsive">
+
+    <!-- Font -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Themify Icons -->
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <!-- Owl carousel -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <!-- Main css -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="../css/nav.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+
+	<link href="css/nprogress.css" rel="stylesheet" /> <!--FOR LOADING PROCESS BAR-->
+
+	
+	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script> <!--FOR LOADING PROCESS BAR-->
+	<script src="js/nprogress.js"></script> <!--FOR LOADING PROCESS BAR-->
+	
+	
+	
+	<!--FIREBASECODE-->	
+	
+<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-messaging.js"></script>
+
+<!-- Leave out Storage -->
+<!-- <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-storage.js"></script> -->
+
+
+<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBApfToTzoqqENAUZkaoe75ArPH6OEqbgM",
+    authDomain: "rentshack-d2f8f.firebaseapp.com",
+    databaseURL: "https://rentshack-d2f8f.firebaseio.com",
+    projectId: "rentshack-d2f8f",
+    storageBucket: "rentshack-d2f8f.appspot.com",
+    messagingSenderId: "474356914191"
+  };
+  firebase.initializeApp(config);
+</script>
+	
+	
+	<script>
+		console.log('hello world');
+		
+	function initApp() {
+      // Listening for auth state changes.
+      // [START authstatelistener]
+      firebase.auth().onAuthStateChanged(function(user) {
+	  	if (user) {
+          // User is signed in.
+         // var displayName = user.username;
+			var displayName = user.displayName;
+          var email = user.email;
+          var emailVerified = user.emailVerified;
+          var photoURL = user.photoURL;
+          var isAnonymous = user.isAnonymous;
+          var uid = user.uid;
+          var providerData = user.providerData;
+			console.log(uid);
+/*			console.log(displayName);
+*/			console.log(email);
+			
+			
+		}
+	  });
+	}
+	window.onload = function() {
+      initApp();
+    };	
+	
+	</script>
+	
+	
+	
+	
+	
+</head>
+
+<body data-spy="scroll" data-target="#navbar" data-offset="30">
+
+    <!-- Nav Menu -->
+
+    <div class="nav-menu fixed-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <nav class="navbar navbar-light bg-company navbar-expand-lg">
+                        <a class="navbar-brand" href="../homePage/homePage.html"><img src="../images/logo1.png" class="img-fluid" alt="logo"></a>
+                       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> 
+                       </button>
+
+                       <div class="topnav">
+                          <input type="text" placeholder="Search...">
+                        </div>
+
+                        <div class="collapse navbar-collapse" id="navbar">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item"> <a class="nav-link" href="../postPage/postPage.html">Post</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="../messagePage/messagePage.html">Message</a> </li>
+                                <li class="nav-item"> <a class="nav-link" href="../profilePage/profilePage.html">Account</a> </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <header class="bg-gradient">
+    </header>
+
+<br>
+<br>
+<br>
+    		
+	<img id="postPicture" src="file:///C:/Users/Daddy/Desktop/rentshack/randomfiles/pexels-photo-122400.jpeg">
+
+	<div id="productInfo">
+		
+		<h1 id="postTitle">CAMERA</h1>
+		<h2 id="postPrice">$12.00 /hr</h2>
+		<p id="postDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non sapien non lorem suscipit sodales. Aliquam massa libero, consequat at euismod a, dictum ac nisl. Donec aliquet gravida leo tincidunt vulputate. In ex ligula, mattis non velit eget, tempus maximus arcu. Nunc ut ante mi. Curabitur quis nulla sit amet nibh rutrum aliquam non nec justo. Morbi dignissim dolor a velit blandit aliquam. </p>
+			
+	</div>
+	
+	<div class="container-contact2-form-btn">
+		<div class="wrap-contact2-form-btn">
+			<div class="contact2-form-bgbtn"></div>
+				<button class="contact2-form-btn" type="submit">
+					Rent This Item
+				</button>
+		</div>		
+</div>
+	
+	
+	
+	
+	
+	
+	
+	
+
+   <!--  <div class="section pt-0">
+        <div class="container">
+            <div class="section-title">
+                <h3>Frequently Asked Questions</h3>
+            </div>
+
+            <div class="row pt-4">
+                <div class="col-md-6">
+                    <h4 class="mb-3">Can I try before I buy?</h4>
+                    <p class="light-font mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante. </p>
+                    <h4 class="mb-3">What payment methods do you accept?</h4>
+                    <p class="light-font mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante. </p>
+
+                </div>
+                <div class="col-md-6">
+                    <h4 class="mb-3">Can I change my plan later?</h4>
+                    <p class="light-font mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante. </p>
+                    <h4 class="mb-3">Do you have a contract?</h4>
+                    <p class="light-font mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante. </p>
+
+                </div>
+            </div>
+        </div>
+
+    </div> -->
+    <!-- // end .section -->
+
+    <div class="light-bg py-5" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 text-center text-lg-left">
+                    <p class="mb-2"> <span class="ti-location-pin mr-2"></span> UCSB, CA</p>
+                    <div class=" d-block d-sm-inline-block">
+                        <p class="mb-2">
+                            <span class="ti-email mr-2"></span> <a class="mr-4" href="">conrad@mobileapp.com</a>
+                        </p>
+                    </div>
+                    <div class="d-block d-sm-inline-block">
+                        <p class="mb-0">
+                            <span class="ti-headphone-alt mr-2"></span> <a href="tel:51836362800">666-666-6666</a>
+                        </p>
+                    </div>
+
+                </div>
+                <div class="col-lg-6">
+                    <div class="social-icons">
+                        <a href="#"><span class="ti-facebook"></span></a>
+                        <a href="#"><span class="ti-twitter-alt"></span></a>
+                        <a href="#"><span class="ti-instagram"></span></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- // end .section -->
+    <footer class="my-5 text-center">
+        <!-- Copyright removal is not prohibited! -->
+        <p class="mb-2"><small></small></p>
+
+        <small>
+            <a href="#" class="m-2">PRESS</a>
+            <a href="#" class="m-2">TERMS</a>
+            <a href="#" class="m-2">PRIVACY</a>
+        </small>
+    </footer>
+
+    <!-- jQuery and Bootstrap -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- Plugins JS -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+    <script src="js/main.js"></script>
+	
+			<!--	SCRIPT FOR LOADING BAR   -->
+	  <script>
+    $('body').show();
+    $('.version').text(NProgress.version);
+    NProgress.start();
+    setTimeout(function() { NProgress.done(); $('.fade').removeClass('out'); }, 1000);
+
+    $("#b-0").click(function() { NProgress.start(); });
+    $("#b-40").click(function() { NProgress.set(0.4); });
+    $("#b-inc").click(function() { NProgress.inc(); });
+    $("#b-100").click(function() { NProgress.done(); });
+  </script>
+	<!--	SCRIPT FOR LOADING BAR   -->
+
+</body>
+
+</html>
