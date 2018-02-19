@@ -38,7 +38,7 @@ firebase.database().ref('/posts').on('value', function(snapshot) {
     var rentList = document.getElementById('rentList');
     rentList.innerHTML = '';
 
-    for(var i = 0; i < arr.length; i++) {
+    for(var i = arr.length-1; i > 0; i--) {
        var title = arr[i].titlePost;
 	   var desc = arr[i].itemDescription;
 	   var img = arr[i].imageURL;
@@ -51,7 +51,7 @@ firebase.database().ref('/posts').on('value', function(snapshot) {
 						                    '<div class="card features">' +
 						                        '<div class="card-body">' +
 						                            '<div class="media">' +
-														'<img class="rentimg" id="image" src=' + img + 'class="listpics" alt="">' +
+														'<img class="renting" id="image" src=' + img + 'class="listpics" alt="">' +
 						                                '<div class="media-body">' +
 						                                    '<h4 class="card-title" id="titlePost">' + title + '</h4>' +
 															'<h5 id="price" class = "card-price">$' + price + '/hr</h5>' +

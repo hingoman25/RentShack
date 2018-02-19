@@ -74,9 +74,8 @@
           var isAnonymous = user.isAnonymous;
           var uid = user.uid;
           var providerData = user.providerData;
-			console.log(uid);
 /*			console.log(displayName);
-*/			console.log(email);
+*/	
 			
 			return firebase.database().ref('/users/' + uid).once('value').then(function(snapshot) {
   			var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
@@ -178,47 +177,15 @@
         <div class="col-md-9">
             <div class="profile-content">
                <div class="container">
-            <div class="section-title">
-                <h3>My Items</h3>
-        </div>
-
-            <div class="col-md-offset-2">
-                <div class="col-12 col-lg-4">
-                    <div class="card features">
-                        <div class="card-body">
-                            <div class="media">
-                                <img src="../images/bed.jpeg" class="listpics" alt="">
-                                <!-- <span class="ti-face-smile gradient-fill ti-3x mr-3"></span> -->
-                                <div class="media-body">
-                                    <h4 class="card-title">Bedroom for rent</h4>
-                                    <h5 class = "card-price">$100/hr</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="section-title">
+                    <h3>My Items</h3>
                 </div>
-                            
-                <div class="col-12 col-lg-4">
-                    <div class="card features">
-                        <div class="card-body">
-                            <div class="media">
-                                <img src="../images/2lawnmower.jpg" class="listpics" alt="">
-                                <!--<span class="ti-lock gradient-fill ti-3x mr-3"></span>-->
-                                <div class="media-body">
-                                    <h4 class="card-title">Lawn mower</h4>
-                                    <h5 class = "card-price">$5/min</h5>
-
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                <div id="rentList">
+                </div>              
+              </div>
+          </div>
         </div>
-            </div>
-        </div>
+      </div>
     </div>
 </div>
 
@@ -307,7 +274,7 @@
     };
   </script> -->
 	
-		  <script>
+		<script>
     var auth = firebase.auth();
     var storageRef = firebase.storage().ref();
 
