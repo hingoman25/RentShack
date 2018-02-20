@@ -20,7 +20,7 @@ Hose
 
 Bike 
 black fixie
-6
+6969
 
 Volleyball
 Wilson high quality 
@@ -28,4 +28,12 @@ Wilson high quality
 
 Tennis Racket
 High Quality
+20
+
+Tennis Racket
+Medium Quality
+20
+
+Tennis Racket
+the worst Quality askldfjadk
 20

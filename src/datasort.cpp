@@ -8,6 +8,8 @@
 
 using namespace std;
 
+void find_highest_rate(int num_items, vector<int> price_list, vector<string> titlePost_list, vector<string> itemDesc_list); 
+
 int main(){
 
 	ifstream ff;
@@ -18,6 +20,7 @@ int main(){
 	vector<int> price_list;
 	int line_count = 0;
 	string line;
+	int num_items = 0; 
 	map<string, int> m;
 
 
@@ -26,15 +29,18 @@ int main(){
 		getline(ff, line);
 		line_count++;
 		if(line_count % 4 == 1){
-			titlePost_list.push_back(line);
+		  num_items++; 
+		  titlePost_list.push_back(line);
 		}
 		if(line_count % 4 == 2){
 			itemDesc_list.push_back(line);
 		}
 		if(line_count % 4 == 3){
-			int price = stoi(line);
-			price_list.push_back(line);
+		  int price = stoi(line);
+		  //cout << "just the price: " << price << "price plus three test if int" << (price + 3) << endl; 
+		  price_list.push_back(price);
 		}
+		
 
 	}
 
@@ -60,14 +66,9 @@ int main(){
       it = it2;
     }
 
-    cout << it->first << endl;
-
-
-    // find the most expensive item
-    /*string exp_item
-    for (int i = 0; i < price_list.size(); i++){
-    	if (i == 0)*/
-
+    cout <<"Most common item: " + it->first << endl;
+    
+    find_highest_rate(num_items, price_list, titlePost_list, itemDesc_list); 
     
 
 
@@ -76,3 +77,25 @@ int main(){
 
     return 0;
 }
+
+
+void find_highest_rate(int num_items, vector<int> price_list, vector<string> titlePost_list, vector<string> itemDesc_list) { 
+  /* ****** Most expensive item ******  */
+  int max = 0;
+  string temp_titlePost;
+  string temp_itemDesc;
+  //cout << "number of items" << num_items <<endl;                                                                                                 
+  for(int i = 0; i < num_items; i++) {
+    if (max < price_list[i]) {
+      max = price_list[i];
+      temp_titlePost = titlePost_list[i];
+      temp_itemDesc = itemDesc_list[i];
+    }
+  }
+
+  cout << "Most expensive rate: " <<endl;
+  cout << temp_titlePost <<endl;
+  cout <<temp_itemDesc <<endl;
+  cout << "$" <<max <<"/hr" <<endl;
+  return; 
+} 
