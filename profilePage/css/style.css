@@ -1,11 +1,26 @@
 @charset "UTF-8";
 
+@font-face {
+  font-family: Poppins-Regular;
+  src: url('../fonts/poppins/Poppins-Regular.ttf'); 
+}
+
+@font-face {
+  font-family: Poppins-Medium;
+  src: url('../fonts/poppins/Poppins-Medium.ttf'); 
+}
+
+@font-face {
+  font-family: Poppins-Bold;
+  src: url('../fonts/poppins/Poppins-Bold.ttf'); 
+}
+
 
 /* GLOBAL
 ----------------------*/
 
 body {
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Poppins-Regular', sans-serif;
     position: relative;
 }
 
@@ -34,15 +49,17 @@ h2 {
 }
 
 h3 {
-    color: #F18153;
-    font-size: 33px;
+    color: #333333;
+    font-size: 39px;
     font-weight: 500;
+	font-family: Poppins-Bold;
 }
 
 h4 {
     font-size: 20px;
     font-weight: 500;
-    color: #F18153;
+    color: #333333;
+	font-family: Poppins-Medium;
 }
 
 h5 {
@@ -468,4 +485,7 @@ p.lead {
     width: 140px;
     height: 130px;
     padding-right: 13px;
+}
+#myItems {
+	font-size: 30px;
 }
