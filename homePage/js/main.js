@@ -43,10 +43,11 @@ firebase.database().ref('/posts').on('value', function(snapshot) {
 	   var desc = arr[i].itemDescription;
 	   var img = arr[i].imageURL;
 	   var price = arr[i].pricePerHour;
+	   var pid = arr[i].pid;
 
 
 	   rentList.innerHTML += 
-		   '<a id="anchor" style="text-decoration:none" style="display:block" href="file:///C:/Users/Daddy/Desktop/rentshack/site/itemPage/itemPage.html">' +
+		   '<a id="anchor" style="text-decoration:none" style="display:block" href="file:///C:/Users/Daddy/Desktop/rentshack/site/itemPage/itemPage.html?pid=' + pid + '">' +
 						   '<div  class="col-md-offset-2">' +
 						                '<div class="col-12 col-lg-4">' +
 						                    '<div class="card features">' +

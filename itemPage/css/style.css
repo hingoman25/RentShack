@@ -396,6 +396,7 @@ p.lead {
   line-height: 0;
   text-align: left;
   padding-bottom: 30px;
+  text-transform: uppercase;
 }
 
 #postPrice {
@@ -427,6 +428,7 @@ p.lead {
 }
 
 #postPicture {
+	height: 40%;
 	width: 30%;
 	display: block;
 	margin: auto;
