@@ -39,7 +39,7 @@ firebase.database().ref('/posts').on('value', function(snapshot) {
 								                    '<div class="card features">' +
 								                        '<div class="card-body">' +
 								                            '<div class="media">' +
-																'<img class="renting" id="image" src=' + img + 'class="listpics" alt="">' +
+																'<img class="renting" id="image" src=' + img + ' class="listpics" alt="">' +
 								                                '<div class="media-body">' +
 								                                    '<h4 class="card-title" id="titlePost">' + title + '</h4>' +
 																	'<h5 id="price" class = "card-price">$' + price + '/hr</h5>' +
