@@ -12,12 +12,6 @@ playersRef.on("child_added", function(data, prevChildKey) {
    console.log("title: " + user.titlePost);
    console.log("description: " + user.itemDescription);
 
-   var titlePost = document.getElementById('titlePost').innerHTML =
-   user.titlePost;
-
-   var itemDescription = document.getElementById('itemDescription').innerHTML =
-   user.itemDescription;
-
 });
 
 function slicePID() {
