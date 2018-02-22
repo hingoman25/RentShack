@@ -33,7 +33,6 @@ function snapshotToArray(snapshot) {
 
 firebase.database().ref('/posts').on('value', function(snapshot) {
     var arr = snapshotToArray(snapshot);
-    console.log(arr);
 
     var rentList = document.getElementById('rentList');
     rentList.innerHTML = '';
