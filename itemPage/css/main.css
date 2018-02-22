@@ -454,3 +454,20 @@ textarea.input2 + .focus-input2::after {
 #alertMessage {
 	margin-bottom: -1.5em;
 }
+
+
+
+.addComment {
+	display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 13px;
+	margin-bottom: 4%;
+	margin-left: 50%;
+	margin-top: -3%;
+	float: right;
+}
