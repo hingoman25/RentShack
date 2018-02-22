@@ -161,11 +161,13 @@ iframe {
 }
 
 .wrap-contact2 {
-  width: 790px;
+  width: 60%;
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
-  padding: 72px 55px 90px 55px;
+  padding: 72px 5px 90px 55px;
+margin-left: 17%;
+	margin-bottom: -20%;
 }
 
 
@@ -306,7 +308,7 @@ textarea.input2 + .focus-input2::after {
   flex-wrap: wrap;
   justify-content: center;
   padding-top: 13px;
-	margin-bottom: 8%;
+	margin-bottom: 4%;
 	margin-left: 50%;
 	margin-top: -10%;
 }

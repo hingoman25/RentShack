@@ -30,6 +30,7 @@ function slicePID() {
 	return pid;
 }
 
+
 function populatePost( pid ) {
 	
 	return firebase.database().ref('/posts/' + pid).once('value').then(function(snapshot) {
@@ -48,6 +49,13 @@ function populatePost( pid ) {
 		  });		
 	
 	
+}
+
+function showComment(){
+	var x = document.getElementById("commentForm");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+	}
 }
 
 
