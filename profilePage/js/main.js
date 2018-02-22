@@ -18,6 +18,13 @@ function snapshotToArray(snapshot) {
 }
 
 
+function deletePost(pid){
+	
+	firebase.database().ref('posts/' + pid).remove();
+ 	location.href = "./profilePage.html";
+}
+
+
 firebase.database().ref('/posts').on('value', function(snapshot) {
     	var arr = snapshotToArray(snapshot);
 	    var rentList = document.getElementById('rentList');
@@ -30,28 +37,35 @@ firebase.database().ref('/posts').on('value', function(snapshot) {
 			   var desc = arr[i].itemDescription;
 			   var img = arr[i].imageURL;
 			   var price = arr[i].pricePerHour;
+ var pid = arr[i].pid;
 
 
+	   rentList.innerHTML += 
+		   '<a id="anchor" style="text-decoration:none" style="display:block" href="../itemPage/itemPage.html?pid=' + pid + '">' +
+						   '<div  class="col-md-offset-2">' +
+						                '<div class="col-12 col-lg-4">' +
+						                    '<div class="card features">' +
+						                        '<div class="card-body">' +
+						                            '<div class="media">' +
+														'<img href="#" class="renting" id="image" src=' + img + ' class="listpics" alt="">' +
+						                                '<div class="media-body">' +
+						                                    '<img href="./profilePage.html" onClick="deletePost(\''+ pid +'\')" src="img/trashbin.png" id="trash">' +
+		   													'<h4 class="card-title" id="titlePost">' + title + '</h4>' +
+															'<h5 id="price" class = "card-price">$' + price + '/hr</h5>' +
+						                                    '<p class="card-text" id="itemDescription">' + desc + '</p>' +
+		   													
+						                                '</div>' +
+						                            '</div>' +
+						                        '</div>' +
+						                    '</div>' +
+						                '</div>' +
+						            '</div>' +
+			'</a>';
 
-			   rentList.innerHTML += 
-								   '<div class="col-md-offset-2">' +
-								                '<div class="col-12 col-lg-4">' +
-								                    '<div class="card features">' +
-								                        '<div class="card-body">' +
-								                            '<div class="media">' +
-																'<img class="renting" id="image" src=' + img + ' class="listpics" alt="">' +
-								                                '<div class="media-body">' +
-								                                    '<h4 class="card-title" id="titlePost">' + title + '</h4>' +
-																	'<h5 id="price" class = "card-price">$' + price + '/hr</h5>' +
-								                                    '<p class="card-text" id="itemDescription">' + desc + '</p>' +
-								                                '</div>' +
-								                            '</div>' +
-								                        '</div>' +
-								                    '</div>' +
-								                '</div>' +
-								            '</div>';
 	    }
 	}
 });
+
+
 
 
