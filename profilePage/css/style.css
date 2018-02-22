@@ -489,3 +489,9 @@ p.lead {
 #myItems {
 	font-size: 30px;
 }
+
+#trash {
+	height: 5%;
+	width: 5%;
+	float:right;
+}
