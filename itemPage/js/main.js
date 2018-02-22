@@ -55,6 +55,7 @@ function showComment(){
 	var x = document.getElementById("commentForm");
     if (x.style.display === "none") {
         x.style.display = "block";
+		window.scrollBy(0,200);
 	}
 }
 
