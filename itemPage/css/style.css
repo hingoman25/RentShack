@@ -146,7 +146,7 @@ p.lead {
 
 .light-bg {
     background-color: #faf6fb;
-		margin-top: 22%;
+		margin-top: 15%;
 
 }
 
@@ -395,7 +395,6 @@ p.lead {
   font-family: Poppins-Bold;
   font-size: 25px;
   color: #333333;
-  line-height: 0;
   text-align: left;
   padding-bottom: 30px;
   text-transform: uppercase;
