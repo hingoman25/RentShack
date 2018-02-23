@@ -167,6 +167,55 @@ window.addEventListener('load', function() {
   };
 }, false);
 
+function snapshotToArray(snapshot) {
+    var returnArr = [];
+
+    snapshot.forEach(function(childSnapshot) {
+        var item = childSnapshot.val();
+        item.key = childSnapshot.key;
+        
+		returnArr.push(item);
+    });
+    return returnArr;
+}
+
+
+firebase.database().ref('/posts/' + global_pid + '/post-comments').on('value', function(snapshot) {
+	console.log(snapshot);
+    var arr = snapshotToArray(snapshot);
+    var comments = document.getElementById('comments');
+    comments.innerHTML = '';
+	console.log(arr[0]);
+	
+    for(var i = arr.length-1; i > 0; i--) {
+		var userComment = arr[i].comment;
+		console.log('hello!');
+	   var userPic = arr[i].profilePic;
+	   var user_name = arr[i].username;
+
+
+
+	   comments.innerHTML += 
+		   '<a id="anchor" style="text-decoration:none" style="display:block">' +
+						   '<div  class="col-md-offset-2">' +
+						                '<div class="col-12 col-lg-4">' +
+						                    '<div class="card features">' +
+						                        '<div class="card-body">' +
+						                            '<div class="media">' +
+														'<img class="renting" id="image" src=' + userPic + ' class="listpics" alt="">' +
+						                                '<div class="media-body">' +
+						                                    '<h4 class="card-title" id="titlePost">' + user_name + '</h4>' +
+						                                    '<p class="card-text" id="itemDescription">' + userComment + '</p>' +
+						                                '</div>' +
+						                            '</div>' +
+						                        '</div>' +
+						                    '</div>' +
+						                '</div>' +
+						            '</div>' +
+			'</a>';
+
+    }
+});
 
 
 
