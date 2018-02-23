@@ -1,6 +1,7 @@
 # RentShack
 
 firebase quickstarts (FOR IMPLEMENTING POST PAGE) - https://github.com/firebase/quickstart-js
+live domain: https://rentshack-d2f8f.firebaseapp.com/
 
 ## Group 4: The Conrads
 * Terrell Marshall [*theonlyt3* | `tbmarshall97@gmail.com`]
