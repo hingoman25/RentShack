@@ -38,11 +38,15 @@ function populatePost( pid ) {
 			var itemDescription = (snapshot.val() && snapshot.val().itemDescription);
 			var pricePerHour = (snapshot.val() && snapshot.val().pricePerHour);
 			var postPicture  = (snapshot.val() && snapshot.val().imageURL);
-		
-			document.getElementById('postTitle').innerHTML = titlePost;
-			document.getElementById('postPrice').innerHTML = "$" + pricePerHour + " /hour";
-			document.getElementById('postDescription').innerHTML = itemDescription;
-			document.getElementById('postPicture').src = postPicture;
+			if(titlePost)
+			{
+				document.getElementById('postTitle').innerHTML = titlePost;
+				document.getElementById('postPrice').innerHTML = "$" + pricePerHour + " /hour";
+				document.getElementById('postDescription').innerHTML = itemDescription;
+				document.getElementById('postPicture').src = postPicture;
+			}else {
+ 				window.location.replace("../profilePage/profilePage.html");
+			}
   			/*document.getElementById('username').innerHTML = username;
 			document.getElementById('profilePic').src = (snapshot.val() && snapshot.val().profilePic);*/
 

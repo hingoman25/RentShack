@@ -59,7 +59,11 @@
     
     <script>
 		console.log('hello world');
-		
+		function toggleSignIn() {
+			firebase.auth().signOut();
+			window.location.replace("../landingPage/landingPage.html");
+			
+		}
 	function initApp() {
       // Listening for auth state changes.
       // [START authstatelistener]
@@ -75,7 +79,7 @@
           var uid = user.uid;
           var providerData = user.providerData;
 /*			console.log(displayName);
-*/	
+*/			
 			
 			return firebase.database().ref('/users/' + uid).once('value').then(function(snapshot) {
   			var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
@@ -162,12 +166,12 @@
                     <div class="profile-usertitle-job">
                         Developer
                     </div>
-                </div>
+                </div> 
                 <!-- END SIDEBAR USER TITLE -->
                 <!-- SIDEBAR BUTTONS -->
                 <div class="profile-userbuttons">
                     <button type="button" class="btn btn-success btn-sm">Follow</button>
-                    <button type="button" class="btn btn-danger btn-sm">Message</button>
+                    <button type="button" onClick="toggleSignIn();" class="btn btn-danger btn-sm">Sign Out</button>
                 </div>
             </div>
         </div>

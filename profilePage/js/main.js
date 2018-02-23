@@ -21,7 +21,7 @@ function snapshotToArray(snapshot) {
 function deletePost(pid){
 	
 	firebase.database().ref('posts/' + pid).remove();
- 	location.href = "./profilePage.html";
+ 	//window.location.replace("./profilePage.html");
 }
 
 
@@ -41,6 +41,7 @@ firebase.database().ref('/posts').on('value', function(snapshot) {
 
 
 	   rentList.innerHTML += 
+		   '<p href="./profilePage.html" onClick="deletePost(\''+ pid +'\')" id="trash" >X</p>' +
 		   '<a id="anchor" style="text-decoration:none" style="display:block" href="../itemPage/itemPage.html?pid=' + pid + '">' +
 						   '<div  class="col-md-offset-2">' +
 						                '<div class="col-12 col-lg-4">' +
@@ -49,7 +50,7 @@ firebase.database().ref('/posts').on('value', function(snapshot) {
 						                            '<div class="media">' +
 														'<img href="#" class="renting" id="image" src=' + img + ' class="listpics" alt="">' +
 						                                '<div class="media-body">' +
-						                                    '<img href="./profilePage.html" onClick="deletePost(\''+ pid +'\')" src="img/trashbin.png" id="trash">' +
+						                                    
 		   													'<h4 class="card-title" id="titlePost">' + title + '</h4>' +
 															'<h5 id="price" class = "card-price">$' + price + '/hr</h5>' +
 						                                    '<p class="card-text" id="itemDescription">' + desc + '</p>' +
@@ -63,6 +64,7 @@ firebase.database().ref('/posts').on('value', function(snapshot) {
 			'</a>';
 
 	    }
+
 	}
 });
 
