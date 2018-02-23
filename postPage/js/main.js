@@ -95,16 +95,6 @@ function newPostForCurrentUser(titlePost, itemDescription, pricePerHour) {
 
 
 window.addEventListener('load', function() {
-  // Bind Sign in button.
- /* signInButton.addEventListener('click', function() {
-    var provider = new firebase.auth.GoogleAuthProvider();
-    firebase.auth().signInWithPopup(provider);
-  }); */
-
-  // Bind Sign out button.
- /* signOutButton.addEventListener('click', function() {
-    firebase.auth().signOut();
-  }); */
 
   // Listen for auth state changes
   firebase.auth().onAuthStateChanged(onAuthStateChanged);

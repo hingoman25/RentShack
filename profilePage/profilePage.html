@@ -225,51 +225,6 @@
     $("#b-100").click(function() { NProgress.done(); });
   </script>
 	<!--	SCRIPT FOR LOADING BAR   -->
-    <!--Firebase imports-->	
-	
-
-<!-- Leave out Storage -->
-<!-- <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-storage.js"></script> -->
-<!-- Leave out Storage -->
-<!-- <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-storage.js"></script> -->
-      <!-- Leave out Storage -->
-<!-- <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-storage.js"></script> -->
-
-      
-    
-<!-- <script> 
-    function initApp() {
-      firebase.auth().onAuthStateChanged(function(user) {
-
-
-        console.log("omer is cool");
-
-        if (user) {
-            
-          var email = user.email;
-            var user_name = document.getElementById('user_name').value;
-          var emailVerified = user.emailVerified;
-          var photoURL = user.photoURL;
-          var isAnonymous = user.isAnonymous;
-          var uid = user.uid;
-          var providerData = user.providerData;
-			
-            
-        var userId = firebase.auth().currentUser.uid;
-        return firebase.database().ref('/users/' + userId).once('value').then(function(snapshot) {
-        var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
-            console.log(username);
-            console.log(uid);
-            console.log(email);
-        });
-       }
-      }
-    )}; 
-    
-   window.onload = function() {
-      initApp();
-    };
-  </script> -->
 	
 		<script>
     var auth = firebase.auth();
