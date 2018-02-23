@@ -1,4 +1,4 @@
-
+/*Code to make inputs aesthetic*/
 (function ($) {
     "use strict";
 
