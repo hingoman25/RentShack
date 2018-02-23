@@ -491,7 +491,13 @@ p.lead {
 }
 
 #trash {
+	position: relative;
 	height: 5%;
 	width: 5%;
 	float:right;
+	margin-right:4.5em;
+	padding-top: 0.8em;
+	z-index: 4;
+	cursor: pointer;
+	
 }
