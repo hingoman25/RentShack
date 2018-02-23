@@ -1,16 +1,16 @@
- // Initialize Firebase
-'use-strict';
+//  // Initialize Firebase
+// 'use-strict';
 
 
 
-/*alert('THIS IS A FUCKING ALERT');*/
+// /*alert('THIS IS A FUCKING ALERT');*/
 
 
 
-	document.getElementById('anchor').addEventListener("click", sendInstancePID() );
+// 	document.getElementById('anchor').addEventListener("click", sendInstancePID() );
  
 
 
-	function sendInstancePID() {
-		alert('I HAVE BEEN CALLED');
-	}
+// 	function sendInstancePID() {
+// 		alert('I HAVE BEEN CALLED');
+// 	}

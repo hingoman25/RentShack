@@ -1,17 +1,4 @@
-@font-face {
-  font-family: Poppins-Regular;
-  src: url('../fonts/poppins/Poppins-Regular.ttf'); 
-}
 
-@font-face {
-  font-family: Poppins-Medium;
-  src: url('../fonts/poppins/Poppins-Medium.ttf'); 
-}
-
-@font-face {
-  font-family: Poppins-Bold;
-  src: url('../fonts/poppins/Poppins-Bold.ttf'); 
-}
 /* NAVBAR
 ----------------------*/
 
@@ -82,16 +69,16 @@
 
 .topnav {
     overflow: hidden;
-    border: 1.5px solid #f2784b;
-    border-radius: 25px;
+    /*border: 1.5px solid #f2784b;
+    border-radius: 25px;*/
     margin: 0 auto;
-    margin-left: 8em;
+    margin-left: 14em;
     padding-right: 7em;
 
 }
 
 /* Style the links inside the navigation bar */
-/*.topnav a {
+.topnav a {
     align-items: center;
     display: block;
     color: black;
@@ -99,7 +86,7 @@
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-}*/
+}
 
 /* Change the color of links on hover */
 /*.topnav a:hover {
@@ -144,6 +131,10 @@ textarea:focus, input:focus{
     }
 }
 */
+
+ul {
+    list-style: none;
+}
 
 option {
     font-family: Poppins-Bold;
@@ -196,4 +187,61 @@ header {
 }
 
 
+
+
+
+input {
+      width: 100%;
+      padding:20px;
+    }
+
+  
+
+    input.search {
+      margin: 0;
+      text-align: center;
+      outline:0;
+      border: 10px solid #F7F7F7;
+      width: 120%;
+      left: -10%;
+      position: relative;
+      top: 10px;
+      z-index: 2;
+      border-radius: 5px;
+      font-size: 40px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19);
+    }
+
+
+    .suggestions {
+      margin: 0;
+      padding: 0;
+      position: relative;
+      /*perspective:20px;*/
+    }
+    .suggestions li {
+      background:white;
+      list-style: none;
+      border-bottom: 1px solid #D8D8D8;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
+      margin:0;
+      padding:20px;
+      transition:background 0.2s;
+      display:flex;
+      justify-content:space-between;
+      text-transform: capitalize;
+    }
+
+    li {
+        color: black;
+    }
+
+  /*  .suggestions li:nth-child(even) {
+      transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
+      background: linear-gradient(to bottom,  #ffffff 0%,#EFEFEF 100%);
+    }
+    .suggestions li:nth-child(odd) {
+      transform: perspective(100px) rotateX(-3deg) translateY(3px);
+      background: linear-gradient(to top,  #ffffff 0%,#EFEFEF 100%);
+    }*/
 

@@ -25,15 +25,15 @@
 
 	<link href="css/nprogress.css" rel="stylesheet" /> <!--FOR LOADING PROCESS BAR-->
 
-	
+
 	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script> <!--FOR LOADING PROCESS BAR-->
 	<script src="js/nprogress.js"></script> <!--FOR LOADING PROCESS BAR-->
-	
+
 	<script src="js/homePage-itemPage-main.js"></script>
-	
-	
-	<!--FIREBASECODE-->	
-	
+
+
+	<!--FIREBASECODE-->
+
 <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-database.js"></script>
@@ -59,9 +59,9 @@
   };
   firebase.initializeApp(config);
 </script>
-	
+
 <script>
-		
+
 	function initApp() {
       // Listening for auth state changes.
       // [START authstatelistener]
@@ -76,20 +76,17 @@
           var isAnonymous = user.isAnonymous;
           var uid = user.uid;
           var providerData = user.providerData;
-			console.log(uid);
-/*			console.log(displayName);
-*/			console.log(email);
-					
+
 		}
 	  });
 	}
 	window.onload = function() {
       initApp();
-    };	
-	
+    };
+
 </script>
-	
-	
+
+
 </head>
 
 <body data-spy="scroll" data-target="#navbar" data-offset="30">
@@ -106,9 +103,13 @@
                        </button>
 
                        <div class="topnav">
-                          <input type="text" list="itemList" placeholder="Search...">
-                          <datalist id="itemList">
-                          </datalist>
+
+                        <input class="search" id="query" type="text" list="itemList" placeholder="Search...">
+                          <ul class="suggestions">
+                          </ul>
+
+                          <!-- <datalist id="itemList">
+                          </datalist> -->
                         </div>
 
                         <div class="collapse navbar-collapse" id="navbar">
@@ -191,12 +192,11 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <!-- Plugins JS -->
-    <script src="js/owl.carousel.min.js"></script>
     <!-- Custom JS -->
     <script src="js/script.js"></script>
     <script src="js/main.js"></script>
     <script src="js/search.js"></script>
-	
+
 			<!--	SCRIPT FOR LOADING BAR   -->
 	  <script>
     $('body').show();

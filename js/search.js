@@ -17,14 +17,19 @@ function snapshotToArray(snapshot) {
     return returnArr;
 }
 
+document.getElementById('anchor').addEventListener("click", sendInstancePID() );
+
+function sendInstancePID() {
+    alert("THIS IS A FUCKING MESSAGE");
+}
+
 firebase.database().ref('/posts').on('value', function(snapshot) {
     var arr = snapshotToArray(snapshot);
 
     itemList.innerHTML = "";
     arr.forEach(function(e){
-    	var pid = e.pid;
     	itemList.innerHTML += 
-		   '<a style="text-decoration: none" style="display:block" href="../itemPage/itemPage.html?pid=' + pid + '">' +
+		   '<a id="anchor" style="text-decoration: none" style="display:block" href="itemPage/itemPage.html?pid=' + e.pid + '">' +
 					'<option>' + e.titlePost + '</option>' +
 			'</a>';
 
