@@ -201,11 +201,9 @@ input {
       margin: 0;
       text-align: center;
       outline:0;
-      border: 10px solid #F7F7F7;
-      border: 1.5px solid #f2784b;
+    
       border-radius: 25px;
-      width: 120%;
-      left: -10%;
+      width: 100%;
       position: relative;
       top: 10px;
       z-index: 2;
@@ -216,12 +214,12 @@ input {
     }
 
 
-    .suggestions {
+   /* .suggestions {
       margin: 0;
       padding: 0;
       position: relative;
-      /*perspective:20px;*/
     }
+
     .suggestions li {
       background:white;
       list-style: none;
@@ -231,7 +229,7 @@ input {
       padding:20px;
       display:flex;
       text-transform: capitalize;
-    }
+    }*/
 
     li {
         color: black;
