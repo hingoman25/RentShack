@@ -202,6 +202,8 @@ input {
       text-align: center;
       outline:0;
       border: 10px solid #F7F7F7;
+      border: 1.5px solid #f2784b;
+      border-radius: 25px;
       width: 120%;
       left: -10%;
       position: relative;
@@ -210,6 +212,7 @@ input {
       border-radius: 5px;
       font-size: 40px;
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19);
+      margin-bottom: 17px;
     }
 
 
@@ -226,9 +229,7 @@ input {
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
       margin:0;
       padding:20px;
-      transition:background 0.2s;
       display:flex;
-      justify-content:space-between;
       text-transform: capitalize;
     }
 
