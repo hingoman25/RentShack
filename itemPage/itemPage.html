@@ -36,34 +36,32 @@
 	
 	<!--FIREBASECODE-->	
 	
-<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-database.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-firestore.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-messaging.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-database.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-messaging.js"></script>
 
-<!-- Leave out Storage -->
-<!-- <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-storage.js"></script> -->
+	<!-- Leave out Storage -->
+	<!-- <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-storage.js"></script> -->
 
 
-<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyBApfToTzoqqENAUZkaoe75ArPH6OEqbgM",
-    authDomain: "rentshack-d2f8f.firebaseapp.com",
-    databaseURL: "https://rentshack-d2f8f.firebaseio.com",
-    projectId: "rentshack-d2f8f",
-    storageBucket: "rentshack-d2f8f.appspot.com",
-    messagingSenderId: "474356914191"
-  };
-  firebase.initializeApp(config);
-</script>
-	
-	
+	<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
 	<script>
-		console.log('hello world');
-		
+	  // Initialize Firebase
+	  var config = {
+		apiKey: "AIzaSyBApfToTzoqqENAUZkaoe75ArPH6OEqbgM",
+		authDomain: "rentshack-d2f8f.firebaseapp.com",
+		databaseURL: "https://rentshack-d2f8f.firebaseio.com",
+		projectId: "rentshack-d2f8f",
+		storageBucket: "rentshack-d2f8f.appspot.com",
+		messagingSenderId: "474356914191"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+	
+	
+	<script>		
 	function initApp() {
       // Listening for auth state changes.
       // [START authstatelistener]
@@ -81,8 +79,7 @@
 			console.log(uid);
 /*			console.log(displayName);
 */			console.log(email);
-			
-			
+					
 		}
 	  });
 	}
@@ -91,10 +88,6 @@
     };	
 	
 	</script>
-	
-	
-	
-	
 	
 </head>
 
@@ -135,17 +128,18 @@
 <br>
 <br>
 <br>
-    		<!--file:///C:/Users/Daddy/Desktop/rentshack/randomfiles/pexels-photo-122400.jpeg-->
+	
+	<!--POST INFORMATION ------------------------------------------------------------------>
 	<img id="postPicture" src="https://tmff.net/wp-content/uploads/2015/04/light-grey-background-pattern-i1.jpg">
 
 	<div id="productInfo">
-		
 		<h1 id="postTitle"></h1>
 		<h2 id="postPrice"></h2>
-		<p id="postDescription"></p>
-			
+		<p id="postDescription"></p>	
 	</div>
+	<!--POST INFORMATION ------------------------------------------------------------------>
 	
+	<!--BUTTON ------------------------------------------------------------------>
 	<div class="container-contact2-form-btn">
 		<div class="wrap-contact2-form-btn">
 			<div class="contact2-form-bgbtn"></div>
@@ -153,8 +147,9 @@
 					Rent This Item
 				</button>
 		</div>		
-</div>
-	
+	</div>
+	<!-------------------------------------------------------------------->
+	<!--COMMENT FORM ------------------------------------------------------------------>
 	<div style="display: none" class="wrap-contact2" id="commentForm">	
 		<form action="#" class="contact2-form validate-form" id="messageForm">
 			<div class="wrap-input2 validate-input" data-validate = "Message is required">
@@ -169,18 +164,15 @@
 							Post Your Comment
 						</button>
 				</div>
+				
 			</div>
-			
-		</form>
-		
-		
-		
-		
+		</form>		
 	</div>
-	
 	<div id="comments">
 		</div>
-	
+	<!--COMMENT FORM ------------------------------------------------------------------>
+
+	<!--FOOTER ---------------------------------------------------------->
     <div class="light-bg py-5" id="contact">
         <div class="container">
             <div class="row">
@@ -196,7 +188,6 @@
                             <span class="ti-headphone-alt mr-2"></span> <a href="tel:51836362800">666-666-6666</a>
                         </p>
                     </div>
-
                 </div>
                 <div class="col-lg-6">
                     <div class="social-icons">
@@ -210,6 +201,9 @@
         </div>
 
     </div>
+	<!--FOOTER ---------------------------------------------------------->
+
+	
     <!-- // end .section -->
     <footer class="my-5 text-center">
         <!-- Copyright removal is not prohibited! -->
