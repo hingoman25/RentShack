@@ -1,8 +1,7 @@
-# RentShack
+![alt text](https://i.imgur.com/G3rViNf.png "rentshack")
 
-*Instructions for C++:*
-Type make in src1 directory. Then type ./a.out 
 
+*Instructions for C++:* Type `make` in src1 directory. Then type `./a.out` 
 Code returns most frequent and most expensive items in items.txt. 
 
 firebase quickstarts (FOR IMPLEMENTING POST PAGE) - https://github.com/firebase/quickstart-js
@@ -18,7 +17,12 @@ live domain: https://rentshack-d2f8f.firebaseapp.com/
 
 **Problem:** We see the everlasting issue of people purchasing items, only to never use them again after the first use. Our app, RentShack, aims to mitigate the amount of money wasted on unused items. RentShack will allow users to rent their items out in return for monetary compensation, creating a more efficient way of spending and earning money for both renting and lending parties.
 
-### Goals For This Iteration (2): 
+### Goals For This Iteration (3): 
+* User able to comment on an item to initiate a **transaction**
+* C++ Application connected to rentshack-firebase **back-end**
+* Functional search-bar
+
+### Goals Completed For Iteration 2:
 * ~~Be able to create a **log entry in the back-end** database for the post feature~~
 * ~~**Design profile page** and have the profile page populate with the **current user's information~~**
 
@@ -28,3 +32,4 @@ live domain: https://rentshack-d2f8f.firebaseapp.com/
 * ~~Create user-base using firebase~~
 * ~~Bridge front-end and back-end together to create fully functional login screen~~
 * Also learn Facebook login procedure
+ 
