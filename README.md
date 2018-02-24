@@ -2,6 +2,7 @@
 
 *Instructions for C++:*
 Type make in src1 directory. Then type ./a.out 
+
 Code returns most frequent and most expensive items in items.txt. 
 
 firebase quickstarts (FOR IMPLEMENTING POST PAGE) - https://github.com/firebase/quickstart-js
