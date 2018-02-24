@@ -1,5 +1,7 @@
 ![alt text](https://i.imgur.com/G3rViNf.png "rentshack")
 
+*Updated Instructions for C++:* Type `make` in src2 directory. Then type `./main` 
+Classes placed in separate files and comments included
 
 *Instructions for C++:* Type `make` in src1 directory. Then type `./a.out` 
 Code returns most frequent and most expensive items in items.txt. 
