@@ -21,84 +21,44 @@
 	<script src="js/nprogress.js"></script> <!--FOR LOADING PROCESS BAR-->
 	
 	
-<!--FIREBASECODE-->	
+	<!--FIREBASECODE-->	
+
+	<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-database.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-messaging.js"></script>
+
+	<!-- Leave out Storage -->
+	<!-- <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-storage.js"></script> -->
+
+
+	<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+		apiKey: "AIzaSyBApfToTzoqqENAUZkaoe75ArPH6OEqbgM",
+		authDomain: "rentshack-d2f8f.firebaseapp.com",
+		databaseURL: "https://rentshack-d2f8f.firebaseio.com",
+		projectId: "rentshack-d2f8f",
+		storageBucket: "rentshack-d2f8f.appspot.com",
+		messagingSenderId: "474356914191"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+
+	<!--FIREBASECODE	
+	-->	
 	
-<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-database.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-firestore.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-messaging.js"></script>
-
-<!-- Leave out Storage -->
-<!-- <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-storage.js"></script> -->
-
-
-<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyBApfToTzoqqENAUZkaoe75ArPH6OEqbgM",
-    authDomain: "rentshack-d2f8f.firebaseapp.com",
-    databaseURL: "https://rentshack-d2f8f.firebaseio.com",
-    projectId: "rentshack-d2f8f",
-    storageBucket: "rentshack-d2f8f.appspot.com",
-    messagingSenderId: "474356914191"
-  };
-  firebase.initializeApp(config);
-</script>
-		
-<!--FIREBASECODE	
--->	
-	
-	 <script type="text/javascript">
+<script type="text/javascript">
     /**
-     * Handles the sign in button press.
-     */
-   /* function toggleSignIn() {
-      if (firebase.auth().currentUser) {
-        // [START signout]
-        firebase.auth().signOut();
-        // [END signout]
-      } else {
-        var email = document.getElementById('email').value;
-        var password = document.getElementById('password').value;
-        if (email.length < 4) {
-          alert('Please enter an email address.');
-          return;
-        }
-        if (password.length < 4) {
-          alert('Please enter a password.');
-          return;
-        }
-        // Sign in with email and pass.
-        // [START authwithemail]
-        firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-          // Handle Errors here.
-          var errorCode = error.code;
-          var errorMessage = error.message;
-          // [START_EXCLUDE]
-          if (errorCode === 'auth/wrong-password') {
-            alert('Wrong password.');
-          } else {
-            alert(errorMessage);
-          }
-          console.log(error);
-          document.getElementById('quickstart-sign-in').disabled = false;
-          // [END_EXCLUDE]
-        });
-        // [END authwithemail]
-      }
-      document.getElementById('quickstart-sign-in').disabled = true;
-    }*/
-    /**
-     * Handles the sign up button press.
+	* Handles Sign-Up Process
      */
     function handleSignUp() {
       var email = document.getElementById('email').value;
       var password = document.getElementById('password').value;
       var conf_pass = document.getElementById('txt_conf_pass').value;
 	  var username = document.getElementById('user_name').value;
-      //var database = firebase.database();
         
       if (email.length < 4) {
         alert('Please enter an email address.');
@@ -127,34 +87,23 @@
         console.log(error);
         // [END_EXCLUDE]
       });
-		//alert('Account was created! Press log-in to be redirected');
+		createAccountAlert(); //Displays alert on createAccount
 		createAccountAlert();
-		createAccountAlert();
-		//writeUserData(username,email);
-		//writeUserData(email);
-	
-  
-
-		
+  	
       // [END createwithemail]
     }
-	//function writeUserData(name,email) {
+
 	  function writeUserData(email , username) {
+		//Writes UserData to firebaseDatabase
 		var uid = firebase.auth().currentUser.uid;
-  firebase.database().ref('users/' + uid/*name*/).set({
-    username: username,
-    email: email,
-	uid: uid
-  });
-}
+		  firebase.database().ref('users/' + uid/*name*/).set({
+				username: username,
+				email: email,
+				uid: uid
+		  });
+	  }
 		 
 		 
-/*	function writeUserID(name,email) {
-  firebase.database().ref('users/' + name).set({
-    username: name,
-    email: email,
-  });
-}*/
     /**
      * Sends an email verification to the user.
      */
@@ -168,29 +117,6 @@
       });
       // [END sendemailverification]
     }/* 
-    function sendPasswordReset() {
-      var email = document.getElementById('email').value;
-      // [START sendpasswordemail]
-      firebase.auth().sendPasswordResetEmail(email).then(function() {
-        // Password Reset Email Sent!
-        // [START_EXCLUDE]
-        alert('Password Reset Email Sent!');
-        // [END_EXCLUDE]
-      }).catch(function(error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        // [START_EXCLUDE]
-        if (errorCode == 'auth/invalid-email') {
-          alert(errorMessage);
-        } else if (errorCode == 'auth/user-not-found') {
-          alert(errorMessage);
-        }
-        console.log(error);
-        // [END_EXCLUDE]
-      });
-      // [END sendpasswordemail];
-    }*/
     /**
      * initApp handles setting up UI event listeners and registering Firebase auth listeners:
      *  - firebase.auth().onAuthStateChanged: This listener is called when the user is signed in or
@@ -220,51 +146,19 @@
 			console.log(user_name);
 			console.log(email);
 				
-				writeUserData(email , user_name);
-				  /*firebase.database().ref('users/' + name).set({
-    				username: name,
-    				email: email,
-  					});*/
-			
-			
-			
-			
-          // [START_EXCLUDE]
-          /*document.getElementById('quickstart-sign-in-status').textContent = 'Signed in';
-          document.getElementById('quickstart-sign-in').textContent = 'Sign out';
-          document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
-          if (!emailVerified) {
-            document.getElementById('quickstart-verify-email').disabled = false;
-          }
-          // [END_EXCLUDE]
-        } else {
-          // User is signed out.
-          // [START_EXCLUDE]
-          document.getElementById('quickstart-sign-in-status').textContent = 'Signed out';
-          document.getElementById('quickstart-sign-in').textContent = 'Sign in';
-          document.getElementById('quickstart-account-details').textContent = 'null';
-          // [END_EXCLUDE]
-        }
-        // [START_EXCLUDE silent]
-        document.getElementById('quickstart-sign-in').disabled = false;*/
-        // [END_EXCLUDE]
+				writeUserData(email , user_name);		
+					
 		}
 	  
       });
       // [END authstatelistener]
 /*      document.getElementById('quickstart-sign-in').addEventListener('click', toggleSignIn, false);*/
       document.getElementById('signup').addEventListener('click', handleSignUp, false);
-      //document.getElementById('signup').addEventListener('click', sendEmailVerification, false);
-    /*  document.getElementById('quickstart-password-reset').addEventListener('click', sendPasswordReset, false);*/
     }
     window.onload = function() {
       initApp();
     };
   </script>
-	
-
-		 
-
 	
 </head>
 <body>
@@ -277,43 +171,34 @@
 <!--			<form class="login100-form validate-form">-->
 			<div class="wrap-login100">
 					<span class="login100-form-title p-b-26">
-					<img class="rentshacklogo" src="../images/rentshacklogo.png" alt="">
-
+						<img class="rentshacklogo" src="../images/rentshacklogo.png" alt="">
 					</span>
 				
-					<!--<div class="wrap-input100 validate-input" data-validate = "Enter username">
-					    <input class="input100" type="text"  id = "user-name">
-						<span class="focus-input100" data-placeholder="Username"></span>
-					</div>-->
+					<!--USERNAME INPUT----------------------------------------------------------->
 					<div class="wrap-input100 validate-input" data-validate="Enter username">
 					  <input class="input100" type="text" id = "user_name">
 						<span class="focus-input100" data-placeholder="Username"></span>
 					</div>
-				
+					
+					<!--EMAIL INPUT----------------------------------------------------------->
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
 						<input class="input100" type="text" name="email" id = "email">
 						<span class="focus-input100" data-placeholder="Email"></span>
 					</div>
 
+					<!--PASSWORD INPUT----------------------------------------------------------->
 					<div class="wrap-input100 validate-input" data-validate="Enter password">
-						<!--<span class="btn-show-pass">
-							<i class="zmdi zmdi-eye"></i>
-							SHOW PASSWORD STUFF CAN'T GET TO WORK :(
-						</span>-->
 					  <input class="input100" type="password" name="pass" id = "password">
 						<span class="focus-input100" data-placeholder="Password"></span>
 					</div>
 
-					
+					<!--CONFIRM PASSWORD INPUT----------------------------------------------------------->
 					<div class="wrap-input100 validate-input" data-validate="Confirm password">
-						<!--<span class="btn-show-pass">
-							<i class="zmdi zmdi-eye"></i>
-							SHOW PASSWORD STUFF CAN'T GET TO WORK :(
-						</span>-->
 					  <input class="input100" type="password" name="pass" id = "txt_conf_pass">
 						<span class="focus-input100" data-placeholder="Confirm Password"></span>
 					</div>
-					
+	
+					<!--CREATE ACCOUNT ALERT----------------------------------------------------------->
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 						  <div class="login100-form-bgbtn"></div>
@@ -327,13 +212,11 @@
 						<span class="txt1">
 							Already have an account?
 						</span>
-
 						<a class="txt2" href="../landingPage/landingPage.html">
 							Log in
-				</a>
-                </div> 
+						</a>
+                	</div> 
 			</div>
-<!--            </form>-->
 		</div>
 	</div>
 	
@@ -355,11 +238,12 @@
 	<script src="vendor/countdowntime/countdowntime.js"></script>
 
 	<script src="js/main.js"></script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+	<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
     
 
 	<script>
 	
+//CODE THAT DISPLAYS THE CREATEACCOUNT ALERT
 function createAccountAlert() {
     var x = document.getElementById("alertMessage");
     if (x.style.display === "none") {
