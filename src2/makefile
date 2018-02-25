@@ -7,3 +7,6 @@ main: $(OBJECTS)
 		$(CXX) $(CXXFLAGS) -o $@ $^
 
 $(OBJECTS): Postsort.h Most_frequent.h Highest_rate.h
+
+clean:
+	rm -f *.o main
