@@ -3,6 +3,10 @@
 
 using namespace std;
 
-void Sorting_client::sort(Postsort sorting_method){
-	sorting_method.sort();
+void Sorting_client::set_sortingMethod(Postsort* sortingMethod_passed){
+	sortingMethod = sortingMethod_passed;
+}
+
+Info_type* Sorting_client::sort(){
+	return sortingMethod->sort();
 }

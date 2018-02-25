@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 #include "Postsort.h"
+#include "Info_type.h"
 
 using namespace std;
 
@@ -10,21 +11,20 @@ using namespace std;
 class Most_frequent: public Postsort {
 	
 	public:
+
 		//constructor
-		Most_frequent(vector<string> titlePost_list);
-
+		Most_frequent(vector<Info_type*> post_or_user_list);
 		
-		//overriden sort method from Postsort, will output most frequently occuring item in list of posts
-		//parameters: none 		
-		//return value: none
-		//precondition: the private member variable titlePost_list has been initialized with a vector<string> 
-		//that should have been passed through the constructor
-		//postcondition: most frequently occurring item in titlePost_list outputted
-		void sort();
+		//overridden sort method from Postsort, will output the post or user that appears most frequently
+	    //parameters: vector of pointers to Info_type objects 		
+	  	//return value: pointer to Info_type object
+	  	//precondition: vector of pointers to Info_type objects passed in, these Info_type objects can be either Posts or Users
+	  	//postcondition: returns pointer to Info_type object with title of post or username that appears most frequently 
+		Info_type* sort();
 
-	private:
+	private: 
+		vector<Info_type*> post_or_user_list;
 
-		vector<string> titlePost_list;
 
 };
 #endif //MOST_FREQUENT_MOST_FREQUENT_H

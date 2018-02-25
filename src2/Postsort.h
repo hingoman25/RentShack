@@ -2,6 +2,7 @@
 #define POSTSORT_POSTSORT_H
 #include <string>
 #include <vector>
+#include "Info_type.h"
 
 using namespace std;
 
@@ -14,6 +15,6 @@ public:
 	//destructor
 	virtual ~Postsort(){}
 	//sort method that will be overridden by subclasses
-	virtual void sort()=0;
+	virtual Info_type* sort()=0;
 };
 #endif //POSTSORT_POSTSORT_H
