@@ -1,7 +1,10 @@
 ![alt text](https://i.imgur.com/G3rViNf.png "rentshack")
 
 *Updated Instructions for C++:* Type `make` in src2 directory. Then type `./main` 
-Classes placed in separate files and comments included
+Classes placed in separate files and comments included. Tests are asserts in main.cpp. 
+Comment out tests to make changes to items.txt. If changes are made to items.txt ensure
+each post follows the format where info is put on each line, and each post is separated
+by a space.
 
 *Instructions for C++:* Type `make` in src1 directory. Then type `./a.out` 
 Code returns most frequent and most expensive items in items.txt. 
