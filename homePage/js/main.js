@@ -23,8 +23,7 @@ firebase.database().ref('/posts').on('value', function(snapshot) {
 
     var rentList = document.getElementById('rentList');
     rentList.innerHTML = '';
-
-    for(var i = arr.length-1; i > 0; i--) {
+    for(var i = arr.length-1; i >= 0; i--) {
        var title = arr[i].titlePost;
 	   var desc = arr[i].itemDescription;
 	   var img = arr[i].imageURL;
