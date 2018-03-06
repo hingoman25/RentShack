@@ -223,8 +223,18 @@ p.lead {
 
 /* Profile sidebar */
 .profile-sidebar {
-  padding: 20px 0 10px 0;
-  background: rgba(222, 227, 234, .3);
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+	padding-bottom: 10%;
+	padding-top: 10%;
+
+  box-shadow: 0 0px 10px 1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0px 10px 1px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0px 10px 1px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 0px 10px 1px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 0px 10px 1px rgba(0, 0, 0, 0.1);
 }
 
 .profile-userpic img {
@@ -315,9 +325,18 @@ p.lead {
 
 /* Profile Content */
 .profile-content {
-  padding: 20px;
-  background: rgba(222, 227, 234, .3);
-  min-height: 460px;
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+	padding-bottom: 10%;
+	padding-top: 5%;
+
+  box-shadow: 0 0px 10px 1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0px 10px 1px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0px 10px 1px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 0px 10px 1px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 0px 10px 1px rgba(0, 0, 0, 0.1);
 }
 
 /*Profile Pic */
