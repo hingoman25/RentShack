@@ -466,8 +466,13 @@ textarea.input2 + .focus-input2::after {
   flex-wrap: wrap;
   justify-content: center;
   padding-top: 13px;
-	margin-bottom: 4%;
+	margin-bottom: 10%;
 	margin-left: 50%;
 	margin-top: -3%;
 	float: right;
+}
+
+#comments {
+	margin: 10%;
+	
 }
