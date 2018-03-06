@@ -31,7 +31,7 @@ firebase.database().ref('/posts').on('value', function(snapshot) {
 	    var uid = firebase.auth().currentUser.uid;
 	    rentList.innerHTML = '';
 
-		for(var i = arr.length-1; i > 0; i--) {
+		for(var i = arr.length-1; i >= 0; i--) {
 		 	if(uid == arr[i].uid) {
 		       var title = arr[i].titlePost;
 			   var desc = arr[i].itemDescription;
