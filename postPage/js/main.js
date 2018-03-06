@@ -27,16 +27,15 @@ function writeNewPost(uid, username, email, titlePost, itemDescription, pricePer
 	// A post entry.
   var postData = {
     uid: uid,
-	username: username,
-	email: email,
-	itemDescription: itemDescription,
-	pricePerHour: pricePerHour,
+	  username: username,
+	  email: email,
+	  itemDescription: itemDescription,
+	  pricePerHour: pricePerHour,
     titlePost: titlePost,
-	pid: newPostKey,
-	imageURL: imgURL
-    //starCount: 0, PERHAPS ADD ITEMAVALIABILITY VARIABLE??? 
+	  pid: newPostKey,
+	  imageURL: imgURL
   };
-  // Write the new post's data simultaneously in the posts list and the user's post list.
+  
   var updates = {};
   updates['/posts/' + newPostKey] = postData;
   updates['/user-posts/' + uid + '/' + newPostKey] = postData;

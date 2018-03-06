@@ -13,8 +13,7 @@ var global_pid;
 
 playersRef.on("child_added", function(data, prevChildKey) {
    var user = data.val();
-   console.log("title: " + user.titlePost);
-   console.log("description: " + user.itemDescription);
+
 
 });
 
@@ -27,7 +26,6 @@ function slicePID() {
 	{
 			
 		pid += currentURL.charAt(i);
-		console.log(pid);
 
 	}
 	global_pid = pid;
@@ -76,11 +74,11 @@ function writeNewComment(uid, username, profilePic, pid, comment) {
   
 	// A post entry.
   var commentData = {
-    uid: uid,
-	cid: newCommentKey,
-	username: username,
-	profilePic: profilePic,
-	comment: comment
+   uid: uid,
+	 cid: newCommentKey,
+	 username: username,
+	 profilePic: profilePic,
+	 comment: comment
     //starCount: 0, PERHAPS ADD ITEMAVALIABILITY VARIABLE??? 
   };
   // Write the new post's data simultaneously in the posts list and the user's post list.
@@ -101,8 +99,6 @@ function onAuthStateChanged(user) {
 
   //cleanupUi();
   if (user) {
-	  console.log('this is inside main.js');
-	  console.log(user);
 
     currentUID = user.uid;
     //splashPage.style.display = 'none';
@@ -117,16 +113,14 @@ function onAuthStateChanged(user) {
 }
 
 function newCommentForCurrentUser(comment) {
-  // [START single_value_read]
+
   var userId = firebase.auth().currentUser.uid;
   return firebase.database().ref('/users/' + userId).once('value').then(function(snapshot) {
     var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
-	var profilePic = (snapshot.val() && snapshot.val().profilePic)
-    // [START_EXCLUDE]
+	  var profilePic = (snapshot.val() && snapshot.val().profilePic)
     return writeNewComment(firebase.auth().currentUser.uid, username, profilePic, global_pid, comment);
-    // [END_EXCLUDE]
   });
-  // [END single_value_read]
+
 }
 
 
@@ -180,41 +174,40 @@ function snapshotToArray(snapshot) {
 }
 
 
-firebase.database().ref('/posts/' + global_pid + '/post-comments').on('value', function(snapshot) {
-	console.log(snapshot);
+firebase.database().ref('/posts').on('value', function(snapshot) {
     var arr = snapshotToArray(snapshot);
     var comments = document.getElementById('comments');
     comments.innerHTML = '';
-	console.log(arr[0]);
-	
-    for(var i = arr.length-1; i > 0; i--) {
-		var userComment = arr[i].comment;
-		console.log('hello!');
-	   var userPic = arr[i].profilePic;
-	   var user_name = arr[i].username;
-
-
-
-	   comments.innerHTML += 
-		   '<a id="anchor" style="text-decoration:none" style="display:block">' +
-						   '<div  class="col-md-offset-2">' +
-						                '<div class="col-12 col-lg-4">' +
-						                    '<div class="card features">' +
-						                        '<div class="card-body">' +
-						                            '<div class="media">' +
-														'<img class="renting" id="image" src=' + userPic + ' class="listpics" alt="">' +
-						                                '<div class="media-body">' +
-						                                    '<h4 class="card-title" id="titlePost">' + user_name + '</h4>' +
-						                                    '<p class="card-text" id="itemDescription">' + userComment + '</p>' +
-						                                '</div>' +
-						                            '</div>' +
-						                        '</div>' +
-						                    '</div>' +
-						                '</div>' +
-						            '</div>' +
-			'</a>';
-
-    }
+    for(var i = arr.length-1; i >= 0; i--) {
+      if(global_pid == arr[i].pid) {
+  	    var userPic = arr[i].profilePic;
+  	    var user_name = arr[i].username;
+        var n = Object.values(arr[i]);
+        var m = Object.values(n[4]);
+        for(var j = m.length-1; j >= 0; j--) {
+          console.log(arr[i]);
+          comments.innerHTML += 
+         '<a id="anchor" style="text-decoration:none" style="display:block">' +
+                 '<div  class="col-md-offset-2">' +
+                              '<div class="col-12 col-lg-4">' +
+                                  '<div class="card features">' +
+                                      '<div class="card-body">' +
+                                          '<div class="media">' +
+                              '<img class="renting" id="image" src=' + userPic + ' class="listpics" alt="">' +
+                                              '<div class="media-body">' +
+                                                  '<h4 class="card-title" id="titlePost">' + m[j].username + '</h4>' +
+                                                  '<p class="card-text" id="itemDescription">' + m[j].comment + '</p>' +
+                                              '</div>' +
+                                          '</div>' +
+                                      '</div>' +
+                                  '</div>' +
+                              '</div>' +
+                          '</div>' +
+         '</a>';
+        }
+          
+        }
+      }
 });
 
 
