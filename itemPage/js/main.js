@@ -187,7 +187,7 @@ firebase.database().ref('/posts').on('value', function(snapshot) {
         for(var j = m.length-1; j >= 0; j--) {
           comments.innerHTML += 
          '<a id="anchor" style="text-decoration:none" style="display:block">' +
-                 '<div  class="col-md-offset-2">' +
+                 '<div style="padding: 5px 0px;" class="col-md-offset-2">' +
                               '<div class="col-12 col-lg-4">' +
                                   '<div class="card features">' +
                                       '<div class="card-body">' +
