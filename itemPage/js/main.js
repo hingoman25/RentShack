@@ -185,7 +185,6 @@ firebase.database().ref('/posts').on('value', function(snapshot) {
         var n = Object.values(arr[i]);
         var m = Object.values(n[4]);
         for(var j = m.length-1; j >= 0; j--) {
-          console.log(arr[i]);
           comments.innerHTML += 
          '<a id="anchor" style="text-decoration:none" style="display:block">' +
                  '<div  class="col-md-offset-2">' +
@@ -193,7 +192,7 @@ firebase.database().ref('/posts').on('value', function(snapshot) {
                                   '<div class="card features">' +
                                       '<div class="card-body">' +
                                           '<div class="media">' +
-                              '<img class="renting" id="image" src=' + userPic + ' class="listpics" alt="">' +
+                                              '<img style="width: 70px; height: 70px; padding-right: 7px; border-radius: 100%;" class="renting" id="image" src=' + m[j].profilePic + ' class="listpics" alt="">' +
                                               '<div class="media-body">' +
                                                   '<h4 class="card-title" id="titlePost">' + m[j].username + '</h4>' +
                                                   '<p class="card-text" id="itemDescription">' + m[j].comment + '</p>' +
