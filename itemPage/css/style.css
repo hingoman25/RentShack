@@ -430,8 +430,8 @@ p.lead {
 }
 
 #postPicture {
-	height: 40%;
-	width: 30%;
+	height: 350px;
+	width: 350px;
 	display: block;
 	margin: auto;
 	margin-left: 20%;
