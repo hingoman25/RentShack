@@ -182,11 +182,12 @@ firebase.database().ref('/posts').on('value', function(snapshot) {
       if(global_pid == arr[i].pid) {
   	    var userPic = arr[i].profilePic;
   	    var user_name = arr[i].username;
+		var uid = arr[i].uid;
         var n = Object.values(arr[i]);
         var m = Object.values(n[4]);
         for(var j = m.length-1; j >= 0; j--) {
           comments.innerHTML += 
-         '<a id="anchor" style="text-decoration:none" style="display:block">' +
+         '<a id="anchor" style="text-decoration:none" style="display:block" href="../profilePage/profilePage.html?uid=' + m[j].uid + '">' +
                  '<div style="padding: 5px 0px;" class="col-md-offset-2">' +
                               '<div class="col-12 col-lg-4">' +
                                   '<div class="card features">' +

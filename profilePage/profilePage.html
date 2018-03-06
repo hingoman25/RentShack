@@ -79,7 +79,12 @@
           var uid = user.uid;
           var providerData = user.providerData;
 /*			console.log(displayName);
-*/			
+*/		  global_uid = sliceUID();
+		if(global_uid.length > 0)
+			uid = global_uid;
+		  
+			
+			//alert('uid is : ' + uid + ' global_uid is: ' + global_uid);
 			
 			return firebase.database().ref('/users/' + uid).once('value').then(function(snapshot) {
   			var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
