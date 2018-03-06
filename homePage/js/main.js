@@ -33,7 +33,7 @@ firebase.database().ref('/posts').on('value', function(snapshot) {
 
 	   rentList.innerHTML += 
 		   '<a id="anchor" style="text-decoration:none" style="display:block" href="../itemPage/itemPage.html?pid=' + pid + '">' +
-						   '<div  class="col-md-offset-2">' +
+						   '<div style="padding: 5px 0px"; class="col-md-offset-2">' +
 						                '<div class="col-12 col-lg-4">' +
 						                    '<div class="card features">' +
 						                        '<div class="card-body">' +

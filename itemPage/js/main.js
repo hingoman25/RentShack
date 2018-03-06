@@ -40,12 +40,21 @@ function populatePost( pid ) {
 			var itemDescription = (snapshot.val() && snapshot.val().itemDescription);
 			var pricePerHour = (snapshot.val() && snapshot.val().pricePerHour);
 			var postPicture  = (snapshot.val() && snapshot.val().imageURL);
+      var username = (snapshot.val() && snapshot.val().username);
+      var uid = (snapshot.val() && snapshot.val().uid);
 			if(titlePost)
 			{
 				document.getElementById('postTitle').innerHTML = titlePost;
 				document.getElementById('postPrice').innerHTML = "$" + pricePerHour + " /hour";
 				document.getElementById('postDescription').innerHTML = itemDescription;
 				document.getElementById('postPicture').src = postPicture;
+        document.getElementById('userName').innerHTML = 
+        
+        '<a href="../profilePage/profilePage.html?uid='+ uid +'">' +
+          '<h6>by ' + username + '</h6>' + 
+        '</a>'
+        
+
 			}else {
  				window.location.replace("../profilePage/profilePage.html");
 			}
