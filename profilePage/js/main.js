@@ -2,7 +2,7 @@
 
 
 var playersRef = firebase.database().ref("/posts");
-
+var global_uid;
 
 function snapshotToArray(snapshot) {
     var returnArr = [];
@@ -29,6 +29,8 @@ firebase.database().ref('/posts').on('value', function(snapshot) {
     	var arr = snapshotToArray(snapshot);
 	    var rentList = document.getElementById('rentList');
 	    var uid = firebase.auth().currentUser.uid;
+		if(global_uid.length > 0)
+	    uid = global_uid;
 	    rentList.innerHTML = '';
 
 		for(var i = arr.length-1; i >= 0; i--) {
@@ -69,5 +71,19 @@ firebase.database().ref('/posts').on('value', function(snapshot) {
 });
 
 
+function sliceUID() {
+    var currentURL = window.location.href;
+	var index = currentURL.indexOf("=" , 0) + 1;
+	if(index == 0)
+		return '';
+	var uid = "";
+	for(var i = index; i < currentURL.length; i++)
+	{
+			
+		uid += currentURL.charAt(i);
 
+	}
+	global_uid = uid;
+	return uid;
+}
 
