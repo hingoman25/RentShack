@@ -91,6 +91,11 @@
   			document.getElementById('username').innerHTML = username;
 			document.getElementById('profilePic').src = (snapshot.val() && snapshot.val().profilePic);
 
+				if(global_uid.length > 0 && global_uid != user.uid)
+					{
+						document.getElementById('myItems').innerHTML = username + "'s Items";
+						document.getElementById('signout').style.display = 'none';
+					}
 		    });			
 		  }
 	  });
@@ -176,7 +181,7 @@
                 <!-- SIDEBAR BUTTONS -->
                 <div class="profile-userbuttons">
                   <!--  <button type="button" class="btn btn-success btn-sm">Follow</button>-->
-                    <button type="button" onClick="toggleSignIn();" class="btn btn-danger btn-sm">Sign Out</button>
+                    <button type="button" onClick="toggleSignIn();" id="signout" class="btn btn-danger btn-sm">Sign Out</button>
                 </div>
             </div>
         </div>
