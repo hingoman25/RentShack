@@ -67,18 +67,18 @@
 /*===========Search Bar=============*/
 
 
-.topnav {
+/*.topnav {
     overflow: hidden;
-    /*border: 1.5px solid #f2784b;
-    border-radius: 25px;*/
+    border: 1.5px solid #f2784b;
+    border-radius: 25px;
     margin: 0 auto;
     margin-left: 14em;
     padding-right: 7em;
 
-}
+}*/
 
 /* Style the links inside the navigation bar */
-.topnav a {
+/*.topnav a {
     align-items: center;
     display: block;
     color: black;
@@ -86,7 +86,7 @@
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-}
+}*/
 
 /* Change the color of links on hover */
 /*.topnav a:hover {
@@ -100,7 +100,7 @@
 }*/
 
 /* Style the search box inside the navigation bar */
-.topnav input[type=text] {
+/*.topnav input[type=text] {
     float: right;
     padding: 6px;
     border: none;
@@ -112,7 +112,7 @@
 
 textarea:focus, input:focus{
     outline: none;
-}
+}*/
 
 /* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
 /*@media screen and (max-width: 600px) {
@@ -132,13 +132,14 @@ textarea:focus, input:focus{
 }
 */
 
-ul {
+/*ul {
     list-style: none;
+   
 }
 
 option {
     font-family: Poppins-Bold;
-}
+}*/
 
 
 /* HERO
@@ -189,15 +190,15 @@ header {
 
 
 
-
+/*
 input {
       width: 100%;
       padding:0px;
-    }
+    }*/
 
   
 
-    input.search {
+/*    input.search {
       margin: 0;
       text-align: center;
       outline:0;
@@ -211,7 +212,7 @@ input {
       font-size: 40px;
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19);
       margin-bottom: 17px;
-    }
+    }*/
 
 
    /* .suggestions {

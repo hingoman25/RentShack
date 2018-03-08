@@ -24,6 +24,10 @@
 body {
     font-family: 'Poppins-Regular', sans-serif;
     position: relative;
+    max-width: 60rem;
+    padding: 1rem;
+    margin: auto;
+    text-shadow: 0 1px 1px white;
 }
 
 a {
