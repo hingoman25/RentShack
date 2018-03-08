@@ -94,7 +94,11 @@
 				if(global_uid.length > 0 && global_uid != user.uid)
 					{
 						document.getElementById('myItems').innerHTML = username + "'s Items";
-						document.getElementById('signout').style.display = 'none';
+						document.getElementById('message').style.display = 'inline';
+					}else{
+						document.getElementById('signout').style.display = 'inline';
+						document.getElementById('uploadImage').style.display = 'block';
+
 					}
 		    });			
 		  }
@@ -161,7 +165,7 @@
 
                     <div class="profile-upload">
                         <img id="profilePic" src="https://tmff.net/wp-content/uploads/2015/04/light-grey-background-pattern-i1.jpg" class="profile-pic"/>
-                        <div class="upload-button">Upload Image</div>
+                        <div id="uploadImage" style="display: none" class="upload-button">Upload Image</div>
                         <input style="display: none" class="file-upload" id="file" type="file"/>
                     </div>
                     
@@ -180,8 +184,8 @@
                 <!-- END SIDEBAR USER TITLE -->
                 <!-- SIDEBAR BUTTONS -->
                 <div class="profile-userbuttons">
-                  <!--  <button type="button" class="btn btn-success btn-sm">Follow</button>-->
-                    <button type="button" onClick="toggleSignIn();" id="signout" class="btn btn-danger btn-sm">Sign Out</button>
+                    <button type="button" style="display: none;" id="message" class="btn btn-success btn-sm">Message</button>
+                    <button type="button" style="display: none" onClick="toggleSignIn();" id="signout" class="btn btn-danger btn-sm">Sign Out</button>
                 </div>
             </div>
         </div>
