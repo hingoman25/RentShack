@@ -187,36 +187,38 @@ firebase.database().ref('/posts').on('value', function(snapshot) {
     var arr = snapshotToArray(snapshot);
     var comments = document.getElementById('comments');
     comments.innerHTML = '';
-    for(var i = arr.length-1; i >= 0; i--) {
-      if(global_pid == arr[i].pid) {
-  	    var userPic = arr[i].profilePic;
-  	    var user_name = arr[i].username;
-		var uid = arr[i].uid;
-        var n = Object.values(arr[i]);
-        var m = Object.values(n[4]);
-        for(var j = m.length-1; j >= 0; j--) {
-          comments.innerHTML += 
-         '<a id="anchor" style="text-decoration:none" style="display:block" href="../profilePage/profilePage.html?uid=' + m[j].uid + '">' +
-                 '<div style="padding: 5px 0px;" class="col-md-offset-2">' +
-                              '<div class="col-12 col-lg-4">' +
-                                  '<div class="card features">' +
-                                      '<div class="card-body">' +
-                                          '<div class="media">' +
-                                              '<img style="width: 70px; height: 70px; padding-right: 7px; border-radius: 100%;" class="renting" id="image" src=' + m[j].profilePic + ' class="listpics" alt="">' +
-                                              '<div class="media-body">' +
-                                                  '<h4 class="card-title" id="titlePost">' + m[j].username + '</h4>' +
-                                                  '<p class="card-text" id="itemDescription">' + m[j].comment + '</p>' +
+      for(var i = arr.length-1; i >= 0; i--) {
+        if(global_pid == arr[i].pid) {
+    	    var userPic = arr[i].profilePic;
+    	    var user_name = arr[i].username;
+  		    var uid = arr[i].uid;
+          var n = Object.values(arr[i]);
+          console.log(n.length);
+          if(n.length == 10) {
+            var m = Object.values(n[4]);
+            for(var j = m.length-1; j >= 0; j--) {
+              comments.innerHTML += 
+             '<a id="anchor" style="text-decoration:none" style="display:block" href="../profilePage/profilePage.html?uid=' + m[j].uid + '">' +
+                     '<div style="padding: 5px 0px;" class="col-md-offset-2">' +
+                                  '<div class="col-12 col-lg-4">' +
+                                      '<div class="card features">' +
+                                          '<div class="card-body">' +
+                                              '<div class="media">' +
+                                                  '<img style="width: 70px; height: 70px; padding-right: 7px; border-radius: 100%;" class="renting" id="image" src=' + m[j].profilePic + ' class="listpics" alt="">' +
+                                                  '<div class="media-body">' +
+                                                      '<h4 class="card-title" id="titlePost">' + m[j].username + '</h4>' +
+                                                      '<p class="card-text" id="itemDescription">' + m[j].comment + '</p>' +
+                                                  '</div>' +
                                               '</div>' +
                                           '</div>' +
                                       '</div>' +
                                   '</div>' +
-                              '</div>' +
-                          '</div>' +
-         '</a>';
+                        '</div>' +
+             '</a>';
+              }
+          }
         }
-          
-        }
-      }
+    }
 });
 
 
