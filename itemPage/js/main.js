@@ -199,7 +199,7 @@ firebase.database().ref('/posts').on('value', function(snapshot) {
             for(var j = m.length-1; j >= 0; j--) {
               comments.innerHTML += 
              '<a id="anchor" style="text-decoration:none" style="display:block" href="../profilePage/profilePage.html?uid=' + m[j].uid + '">' +
-                     '<div style="padding: 5px 0px;" class="col-md-offset-2">' +
+                     '<div style="max-width: 60em; margin-left: 8em; padding: 5px 0px;" class="col-md-offset-2">' +
                                   '<div class="col-12 col-lg-4">' +
                                       '<div class="card features">' +
                                           '<div class="card-body">' +

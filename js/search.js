@@ -17,11 +17,6 @@ function snapshotToArray(snapshot) {
     return returnArr;
 }
 
-document.getElementById('anchor').addEventListener("click", sendInstancePID() );
-
-function sendInstancePID() {
-    alert("THIS IS A FUCKING MESSAGE");
-}
 
 firebase.database().ref('/posts').on('value', function(snapshot) {
     var arr = snapshotToArray(snapshot);
@@ -36,4 +31,4 @@ firebase.database().ref('/posts').on('value', function(snapshot) {
     });
 });
 
-// "../itemPage/itemPage.html?pid=' + pid + '"
+"../itemPage/itemPage.html?pid=' + pid + '"
