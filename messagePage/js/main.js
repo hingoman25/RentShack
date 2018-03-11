@@ -260,18 +260,19 @@ firebase.database().ref('/users').on('value', function(snapshot) {
 				//var p = Object.values(o[j]);
 				for(var k = 0; k <= o.length-1; k++) {
 					var q = Object.values(o[k]);
-					if(q.length < 4)
+					if(q.length < 5)
 					{
 						//console.log(q);
-						if(q[1] == currentUID)
+						if(q[2] == currentUID)
 						{
-
+							console.log(q[0]);
 					  convos.innerHTML += 
 
 						'<blockquote class="example-twitter" cite="https://twitter.com/necolas/status/9880187933">' +
 							'<p>' +
 								q[0] +
 							'</p>' +
+						  	'<p id="time">' + q[1] + '</p>' +
 						'</blockquote>';
 						} else
 						{
@@ -281,6 +282,7 @@ firebase.database().ref('/users').on('value', function(snapshot) {
 							'<p>' +
 								q[0] +
 							'</p>' +
+							'<p id="time-otheruser">' + q[1] + '</p>' +
 						'</blockquote>';
 
 
