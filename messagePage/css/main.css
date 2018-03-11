@@ -167,7 +167,7 @@ iframe {
   overflow: hidden;
   padding: 72px 5px 90px 55px;
 margin-left: 17%;
-	margin-bottom: -20%;
+	margin-bottom: -50%;
 }
 
 
@@ -466,7 +466,7 @@ textarea.input2 + .focus-input2::after {
   flex-wrap: wrap;
   justify-content: center;
   padding-top: 13px;
-	margin-bottom: 10%;
+	margin-bottom: 50%;
 	margin-left: 50%;
 	margin-top: -3%;
 	float: right;
@@ -478,7 +478,7 @@ textarea.input2 + .focus-input2::after {
 }
 
 .profile-content {
-	 width: 20%;
+	 width: 28%;
 	margin-left: 5%;
 	margin-top: -5.5%;
   background: #fff;
@@ -486,6 +486,7 @@ textarea.input2 + .focus-input2::after {
   overflow: hidden;
 	padding-bottom: 20%;
 	padding-top: 2%;
+	float: left;
 
   box-shadow: 0 0px 10px 1px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 0px 10px 1px rgba(0, 0, 0, 0.1);

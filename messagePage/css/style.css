@@ -191,12 +191,14 @@ p.lead {
 
 .card.features {
 	/* THIS IS WHAT YOU WANT TO EDIT TO CHANGE INDIVIDUAL LIST ELEMENTS */
-    border: 1;
+	display:contents;
+	border: 1;
     border-radius: 3px;
     box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.04);
     transition: all 0.3s ease;
-	width: 370%;
+	width: 340%;
 	margin-bottom: 0.2em;
+	overflow: hidden;
 
 }
 
@@ -437,6 +439,107 @@ p.lead {
 	margin-left: 20%;
 	margin-bottom: -24%;
 	margin-top: 4%;
+}
+
+
+
+#commentForm {
+	margin-top: 15%;
+	margin-bottom: 0.1em;
+}
+
+.example-twitter {
+  position:relative;
+	width: 50%;
+	padding:15px;
+	margin-left: 50%;
+  color:#333;
+  background:#0084ff;
+  /* css3 */
+  -webkit-border-radius:10px;
+  -moz-border-radius:10px;
+  border-radius:10px;
+}
+
+.example-twitter p {font-size:18px; line-height:1.25em; color: #FFFFFF;}
+
+/* this isn't necessary, just saves me having to edit the HTML of the demo */
+.example-twitter:before {
+  content:url(twitter-logo.gif);
+  position:absolute;
+  top:-60px;
+  left:0;
+  width:155px;
+  height:36px;
+  /* reduce the damage in FF3.0 */
+  display:block;
+}
+
+/* creates the triangle */
+.example-twitter:after {
+ /* content:"";
+  position:absolute;
+  top:-30px;
+  left:50px;
+  border:15px solid transparent;
+  border-bottom-color:#0084ff;
+  /* reduce the damage in FF3.0 */
+ /* display:block;
+  width:0; */
+}
+
+/* display of quote author (alternatively use a class on the element following the blockquote) */
+.example-twitter + p {padding-left:15px; font:14px Arial, sans-serif;}
+
+
+.example-twitter-otheruser {
+  position:relative;
+  padding:15px;
+	width: 50%;
+  color:#333;
+  background:#f1f0f0;
+  /* css3 */
+  -webkit-border-radius:10px;
+  -moz-border-radius:10px;
+  border-radius:10px;
+}
+
+.example-twitter-otheruser p {font-size:18px; line-height:1.25em;color:#2C2C2C;}
+
+/* this isn't necessary, just saves me having to edit the HTML of the demo */
+.example-twitter-otheruser:before {
+  content:url(twitter-logo.gif);
+  position:absolute;
+  top:-60px;
+  left:0;
+  width:155px;
+  height:36px;
+  /* reduce the damage in FF3.0 */
+  display:block;
+}
+
+/* creates the triangle */
+.example-twitter-otheruser:after {
+/*  content:"";
+  position:absolute;
+  top:-30px;
+  left:50px;
+  border:15px solid transparent;
+  border-bottom-color:#eee;
+  /* reduce the damage in FF3.0 */
+ /* display:block;
+  width:0;*/
+}
+
+/* display of quote author (alternatively use a class on the element following the blockquote) */
+.example-twitter-otheruser + p {padding-left:15px; font:14px Arial, sans-serif;}
+
+
+.messages-content {
+	width: 60%;
+	margin-left: 35%;
+	display: block;
+	overflow: auto;
 }
 
 

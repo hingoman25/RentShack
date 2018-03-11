@@ -32,6 +32,7 @@ function assignUIDS(global_uid) {
 		localStorage.setItem("senderUID", senderUID);
 		localStorage.setItem("receiverUID", receiverUID);
 
+		
 		writeNewConversation();
 	});
 	
@@ -48,7 +49,8 @@ function writeNewConversation() {
 	// A post entry.
   var conversationData = {
 	  uid1: senderUID,
-	  uid2: receiverUID
+	  uid2: receiverUID,
+	  cid: newConversationKey
 	  
     //starCount: 0, PERHAPS ADD ITEMAVALIABILITY VARIABLE??? 
   };
@@ -89,8 +91,7 @@ function writeNewMessage(uid, username, message) {
   // Write the new post's data simultaneously in the posts list and the user's post list.
   var updates = {};
   updates['users/' + currentUID + '/conversations/' + global_convoID + '/' + newMessageKey] = messageData;
-  updates['users/' + localStorage.getItem("receiverUID") + '/conversations/' + global_convoID + '/' + newMessageKey] = messageData;
-
+  updates['users/' + receiverUID + '/conversations/' + global_convoID + '/' + newMessageKey] = messageData;
 	//alert('user ' + localStorage.getItem("senderUID"));
 	
 	
@@ -144,6 +145,49 @@ window.addEventListener('load', function() {
   }); */
 
 	global_convoID = sliceConvoID();
+	
+	
+	firebase.auth().onAuthStateChanged(function(user) {
+	  if (user) {
+		// User is signed in.
+		  firebase.database().ref('/users/' + user.uid + '/conversations/' + global_convoID + '/').once('value').then(function(snapshot) {
+			var uid;
+			var uid1 = (snapshot.val() && snapshot.val().uid2);
+			var uid2 = (snapshot.val() && snapshot.val().uid1);
+			  
+			  if(user.uid == uid1)
+				  { uid = uid2; }
+			  else
+				  { uid = uid1; }
+			  
+			firebase.database().ref('/users/' + uid).once('value').then(function(snapshot) {
+				
+				var username = (snapshot.val() && snapshot.val().username);
+				var uid = (snapshot.val() && snapshot.val().uid);
+				receiverUID = uid;
+				document.getElementById("messagesHeader").innerHTML = "Messaging " + username;
+				
+
+			});
+		});
+	  } else {
+		// No user is signed in.
+	  }
+	});
+	
+	/*firebase.database().ref('/users/' + localStorage.getItem("receiverUID") + '/conversations/' + global_convoID + '/').once('value').then(function(snapshot) {
+		
+			var uid1 = (snapshot.val() && snapshot.val().uid1);
+			firebase.database().ref('/users/' + uid1).once('value').then(function(snapshot) {
+				
+				var username = (snapshot.val() && snapshot.val().username);
+				alert(username);
+
+			});
+		
+	});
+*/
+	
 	
   // Listen for auth state changes
   firebase.auth().onAuthStateChanged(onAuthStateChanged);

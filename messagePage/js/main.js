@@ -169,11 +169,12 @@ firebase.database().ref('/users').on('value', function(snapshot) {
   	    var username;
 		var profilePic;
 		var uid;	
+		var cid;
         var n = Object.values(arr[i]);
         var m = Object.values(n[0]);
 			
-		var test;
-			
+		if(n.length == 6)
+		{
         for(var j = m.length-1; j >= 0; j--) {
 			
 		if(m[j].uid1 == currentUID)
@@ -181,13 +182,14 @@ firebase.database().ref('/users').on('value', function(snapshot) {
 		else
 		{ uid = m[j].uid1; }	
 			
-			
+		cid = m[j].cid;	
 			
 		firebase.database().ref('/users/' + uid).once('value').then(function(snapshot) {
 			username = (snapshot.val() && snapshot.val().username);
 			profilePic = (snapshot.val() && snapshot.val().profilePic);
+			
           convos.innerHTML += 
-         '<a id="anchor" style="text-decoration:none" style="display:block" href="../profilePage/profilePage.html?uid=' + uid + '">' +
+         '<a id="anchor" style="text-decoration:none" style="display:block" href="messagePage.html?convoid=' + cid + '">' +
                  '<div style="padding: 5px 0px;" class="col-md-offset-2">' +
                               '<div class="col-12 col-lg-4">' +
                                   '<div class="card features">' +
@@ -195,8 +197,8 @@ firebase.database().ref('/users').on('value', function(snapshot) {
                                           '<div class="media">' +
                                               '<img style="width: 70px; height: 70px; padding-right: 7px; border-radius: 100%;" class="renting" id="image" src=' + profilePic + ' class="listpics" alt="">' +
                                               '<div class="media-body">' +
-                                                  '<h4 class="card-title" id="titlePost">' + username + '</h4>' +
-                                                  '<p class="card-text" id="itemDescription">' + /*m[j].comment*/ + '</p>' +
+                                                  '<h4 class="card-title" style="font-size:20px;" id="titlePost">' + username + '</h4>' +
+                                                  /*'<p class="card-text" id="itemDescription">' + m[j].comment + '</p>' +*/
                                               '</div>' +
                                           '</div>' +
                                       '</div>' +
@@ -206,46 +208,62 @@ firebase.database().ref('/users').on('value', function(snapshot) {
          '</a>';
 			});
         }
-          
+		}
+		
 		}
     }
 });
-/*
+
 firebase.database().ref('/users').on('value', function(snapshot) {
     var arr = snapshotToArray(snapshot);
-    var convos = document.getElementById('convoList');
-    convos.innerHTML = '';
+    var convos = document.getElementById('messages-content');
+    convos.innerHTML = ''; 
     for(var i = arr.length-1; i >= 0; i--) {
 		if(currentUID == arr[i].uid) {
-  	    var userPic = arr[i].profilePic;
-  	    var user_name = arr[i].username;
-		var uid = arr[i].uid;
-        var n = Object.values(arr[i]);
-        var m = Object.values(n[0]);
-        for(var j = m.length-1; j >= 0; j--) {
-          convos.innerHTML += 
-         '<a id="anchor" style="text-decoration:none" style="display:block" href="../profilePage/profilePage.html?uid=' + m[j].uid + '">' +
-                 '<div style="padding: 5px 0px;" class="col-md-offset-2">' +
-                              '<div class="col-12 col-lg-4">' +
-                                  '<div class="card features">' +
-                                      '<div class="card-body">' +
-                                          '<div class="media">' +
-                                              '<img style="width: 70px; height: 70px; padding-right: 7px; border-radius: 100%;" class="renting" id="image" src=' + m[j].profilePic + ' class="listpics" alt="">' +
-                                              '<div class="media-body">' +
-                                                  '<h4 class="card-title" id="titlePost">' + m[j].username + '</h4>' +
-                                                  '<p class="card-text" id="itemDescription">' + m[j].comment + '</p>' +
-                                              '</div>' +
-                                          '</div>' +
-                                      '</div>' +
-                                  '</div>' +
-                              '</div>' +
-                          '</div>' +
-         '</a>';
-        }
+			var userPic = arr[i].profilePic;
+			var user_name = arr[i].username;
+			var uid = arr[i].uid;
+			var n = Object.values(arr[i]);
+			var m = Object.values(n[0]);
+			for(var j = m.length-1; j >= 0; j--) {
+				if(global_convoID == m[j].cid) {
+				var o = Object.values(m[j]);
+				//var p = Object.values(o[j]);
+				for(var k = 0; k <= o.length-1; k++) {
+					var q = Object.values(o[k]);
+					if(q.length < 4)
+					{
+						//console.log(q);
+						if(q[1] == currentUID)
+						{
+
+					  convos.innerHTML += 
+
+						'<blockquote class="example-twitter" cite="https://twitter.com/necolas/status/9880187933">' +
+							'<p>' +
+								q[0] +
+							'</p>' +
+						'</blockquote>';
+						} else
+						{
+						convos.innerHTML += 
+						
+						'<blockquote class="example-twitter-otheruser" cite="https://twitter.com/necolas/status/9880187933">' +
+							'<p>' +
+								q[0] +
+							'</p>' +
+						'</blockquote>';
+
+
+						}
+					}
+				}
+        	}
+		}
           
 		}
-      }
-});*/
+    } 
+});
 /*
 window.onload = function() {
 	var uid = sliceUID();
