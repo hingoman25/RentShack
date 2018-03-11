@@ -10,6 +10,7 @@ var comment = document.getElementById('userComment');
 var playersRef = firebase.database().ref("/posts");*/
 
 var global_uid;
+var convoid;
 /*
 playersRef.on("child_added", function(data, prevChildKey) {
    var user = data.val();
@@ -160,6 +161,37 @@ function snapshotToArray(snapshot) {
 }
 
 
+function getUsername(uid, cb)
+{
+	firebase.database().ref('/users/' + uid).once('value').then(function(snapshot) {
+		var username = (snapshot.val() && snapshot.val().username);
+		cb(username);
+		
+		return username;
+		
+	});
+	
+}
+function getConvoID(uid, cb)
+{
+	
+		
+		return convoid;
+		
+
+	
+}
+
+function getProfilePic(uid)
+{
+	firebase.database().ref('/users/' + uid).once('value').then(function(snapshot) {
+		return 	(snapshot.val() && snapshot.val().profilePic);
+		
+	});	
+	
+	
+}
+
 firebase.database().ref('/users').on('value', function(snapshot) {
     var arr = snapshotToArray(snapshot);
     var convos = document.getElementById('convoList');
@@ -172,22 +204,18 @@ firebase.database().ref('/users').on('value', function(snapshot) {
 		var cid;
         var n = Object.values(arr[i]);
         var m = Object.values(n[0]);
-			
 		if(n.length == 6)
 		{
         for(var j = m.length-1; j >= 0; j--) {
 			
 		if(m[j].uid1 == currentUID)
-		{ uid = m[j].uid2; }
+		{ uid = m[j].uid2; username = m[j].username2; profilePic = m[j].profilePic2; }
 		else
-		{ uid = m[j].uid1; }	
+		{ uid = m[j].uid1; username = m[j].username1; profilePic = m[j].profilePic1; }	
 			
 		cid = m[j].cid;	
-			
-		firebase.database().ref('/users/' + uid).once('value').then(function(snapshot) {
-			username = (snapshot.val() && snapshot.val().username);
-			profilePic = (snapshot.val() && snapshot.val().profilePic);
-			
+
+
           convos.innerHTML += 
          '<a id="anchor" style="text-decoration:none" style="display:block" href="messagePage.html?convoid=' + cid + '">' +
                  '<div style="padding: 5px 0px;" class="col-md-offset-2">' +
@@ -206,7 +234,8 @@ firebase.database().ref('/users').on('value', function(snapshot) {
                               '</div>' +
                           '</div>' +
          '</a>';
-			});
+			
+			
         }
 		}
 		

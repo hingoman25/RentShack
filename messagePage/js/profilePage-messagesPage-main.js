@@ -46,11 +46,22 @@ function writeNewConversation() {
   // Get a key for a new Post.
   var newConversationKey = firebase.database().ref().child('users/' + senderUID).push().key;
   
+	firebase.database().ref('/users/' + senderUID).once('value').then(function(snapshot) {
+		var username1 = (snapshot.val() && snapshot.val().username);
+		var profilePic1 = (snapshot.val() && snapshot.val().profilePic) || '../images/user.png';
+			firebase.database().ref('/users/' + receiverUID).once('value').then(function(snapshot) {
+				var username2 = (snapshot.val() && snapshot.val().username);
+				var profilePic2 = (snapshot.val() && snapshot.val().profilePic) || '../images/user.png';
+
 	// A post entry.
   var conversationData = {
 	  uid1: senderUID,
 	  uid2: receiverUID,
-	  cid: newConversationKey
+	  cid: newConversationKey,
+	  username1: username1,
+	  username2: username2,
+	  profilePic1: profilePic1,
+	  profilePic2: profilePic2
 	  
     //starCount: 0, PERHAPS ADD ITEMAVALIABILITY VARIABLE??? 
   };
@@ -69,6 +80,8 @@ function writeNewConversation() {
 
 	
   return firebase.database().ref().update(updates);
+		});
+  });
 }
 
 
