@@ -87,3 +87,17 @@ function sliceUID() {
 	return uid;
 }
 
+function toggleSignIn() {
+	firebase.auth().signOut();
+	window.location.replace("../landingPage/landingPage.html");
+
+}
+
+function openMessage() {
+
+	
+	assignUIDS(global_uid);
+	
+}
+
+

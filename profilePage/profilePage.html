@@ -29,10 +29,10 @@
 	<link href="css/nprogress.css" rel="stylesheet" /> <!--FOR LOADING PROCESS BAR-->
 
 	
-	  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script> <!--FOR LOADING PROCESS BAR-->
-	  <script src="js/nprogress.js"></script> <!--FOR LOADING PROCESS BAR-->
+	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script> <!--FOR LOADING PROCESS BAR-->
+	<script src="js/nprogress.js"></script> <!--FOR LOADING PROCESS BAR-->
+	<script src="../messagePage/js/profilePage-messagesPage-main.js"></script>
 
-    	
 <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-database.js"></script>
@@ -58,12 +58,11 @@
 
     
     <script>
-		console.log('hello world');
-		function toggleSignIn() {
-			firebase.auth().signOut();
-			window.location.replace("../landingPage/landingPage.html");
-			
-		}
+
+		
+		
+		
+		
 	function initApp() {
       // Listening for auth state changes.
       // [START authstatelistener]
@@ -184,7 +183,7 @@
                 <!-- END SIDEBAR USER TITLE -->
                 <!-- SIDEBAR BUTTONS -->
                 <div class="profile-userbuttons">
-                    <button type="button" style="display: none;" id="message" class="btn btn-success btn-sm">Message</button>
+                    <button type="button" style="display: none;" onClick="openMessage()" id="message" class="btn btn-success btn-sm">Message</button>
                     <button type="button" style="display: none" onClick="toggleSignIn();" id="signout" class="btn btn-danger btn-sm">Sign Out</button>
                 </div>
             </div>
