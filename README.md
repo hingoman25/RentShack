@@ -9,8 +9,11 @@ by a space.
 *Instructions for C++:* Type `make` in src1 directory. Then type `./a.out` 
 Code returns most frequent and most expensive items in items.txt. 
 
-firebase quickstarts (FOR IMPLEMENTING POST PAGE) - https://github.com/firebase/quickstart-js
-live domain: https://rentshack-d2f8f.firebaseapp.com/
+* firebase quickstarts: https://github.com/firebase/quickstart-js
+
+* live domain: https://rentshack-d2f8f.firebaseapp.com/
+
+* function examples: https://github.com/firebase/functions-samples
 
 ## Group 4: The Conrads
 * Terrell Marshall [*theonlyt3* | `tbmarshall97@gmail.com`]
