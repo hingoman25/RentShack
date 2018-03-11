@@ -17,11 +17,10 @@ int main(int argc, char *argv[]) {
     //vector<vector<string> > str_vec;
     string my_arr[1000][2];
     ifstream fin;
-    ifstream lin;
+    //ifstream lin;
     bool eol = false;
     
     fin.open("rentshack-d2f8f-export.json");
-    //lin.open("rentshack-d2f8f-export.json");
   
     if (fin.fail()) {
         cerr << "Error opening file" <<endl;
@@ -31,19 +30,14 @@ int main(int argc, char *argv[]) {
     int j = 0;
     
     while (true) {
-        //getline(lin, line);
         fin >> word;
         
         cout << "word is: " << word <<endl;
-        //cout << "line is: " << line <<endl;
-        //cout << "im here 1" <<endl;
-        
-        //I want to ignore the inputted word if line % 10 = 3
-        //line count??
+
         
         if (fin.eof())
             break;
-        if (word == "{" || word == ":" || word == "posts" || word=="}"|| word=="}," || word == "")
+        if (word == "{" || word == ":" || word == "posts" || word=="}"|| word=="}," || word == "" || word[1]=='-')
             continue;
         eol = word_strip(word);
         if (word == "user-posts")
@@ -55,7 +49,7 @@ int main(int argc, char *argv[]) {
             fin >> word;
             if (fin.eof())
                 break;
-            if (word == "{" || word == ":" || word == "posts" || word=="}" || word=="}," || word == "")
+            if (word == "{" || word == ":" || word == "posts" || word=="}" || word=="}," || word == ""|| word[1]=='-')
                 continue;
             if (word == "user-posts")
                 return 0;
@@ -94,8 +88,8 @@ int main(int argc, char *argv[]) {
     //
         
         }
-    for (int i = 0; i < 9; i++) {
-        cout << my_arr[i][0] << ":" << cout << my_arr[i][1] <<endl;
+    for (int i = 0; i < 50; i++) {
+        cout << my_arr[i][0] << ":" << my_arr[i][1] <<endl;
         cout << endl;
         cout <<endl;
     }
