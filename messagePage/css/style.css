@@ -1,6 +1,11 @@
 @charset "UTF-8";
 
 @font-face {
+  font-family: Poppins-Bold;
+  src: url('../fonts/poppins/Poppins-Light.ttf'); 
+}
+
+@font-face {
   font-family: Poppins-Regular;
   src: url('../fonts/poppins/Poppins-Regular.ttf'); 
 }
@@ -11,8 +16,8 @@
 }
 
 @font-face {
-  font-family: Poppins-Bold;
-  src: url('../fonts/poppins/Poppins-Bold.ttf'); 
+  font-family: Poppins-Light;
+  src: url('../fonts/poppins/Poppins-Light.ttf'); 
 }
 
 
@@ -20,7 +25,7 @@
 ----------------------*/
 
 body {
-    font-family: 'Poppins-Regular', sans-serif;
+    font-family: 'Rubik', sans-serif;
     position: relative;
 }
 
@@ -51,14 +56,13 @@ h2 {
 h3 {
     color: #333333;
     font-size: 39px;
-    font-weight: 500;
-	font-family: Poppins-Bold;
+    font-family: Poppins-Bold;
 }
 
 h4 {
-    font-size: 20px;
-    font-weight: 500;
-    color: #F18153;
+    color: #333333;
+    font-size: 25px;
+    font-family: Poppins-Medium;
 }
 
 h5 {
@@ -142,6 +146,8 @@ p.lead {
 
 .light-bg {
     background-color: #faf6fb;
+		margin-top: 15%;
+
 }
 
 .section {
@@ -164,6 +170,180 @@ p.lead {
     h2 {
         font-size: 30px;
     }
+}
+
+
+
+
+
+/* FEATURES
+----------------------*/
+
+.gradient-fill:before {
+    color: #fc73b4;
+    background: -moz-linear-gradient(top, #9477b4 0%, #fc73b4 100%);
+    background: -webkit-linear-gradient(top, #9477b4 0%, #fc73b4 100%);
+    background: linear-gradient(to bottom, #9477b4 0%, #fc73b4 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.card.features {
+	/* THIS IS WHAT YOU WANT TO EDIT TO CHANGE INDIVIDUAL LIST ELEMENTS */
+	display:contents;
+	border: 1;
+    border-radius: 3px;
+    box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+	width: 340%;
+	margin-bottom: 0.2em;
+	overflow: hidden;
+
+}
+
+@media (max-width:991px) {
+    .card.features {
+        margin-bottom: 2rem;
+    }
+    [class^="col-"]:last-child .card.features {
+        margin-bottom: 0;
+		
+    }
+}
+
+.card.features:before {
+    content: "";
+    position: absolute;
+    width: 3px;
+    color: #fc73b4;
+    background: -moz-linear-gradient(top, #FEE088 0%, #F18153 100%);
+    background: -webkit-linear-gradient(top, #FEE088 0%, #F18153 100%);
+    background: linear-gradient(to bottom, #FEE088 0%, #F18153 100%);
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+}
+
+.card-text {
+    font-size: 14px;
+}
+
+.card.features:hover {
+    transform: translateY(-5px);
+    -moz-box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.08);
+    -webkit-box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.08);
+}
+
+.box-icon {
+    box-shadow: 0px 0px 43px 0px rgba(0, 0, 0, 0.14);
+    padding: 10px;
+    width: 70px;
+    border-radius: 3px;
+    margin-bottom: 1.5rem;
+    background-color: #FFF;
+}
+
+.circle-icon {
+    box-shadow: 0px 9px 32px 0px rgba(0, 0, 0, 0.07);
+    padding: 10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    background-color: #FFF;
+    color: #f5378e;
+    font-size: 48px;
+    text-align: center;
+    line-height: 80px;
+    font-weight: 300;
+    transition: all 0.3s ease;
+}
+
+@media (max-width:992px) {
+    .circle-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 28px;
+        line-height: 50px;
+    }
+}
+
+.ui-steps li:hover .circle-icon {
+    background-image: -moz-linear-gradient( 122deg, #e6388e 0%, #fb378e 100%);
+    background-image: -webkit-linear-gradient( 122deg, #e6388e 0%, #fb378e 100%);
+    background-image: -ms-linear-gradient( 122deg, #e6388e 0%, #fb378e 100%);
+    background-image: linear-gradient( 122deg, #e6388e 0%, #fb378e 100%);
+    box-shadow: 0px 9px 32px 0px rgba(0, 0, 0, 0.09);
+    color: #FFF;
+}
+
+.ui-steps li {
+    padding: 15px 0;
+}
+
+.ui-steps li:not(:last-child) {
+    border-bottom: 1px solid #f8e3f0;
+}
+
+.perspective-phone {
+    position: relative;
+    z-index: -1;
+}
+
+@media (min-width:992px) {
+    .perspective-phone {
+        margin-top: -150px;
+    }
+}
+
+
+/*  TABS
+----------------------*/
+
+.tab-content {
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    background-color: #FFF;
+    box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.04);
+    padding: 3rem;
+}
+
+@media (max-width:992px) {
+    .tab-content {
+        padding: 1.5rem;
+    }
+}
+
+.tab-content p {
+    line-height: 1.8;
+}
+
+.tab-content h2 {
+    margin-bottom: 0.5rem;
+}
+
+.nav-tabs {
+    border-bottom: 0;
+}
+
+.nav-tabs .nav-item .nav-link,
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover {
+    padding: 1rem 1rem;
+    border-color: #faf6fb #faf6fb #FFF;
+    font-size: 19px;
+    color: #b5a4c8;
+    background: #f5eff7;
+}
+
+.nav-tabs .nav-link.active {
+    background: #FFF;
+    border-top-width: 3px;
+    border-color: #ce75b4 #faf6fb #FFF;
+    color: #633991;
 }
 
 /*  FOOTER
@@ -208,6 +388,158 @@ p.lead {
 	font-size: 18px;
 	font-weight: 500;
 	color: #048612;
+}
+
+
+
+#postTitle {
+  display: block;
+  font-family: Poppins-Bold;
+  font-size: 25px;
+  color: #333333;
+  text-align: left;
+  padding-bottom: 30px;
+  text-transform: uppercase;
+}
+
+#postPrice {
+  display: block;
+  font-family: Poppins-Regular;
+  font-size: 20px;
+  color: #0C7E00;
+  line-height: 0;
+  text-align: left;
+  padding-bottom: 30px;
+}
+
+#productInfo {
+	margin-top: 5%;
+	margin-left: 60%;
+	padding-right: 8%;
+	margin-bottom: 10%;
+	display: block;
+    padding-bottom: 40px;
+}
+
+#postDescription {
+  display: block;
+  font-family: Poppins-Regular;
+  font-size: 14px;;
+  color: #494949;
+  line-height: 1.5em;
+  text-align: left;
+  padding-bottom: 30px;
+}
+
+#postPicture {
+	height: 350px;
+	width: 350px;
+	display: block;
+	margin: auto;
+	margin-left: 20%;
+	margin-bottom: -24%;
+	margin-top: 4%;
+}
+
+
+
+#commentForm {
+	margin-top: 15%;
+	margin-bottom: 0.1em;
+}
+
+.example-twitter {
+  position:relative;
+	width: 50%;
+	padding:15px;
+	margin-left: 50%;
+  color:#333;
+  background:#0084ff;
+  /* css3 */
+  -webkit-border-radius:10px;
+  -moz-border-radius:10px;
+  border-radius:10px;
+}
+
+.example-twitter p {font-size:18px; line-height:1.25em; color: #FFFFFF;}
+
+/* this isn't necessary, just saves me having to edit the HTML of the demo */
+.example-twitter:before {
+  content:url(twitter-logo.gif);
+  position:absolute;
+  top:-60px;
+  left:0;
+  width:155px;
+  height:36px;
+  /* reduce the damage in FF3.0 */
+  display:block;
+}
+
+/* creates the triangle */
+.example-twitter:after {
+ /* content:"";
+  position:absolute;
+  top:-30px;
+  left:50px;
+  border:15px solid transparent;
+  border-bottom-color:#0084ff;
+  /* reduce the damage in FF3.0 */
+ /* display:block;
+  width:0; */
+}
+
+/* display of quote author (alternatively use a class on the element following the blockquote) */
+.example-twitter + p {padding-left:15px; font:14px Arial, sans-serif;}
+
+
+.example-twitter-otheruser {
+  position:relative;
+  padding:15px;
+	width: 50%;
+  color:#333;
+  background:#f1f0f0;
+  /* css3 */
+  -webkit-border-radius:10px;
+  -moz-border-radius:10px;
+  border-radius:10px;
+}
+
+.example-twitter-otheruser p {font-size:18px; line-height:1.25em;color:#2C2C2C;}
+
+/* this isn't necessary, just saves me having to edit the HTML of the demo */
+.example-twitter-otheruser:before {
+  content:url(twitter-logo.gif);
+  position:absolute;
+  top:-60px;
+  left:0;
+  width:155px;
+  height:36px;
+  /* reduce the damage in FF3.0 */
+  display:block;
+}
+
+/* creates the triangle */
+.example-twitter-otheruser:after {
+/*  content:"";
+  position:absolute;
+  top:-30px;
+  left:50px;
+  border:15px solid transparent;
+  border-bottom-color:#eee;
+  /* reduce the damage in FF3.0 */
+ /* display:block;
+  width:0;*/
+}
+
+/* display of quote author (alternatively use a class on the element following the blockquote) */
+.example-twitter-otheruser + p {padding-left:15px; font:14px Arial, sans-serif;}
+
+
+.messages-content {
+	width: 60%;
+	margin-left: 35%;
+	display: block;
+	overflow: auto;
 }
 
 

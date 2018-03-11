@@ -99,6 +99,7 @@
 		  firebase.database().ref('users/' + uid/*name*/).set({
 				username: username,
 				email: email,
+			  	profilePic: '../images/user.png',
 				uid: uid
 		  });
 	  }
