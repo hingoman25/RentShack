@@ -84,7 +84,16 @@ function writeNewConversation() {
   });
 }
 
-
+function formatAMPM(date) {
+  var hours = date.getHours();
+  var minutes = date.getMinutes();
+  var ampm = hours >= 12 ? 'pm' : 'am';
+  hours = hours % 12;
+  hours = hours ? hours : 12; // the hour '0' should be '12'
+  minutes = minutes < 10 ? '0'+minutes : minutes;
+  var strTime = hours + ':' + minutes +  ampm;
+  return strTime;
+}
 
 
 function writeNewMessage(uid, username, message) {
@@ -93,11 +102,14 @@ function writeNewMessage(uid, username, message) {
   // Get a key for a new Post.
   var newMessageKey = firebase.database().ref().child('users/' + senderUID).push().key;
   
+	var d = new Date();
+	var date = formatAMPM(d);
 	// A post entry.
   var messageData = {
 	  uid: uid,
 	  username: username,
-	  message: message
+	  message: message,
+	  time: date
 	 // isRead: false
     //starCount: 0, PERHAPS ADD ITEMAVALIABILITY VARIABLE??? 
   };

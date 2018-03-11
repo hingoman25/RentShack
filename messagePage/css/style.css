@@ -543,3 +543,17 @@ p.lead {
 }
 
 
+
+
+
+#time {
+	margin-left: 85%;
+	font-size: 15px;
+	color:#FFFFFF;
+}
+
+#time-otheruser {
+		margin-left: 85%;
+		font-size: 15px;
+		color: #7A7A7A;
+}
