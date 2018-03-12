@@ -3,7 +3,6 @@
 #include<fstream>
 #include <vector>
 
-
 using namespace std; 
 
 bool word_check(string word);
@@ -12,12 +11,13 @@ bool word_strip2(string& word);
 
 int main(int argc, char *argv[]) { 
     string word;
-    string temp, line;
+    string temp;
     int line_num = 0;
-    //vector<vector<string> > str_vec;
-    string my_arr[1000][2];
+    string my_arr[10000][2];
     ifstream fin;
-    //ifstream lin;
+    int i = 0;
+    int j = 0;
+    int num_p = 0;
     bool eol = false;
     
     fin.open("rentshack-d2f8f-export.json");
@@ -26,73 +26,78 @@ int main(int argc, char *argv[]) {
         cerr << "Error opening file" <<endl;
         exit(1);
     }
-    int i = 0;
-    int j = 0;
-    
+
     while (true) {
         fin >> word;
         
-        cout << "word is: " << word <<endl;
-
         
         if (fin.eof())
             break;
-        if (word == "{" || word == ":" || word == "posts" || word=="}"|| word=="}," || word == "" || word[1]=='-')
+        if (word == "{" || word == ":" || word == "posts" || word=="}"|| word=="}," || word == "")
+            continue;
+        if (word[1]=='-' && word[word.length()-1]!=',')
             continue;
         eol = word_strip(word);
-        if (word == "user-posts")
+        if (word == "user-posts") {
+            //code to clean up the strings not working
+//            for (int i = 0; i < num_p; i++) {
+//                for (int j = 0; j < my_arr[i][1].length(); j++) {
+//                    string tempw;
+//                    if (my_arr[i][0] == "username") {
+//                        tempw = my_arr[i][1].substr(0, my_arr[i][1].length() -1);
+//                        my_arr[i][1] = tempw;
+//                    }
+//                }
+//            }
+            
+            //INSERT CODE TO WRITE TO TXT HERE and then call the main.cpp to get most_frequent here 
+            
+            for (int i = 0; i < num_p; i++) {
+                cout << my_arr[i][0] << ":" << my_arr[i][1] << endl;
+                cout << endl;
+            }
+            
+            
+            
             return 0;
+        }
         if (word_check(word)) {
             my_arr[i][j]=word;
+            num_p++;
         }
         while (true) {
+            bool end_att = false;
             fin >> word;
             if (fin.eof())
                 break;
-            if (word == "{" || word == ":" || word == "posts" || word=="}" || word=="}," || word == ""|| word[1]=='-')
+            if (word == "{" || word == ":" || word == "posts" || word=="}" || word == "")
                 continue;
-            if (word == "user-posts")
+            if (word=="},") {
+                end_att = true;
+            }
+                
+            if (word[1]=='-' && word[word.length()-1]!=',')
+                continue; 
+            if (word == "user-posts") {
                 return 0;
-            //cout << "PRE: " << word <<endl;
+            }
             eol =word_strip2(word);
-            //cout << "POST: " << word <<endl;
             temp = temp + " " + word;
-            if (eol) {
+            
+            if (eol || end_att) {
                 break;
             }
+            
         }
-        //cout << "TEMP IS: " <<temp <<endl;
         j = 1;
         my_arr[i][j] = temp;
         i++;
         j= 0;
         temp = "";
-        //cout << word <<endl;
-        
-          //******Using STOI need to modify make, see piazza
-    //      if (first_word) {
-    //          weight = stoi(word);
-    //          first_word = false;
-    //          continue;
-    //      }
-    //
-    //      my_trie.search_node(word);
-    //
-    //      //im at the end of the line, need to set weight, reset bool
-    //      if (fin.peek() == '\n' || fin.peek() == '\r') {
-    //          Trie::node* p = my_trie.getCurr();
-    //          p->weight = weight;
-    //          my_trie.setCurr(my_trie.getRoot()); //set curr equal to root
-    //          first_word = true;
-    //      }
-    //
+
         
         }
-    for (int i = 0; i < 50; i++) {
-        cout << my_arr[i][0] << ":" << my_arr[i][1] <<endl;
-        cout << endl;
-        cout <<endl;
-    }
+    
     
 }
 
@@ -103,7 +108,6 @@ bool word_strip(string& word){
         check = true;
         
         word = word.substr(1, word.length()-3);
-        //cout << "EOL word is: " <<word <<endl;
     }
     else {
         word = word.substr(1, word.length()-2);
