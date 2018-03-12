@@ -395,3 +395,18 @@ p.lead {
     color: black;
 }
 
+
+#rentList {
+	  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+	padding-bottom: 10%;
+	padding-top: 10%;
+
+  box-shadow: 0 0px 10px 1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0px 10px 1px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0px 10px 1px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 0px 10px 1px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 0px 10px 1px rgba(0, 0, 0, 0.1);
+}
