@@ -157,11 +157,21 @@ iframe {
 }
 
 .wrap-contact2 {
-  width: 790px;
+  width: 85%;
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
-  padding: 72px 55px 90px 55px;
+	margin-top: 5%;
+	padding-bottom: 5%;
+	padding-top: 5%;
+	padding-left: 5%;
+	padding-right: 5%;
+
+  box-shadow: 0 0px 10px 1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0px 10px 1px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0px 10px 1px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 0px 10px 1px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 0px 10px 1px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -179,7 +189,7 @@ iframe {
   color: #333333;
   line-height: 0;
   text-align: center;
-  padding-bottom: 85px;
+	margin-top: 2em;
 }
 
 

@@ -6,6 +6,7 @@ var titlePost = document.getElementById("titlePost"); //IMPLEMENTED IN HTML
 var pricePerHour = document.getElementById('pricePerHour'); //IMPLEMENTED IN HTML
 var itemDescription = document.getElementById('itemDescription'); //IMPLEMENTED IN HTML
 var imageURL = "https://www.google.com/";
+var pid;
 /*var submit = document.getElementById('submit');*/ //IMPLEMENTED IN HTML
 /*var itemCondition = document.getElementById('inlineRadio1');*/ //IMPLEMENTED IN HTML
 /*var fileUpload = document.getElementById('exampleInputFile');*/ //IMPLEMENTED IN HTML
@@ -23,7 +24,7 @@ function writeNewPost(uid, username, email, titlePost, itemDescription, pricePer
 
   // Get a key for a new Post.
   var newPostKey = firebase.database().ref().child('posts').push().key;
-  
+  pid = newPostKey;
 	// A post entry.
   var postData = {
     uid: uid,
@@ -39,6 +40,7 @@ function writeNewPost(uid, username, email, titlePost, itemDescription, pricePer
   var updates = {};
   updates['/posts/' + newPostKey] = postData;
   updates['/user-posts/' + uid + '/' + newPostKey] = postData;
+	window.location.assign("../itemPage/itemPage.html?pid=" + pid);
 
   return firebase.database().ref().update(updates);
 }

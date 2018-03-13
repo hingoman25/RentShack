@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>landing</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../site/landingPage/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../site/landingPage/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../site/landingPage/fonts/iconic/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" type="text/css" href="../site/landingPage/vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="../site/landingPage/vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="../site/landingPage/vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href="../site/landingPage/vendor/select2/select2.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../site/landingPage/vendor/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="../site/landingPage/css/util.css">
+	<link rel="stylesheet" type="text/css" href="../site/landingPage/css/main.css">
+    <link href="../site/landingPage/css/nprogress.css" rel="stylesheet" /> <!--FOR LOADING PROCESS BAR-->
+
+	
+  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script> <!--FOR LOADING PROCESS BAR-->
+  <script src="../site/landingPage/js/nprogress.js"></script> <!--FOR LOADING PROCESS BAR-->
+
+	
+<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-messaging.js"></script>
+
+<!-- Leave out Storage -->
+<!-- <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-storage.js"></script> -->
+
+
+<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBApfToTzoqqENAUZkaoe75ArPH6OEqbgM",
+    authDomain: "rentshack-d2f8f.firebaseapp.com",
+    databaseURL: "https://rentshack-d2f8f.firebaseio.com",
+    projectId: "rentshack-d2f8f",
+    storageBucket: "rentshack-d2f8f.appspot.com",
+    messagingSenderId: "474356914191"
+  };
+  firebase.initializeApp(config);
+</script>
+		
+<!--FIREBASECODE	
+-->	
+	
+	
+<script type="text/javascript">
+    /**
+     * Handles the sign in button press.
+     */
+    function toggleSignIn() {
+      if (firebase.auth().currentUser) {
+        // [START signout]
+		  		//window.location.replace("../homePage/homePage.html");
+
+        // [END signout]
+      } else {
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+        if (email.length < 4) {
+          alert('Please enter an email address.');
+          return;
+        }
+        if (password.length < 4) {
+          alert('Please enter a password.');
+          return;
+        }
+        // [START authwithemail]
+        firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+          // Handle Errors here.
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          // [START_EXCLUDE]
+          if (errorCode === 'auth/wrong-password') {
+            alert('Wrong password.');
+          } else {
+           /* alert(errorMessage);*/
+          }
+          console.log(error);
+          document.getElementById('signin').disabled = false;
+          // [END_EXCLUDE]
+        });
+        // [END authwithemail]
+      }
+      document.getElementById('signin').disabled = true;
+
+    }
+    /**
+     * 
+     */
+    function initApp() {
+      // Listening for auth state changes.
+      // [START authstatelistener]
+      firebase.auth().onAuthStateChanged(function(user) {
+        // [START_EXCLUDE silent]
+      // [END_EXCLUDE]
+        if (user) {
+          // User is signed in.
+          var displayName = user.displayName;
+          var email = user.email;
+          var emailVerified = user.emailVerified;
+          var photoURL = user.photoURL;
+          var isAnonymous = user.isAnonymous;
+          var uid = user.uid;
+          var providerData = user.providerData;
+			
+			console.log(uid);
+/*			console.log(displayName);
+*/			console.log(email);
+			/*checks if user is logged in: if so then redirects to homepage*/
+		//window.location.replace("../homePage/homePage.html");
+
+		}
+	  
+      });
+      // [END authstatelistener]
+      document.getElementById('signin').addEventListener('click', toggleSignIn, false);
+      document.getElementById('join').addEventListener('click', toggleSignIn, false);
+
+    }
+    window.onload = function() {
+		//initApp();
+		/*onpage-load check if user is logged in*/
+    };
+	function login() {
+		window.location.replace("landingPage/landingPage.html");
+	};
+	function createAccount() {
+
+		window.location.assign("accountSignUp/accountSignUp.html");
+	};
+</script>
+	
+	
+</head>
+<body>
+	<video autoplay muted loop id="myVideo">
+  <source src="images/722675586.mp4" type="video/mp4">
+</video>
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form">
+					<span class="login100-form-title p-b-26">
+					<img class="rentshacklogo" src="file:///C:/Users/Daddy/Desktop/rentshack/randomfiles/welcome%20to%20rentshack.png" alt="">
+
+					</span>
+				
+		
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+						  <div class="login100-form-bgbtn"></div>
+							<button type="reset" value="click here" onClick="login()" class="login100-form-btn" id="signin" >
+								Login
+							</button>
+						</div>
+					</div>
+										<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+						  <div class="login100-form-bgbtn"></div>
+							<button type="reset" onClick="createAccount()" class="login100-form-btn" id="join" >
+								Join
+							</button>
+						</div>
+					</div>
+					<!---------------------------------------------------------------------------->
+					
+	
+					<!---------------------------------------------------------------------------->
+
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+	<div id="dropDownSelect1"></div>
+	
+	<script src="../site/landingPage/vendor/jquery/jquery-3.2.1.min.js"></script>
+
+	<script src="../site/landingPage/vendor/animsition/js/animsition.min.js"></script>
+
+	<script src="../site/landingPage/vendor/bootstrap/js/popper.js"></script>
+	<script src="../site/landingPage/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+	<script src="../site/landingPage/vendor/select2/select2.min.js"></script>
+
+	<script src="../site/landingPage/vendor/daterangepicker/moment.min.js"></script>
+	<script src="../site/landingPage/vendor/daterangepicker/daterangepicker.js"></script>
+
+	<script src="../site/landingPage/vendor/countdowntime/countdowntime.js"></script>
+
+	<script src="../site/landingPage/js/main.js"></script>
+	
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+
+<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBApfToTzoqqENAUZkaoe75ArPH6OEqbgM",
+    authDomain: "rentshack-d2f8f.firebaseapp.com",
+    databaseURL: "https://rentshack-d2f8f.firebaseio.com",
+    projectId: "rentshack-d2f8f",
+    storageBucket: "",
+    messagingSenderId: "474356914191"
+  };
+  firebase.initializeApp(config);
+</script>
+	
+	<!--	SCRIPT FOR LOADING BAR   ---------------------------->
+
+	  <script>
+    $('body').show();
+    $('.version').text(NProgress.version);
+    NProgress.start();
+    setTimeout(function() { NProgress.done(); $('.fade').removeClass('out'); }, 300); <!-- CHANGE NUMBER TO ADJUST SPEED -->
+
+    $("#b-0").click(function() { NProgress.start(); });
+    $("#b-40").click(function() { NProgress.set(0.4); });
+    $("#b-inc").click(function() { NProgress.inc(); });
+    $("#b-100").click(function() { NProgress.done(); });
+  </script>
+<!--	SCRIPT FOR LOADING BAR   --------------------------------->
+
+</body>
+</html>
+

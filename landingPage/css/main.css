@@ -182,8 +182,9 @@ iframe {
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
-  padding: 77px 55px 33px 55px;
-
+  padding: 77px 55px 77px 55px;
+  z-index: 1;	
+	
   box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
@@ -206,6 +207,7 @@ iframe {
   color: #333333;
   line-height: 1.2;
   text-align: center;
+	margin-bottom: 3em;
 
 }
 .login100-form-title i {
@@ -497,4 +499,13 @@ iframe {
 	height:100%;
 	margin: auto;
 	margin-left: -10em;
+}
+
+#myVideo {
+	    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+	z-index:0;
 }
