@@ -70,7 +70,9 @@ int main(){
     bool eol = false;
     
     fin.open("rentshack-d2f8f-export.json");
-    
+
+
+    //INTEGRATION TEST, makes sure that there is json file with database information that is accessible to C++ code
     if (fin.fail()) {
         cerr << "Error opening file" <<endl;
         exit(1);
@@ -147,7 +149,7 @@ int main(){
             uid_list.push_back(my_arr[i][1]);
         else if (my_arr[i][0] == "username") {
             string tempu = my_arr[i][1].substr(2, my_arr[i][1].length()-5);
-            cout << "USERNAME IS: " << tempu <<endl;
+            //cout << "USERNAME IS: " << tempu <<endl;
             username_list.push_back(tempu);
         }
         else if (my_arr[i][0] == "pricePerHour") {
@@ -169,16 +171,16 @@ int main(){
 		user_list.push_back(Info_type::make_Info_type("user", titlePost_list[i], itemDesc_list[i], price_list[i], username_list[i], email_list[i], uid_list[i]));
 	}
 
-//    //UNIT TEST to check if first Post object properly created
-//    assert (post_list[0]->getTitlePost() == "First Item");
-//    assert (post_list[0]->getItemDesc() == "first item for testing");
-//    assert (post_list[0]->getPrice() == 1);
-//
-//
-//    //UNIT TEST to check if first User object properly created
-//    assert (user_list[0]->getUsername() == "user0");
-//    assert (user_list[0]->getEmail() == "user0.com");
-//    assert (user_list[0]->getUid() == "us0");
+   //UNIT TEST to check if first Post object properly created
+   assert (post_list[0]->getTitlePost() == " \"Macbook Pro 2016\"");
+   assert (post_list[0]->getItemDesc() == " \"A nice macbook!\"");
+   assert (post_list[0]->getPrice() == 20);
+
+
+   //UNIT TEST to check if first User object properly created
+   assert (user_list[0]->getUsername() == "hingoman25");
+   assert (user_list[0]->getEmail() == " \"s@gmail.com\"");
+   assert (user_list[0]->getUid() == " \"HpofR6XgLIbdtimmSxTZF9Ldcj32\"");
 
 
 	Most_frequent* most_freq = new Most_frequent(post_list);
@@ -196,36 +198,36 @@ int main(){
 	Info_type* most_freq_user = sorting_client.sort();
 
 
-//    //INTEGRATION TEST check that most frequent item was in fact returned
-//    assert (most_freq_post->getTitlePost() == "Tennis Racket");
-//
-//    //INTEGRATION TEST check that most expensive item was in fact returned
-//    assert (highest_rate_post->getTitlePost() == "Bike");
-//    assert (highest_rate_post->getPrice() == 6969);
-//
-//    //INTEGRATION TEST check that most frequent user was in fact returned
-//    assert (most_freq_user->getUsername() == "user3");
-//    assert (most_freq_user->getEmail() == "user3.com");
-//    assert (most_freq_user->getUid() == "us3");
+   //INTEGRATION TEST check that most frequent item was in fact returned
+   assert (most_freq_post->getTitlePost() == " \"Bike\"");
+
+   //INTEGRATION TEST check that most expensive item was in fact returned
+   assert (highest_rate_post->getTitlePost() == " \"Macbook Pro 2016\"");
+   assert (highest_rate_post->getPrice() == 20);
+
+   //INTEGRATION TEST check that most frequent user was in fact returned
+   assert (most_freq_user->getUsername() == "conradsfav");
+   assert (most_freq_user->getEmail() == " \"fav@umail.edu\"");
+   assert (most_freq_user->getUid() == " \"NeTnMFu0AHXjz7XgGLeepjFQBTO2\"");
 
 
-	cout << "Most frequent item: " << endl;
+	cout << "\nMost frequent item: " << endl;
 	cout << most_freq_post->getTitlePost() << endl;
 
     cout << endl;
 	cout << "Most expensive rate: " << endl;
     cout << highest_rate_post->getTitlePost() << endl;
     cout << highest_rate_post->getItemDesc() << endl;
-    cout << "$" << highest_rate_post->getPrice() << "/hr" << endl;
-    cout << highest_rate_post->getUsername() << endl;
+    cout << " $" << highest_rate_post->getPrice() << "/hr" << endl;
+    cout << " " << highest_rate_post->getUsername() << endl;
     cout << highest_rate_post->getEmail() << endl;
     cout << highest_rate_post->getUid() << endl;
 
     cout << endl;
     cout << "Most frequent user: " << endl;
-    cout << most_freq_user->getUsername() << endl;
+    cout << " " << most_freq_user->getUsername() << endl;
     cout << most_freq_user->getEmail() << endl;
-    cout << most_freq_user->getUid() << endl;
+    cout << most_freq_user->getUid() << endl << endl;
 	return 0;
 
 }
