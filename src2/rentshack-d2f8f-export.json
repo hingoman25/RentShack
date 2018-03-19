@@ -1,0 +1,470 @@
+{
+  "posts" : {
+    "-L7VWDl01z5j8ymLvmQV" : {
+      "email" : "s@gmail.com",
+      "imageURL" : "https://firebasestorage.googleapis.com/v0/b/rentshack-d2f8f.appspot.com/o/images%2F4486ddb3-acfb-4425-9ddd-d8cfb6808a4e_1.41822ef269d39eab6ab76c12a5d166cd.jpeg?alt=media&token=863395e5-28f5-4515-ac4c-db24609a1d65",
+      "itemDescription" : "A nice macbook!",
+      "pid" : "-L7VWDl01z5j8ymLvmQV",
+      "pricePerHour" : "20",
+      "titlePost" : "Macbook Pro 2016",
+      "uid" : "HpofR6XgLIbdtimmSxTZF9Ldcj32",
+      "username" : "hingoman25"
+    },
+    "-L7VWUtk1CxJR30UxeDg" : {
+      "email" : "s@gmail.com",
+      "imageURL" : "https://firebasestorage.googleapis.com/v0/b/rentshack-d2f8f.appspot.com/o/images%2F61X%2B-asnL2L._SL1500_.jpg?alt=media&token=a6167f32-00c4-4bc4-9d76-f85ab46b21bd",
+      "itemDescription" : "Great for ocean and river kayaking.",
+      "pid" : "-L7VWUtk1CxJR30UxeDg",
+      "pricePerHour" : "10",
+      "titlePost" : "Kayak for Rent",
+      "uid" : "HpofR6XgLIbdtimmSxTZF9Ldcj32",
+      "username" : "hingoman25"
+    },
+    "-L7VX0g6FyC7CM5NX0Eh" : {
+      "email" : "s@gmail.com",
+      "imageURL" : "https://firebasestorage.googleapis.com/v0/b/rentshack-d2f8f.appspot.com/o/images%2F14484634_10155294868544196_2700184108728633731_n.jpg?alt=media&token=9a08e8c4-f20d-44be-a56f-cdb1953f22c6",
+      "itemDescription" : "A sick surfboard to catch some sick waves bro!",
+      "pid" : "-L7VX0g6FyC7CM5NX0Eh",
+      "post-comments" : {
+        "-L7Vl7f4f4KbczZ2vOPq" : {
+          "cid" : "-L7Vl7f4f4KbczZ2vOPq",
+          "comment" : "nice surfoard!",
+          "profilePic" : "https://firebasestorage.googleapis.com/v0/b/rentshack-d2f8f.appspot.com/o/images%2FPHILLL.jpg?alt=media&token=87c85193-04d3-4eac-968f-853e0ca44975",
+          "uid" : "FNByLB7kYnNz3pLucyS0aEiLQtB3",
+          "username" : "hingoman2222"
+        }
+      },
+      "pricePerHour" : "10",
+      "titlePost" : "Surf Board",
+      "uid" : "HpofR6XgLIbdtimmSxTZF9Ldcj32",
+      "username" : "hingoman25"
+    },
+    "-L7XVtYa_EBeDOUS-B0E" : {
+      "email" : "fav@umail.edu",
+      "imageURL" : "https://firebasestorage.googleapis.com/v0/b/rentshack-d2f8f.appspot.com/o/images%2Fshirt.jpeg?alt=media&token=4258f374-8078-460f-99cf-ce2a288ddf7f",
+      "itemDescription" : "Conrad's favorite shirt",
+      "pid" : "-L7XVtYa_EBeDOUS-B0E",
+      "pricePerHour" : "5",
+      "titlePost" : "Shirt",
+      "uid" : "NeTnMFu0AHXjz7XgGLeepjFQBTO2",
+      "username" : "conradsfav"
+    },
+    "-L7XYVp2u6dQgyd9uBSA" : {
+      "email" : "fav@umail.edu",
+      "imageURL" : "https://firebasestorage.googleapis.com/v0/b/rentshack-d2f8f.appspot.com/o/images%2F9788131700075.jpg?alt=media&token=37f2ecfc-9afc-4128-b2f2-28404fc050b1",
+      "itemDescription" : "Hard copy of our favorite book.",
+      "pid" : "-L7XYVp2u6dQgyd9uBSA",
+      "pricePerHour" : "2",
+      "titlePost" : "Design Patterns Textbook",
+      "uid" : "NeTnMFu0AHXjz7XgGLeepjFQBTO2",
+      "username" : "conradsfav"
+    },
+    "-L7XZiVVv-3TfKYBxbza" : {
+      "email" : "fav@umail.edu",
+      "imageURL" : "https://firebasestorage.googleapis.com/v0/b/rentshack-d2f8f.appspot.com/o/images%2Fa7e27abf-7a38-4fdb-9492-1eef94d13606_1.344ff1008d0bcaad1c2e805772ea9a3c.jpeg?alt=media&token=9516ee23-11a9-4703-ac63-d68b471f84c4",
+      "itemDescription" : "Gets you to csil lightning fast.",
+      "pid" : "-L7XZiVVv-3TfKYBxbza",
+      "pricePerHour" : "4",
+      "titlePost" : "Bike",
+      "uid" : "NeTnMFu0AHXjz7XgGLeepjFQBTO2",
+      "username" : "conradsfav"
+    },
+    "-L7XaJb7ywNfRLLs-qK5" : {
+      "email" : "abba@gmail.com",
+      "imageURL" : "https://firebasestorage.googleapis.com/v0/b/rentshack-d2f8f.appspot.com/o/images%2Fimage.skreened-long-sleeve.white-black.w460h520b3z1.jpg?alt=media&token=48c800ae-6e66-4932-81c5-18bb2dd6b0c2",
+      "itemDescription" : "Party Shirt",
+      "pid" : "-L7XaJb7ywNfRLLs-qK5",
+      "pricePerHour" : "4",
+      "titlePost" : "Shirt",
+      "uid" : "Jj9R97UjAIM3mLEzcOPQyXbKmjD3",
+      "username" : "abba"
+    },
+    "-L7XabtOAbZvLqbg3unK" : {
+      "email" : "abba@gmail.com",
+      "imageURL" : "https://firebasestorage.googleapis.com/v0/b/rentshack-d2f8f.appspot.com/o/images%2FWiggle-Road-Bike-Road-Bikes-Black-1WGMY16R7048UK0001-6.jpg?alt=media&token=1a37f8bb-3750-4d90-b6c9-6dc1779be178",
+      "itemDescription" : "Nice road bike",
+      "pid" : "-L7XabtOAbZvLqbg3unK",
+      "pricePerHour" : "7",
+      "titlePost" : "Bike",
+      "uid" : "Jj9R97UjAIM3mLEzcOPQyXbKmjD3",
+      "username" : "abba"
+    },
+    "-L7Xbqs7xcDW2VfXL2wl" : {
+      "email" : "bo@gmail.com",
+      "imageURL" : "https://firebasestorage.googleapis.com/v0/b/rentshack-d2f8f.appspot.com/o/images%2F71f0fl1dxkL._SY450_.jpg?alt=media&token=ebbf262c-4773-4914-953a-be7a801535f5",
+      "itemDescription" : "Great for hikes",
+      "pid" : "-L7Xbqs7xcDW2VfXL2wl",
+      "pricePerHour" : "3",
+      "titlePost" : "Backpack",
+      "uid" : "YVsFkYTwqPYlV1nbJVjZ9peKR1l2",
+      "username" : "bo"
+    },
+    "-L7XcSRUuXxcf8JZOIbq" : {
+      "email" : "bo@gmail.com",
+      "imageURL" : "https://firebasestorage.googleapis.com/v0/b/rentshack-d2f8f.appspot.com/o/images%2Fdownload?alt=media&token=bcda6a0d-a3c2-45ef-88e8-c40193355a6f",
+      "itemDescription" : "All the pros use this",
+      "pid" : "-L7XcSRUuXxcf8JZOIbq",
+      "pricePerHour" : "10",
+      "titlePost" : "Bike",
+      "uid" : "YVsFkYTwqPYlV1nbJVjZ9peKR1l2",
+      "username" : "bo"
+    }
+  },
+  "user-posts" : {
+    "5vPh6l4USGNrzUHTWZ657uqQfsd2" : {
+      "-L7VgavTuQNHzieAJSvZ" : {
+        "email" : "seller@gmail.com",
+        "imageURL" : "https://firebasestorage.googleapis.com/v0/b/rentshack-d2f8f.appspot.com/o/images%2Fnikon%20d850.jpg?alt=media&token=04b9eaa0-2942-40c5-b8a6-acd1429d485a",
+        "itemDescription" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget turpis eget arcu tincidunt sagittis quis eu augue. In hac habitasse platea dictumst. Vivamus a rhoncus elit. Nam ut suscipit.",
+        "pid" : "-L7VgavTuQNHzieAJSvZ",
+        "pricePerHour" : "50",
+        "titlePost" : "Nikon 850 DSLR Camera",
+        "uid" : "5vPh6l4USGNrzUHTWZ657uqQfsd2",
+        "username" : "seller"
+      }
+    },
+    "F9cHxfxO8BNWmBV8sCquN98nSTq2" : {
+      "-L7V8DBglCxcSpTerdXF" : {
+        "email" : "seller@gmail.com",
+        "imageURL" : "https://firebasestorage.googleapis.com/v0/b/rentshack-d2f8f.appspot.com/o/images%2Fnikon%20d850.jpg?alt=media&token=0ef9daa7-f362-416a-8e06-e9ea7366afbc",
+        "itemDescription" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas efficitur nibh. Fusce sed elit fringilla, facilisis turpis eget, maximus mi. Proin commodo dolor rutrum aliquam tincidunt. Integer eleifend fringilla lectus, non placerat lacus. Nulla libero eros, congue a porta.",
+        "pid" : "-L7V8DBglCxcSpTerdXF",
+        "pricePerHour" : "30",
+        "titlePost" : "Nikon 850 DSLR Camera",
+        "uid" : "F9cHxfxO8BNWmBV8sCquN98nSTq2",
+        "username" : "seller"
+      }
+    },
+    "HpofR6XgLIbdtimmSxTZF9Ldcj32" : {
+      "-L7VWDl01z5j8ymLvmQV" : {
+        "email" : "s@gmail.com",
+        "imageURL" : "https://firebasestorage.googleapis.com/v0/b/rentshack-d2f8f.appspot.com/o/images%2F4486ddb3-acfb-4425-9ddd-d8cfb6808a4e_1.41822ef269d39eab6ab76c12a5d166cd.jpeg?alt=media&token=863395e5-28f5-4515-ac4c-db24609a1d65",
+        "itemDescription" : "A nice macbook!",
+        "pid" : "-L7VWDl01z5j8ymLvmQV",
+        "pricePerHour" : "20",
+        "titlePost" : "Macbook Pro 2016",
+        "uid" : "HpofR6XgLIbdtimmSxTZF9Ldcj32",
+        "username" : "hingoman25"
+      },
+      "-L7VWUtk1CxJR30UxeDg" : {
+        "email" : "s@gmail.com",
+        "imageURL" : "https://firebasestorage.googleapis.com/v0/b/rentshack-d2f8f.appspot.com/o/images%2F61X%2B-asnL2L._SL1500_.jpg?alt=media&token=a6167f32-00c4-4bc4-9d76-f85ab46b21bd",
+        "itemDescription" : "Great for ocean and river kayaking.",
+        "pid" : "-L7VWUtk1CxJR30UxeDg",
+        "pricePerHour" : "10",
+        "titlePost" : "Kayak for Rent",
+        "uid" : "HpofR6XgLIbdtimmSxTZF9Ldcj32",
+        "username" : "hingoman25"
+      },
+      "-L7VX0g6FyC7CM5NX0Eh" : {
+        "email" : "s@gmail.com",
+        "imageURL" : "https://firebasestorage.googleapis.com/v0/b/rentshack-d2f8f.appspot.com/o/images%2F14484634_10155294868544196_2700184108728633731_n.jpg?alt=media&token=9a08e8c4-f20d-44be-a56f-cdb1953f22c6",
+        "itemDescription" : "A sick surfboard to catch some sick waves bro!",
+        "pid" : "-L7VX0g6FyC7CM5NX0Eh",
+        "pricePerHour" : "10",
+        "titlePost" : "Surf Board",
+        "uid" : "HpofR6XgLIbdtimmSxTZF9Ldcj32",
+        "username" : "hingoman25"
+      }
+    },
+    "Jj9R97UjAIM3mLEzcOPQyXbKmjD3" : {
+      "-L7X_gUOxjvPnOBEtn74" : {
+        "email" : "abba@gmail.com",
+        "imageURL" : "https://firebasestorage.googleapis.com/v0/b/rentshack-d2f8f.appspot.com/o/images%2FWiggle-Road-Bike-Road-Bikes-Black-1WGMY16R7048UK0001-6.jpg?alt=media&token=d30b2904-c5e2-40ea-8e72-3c74ee4e5358",
+        "itemDescription" : "Nice road bike",
+        "pid" : "-L7X_gUOxjvPnOBEtn74",
+        "pricePerHour" : "7",
+        "titlePost" : "Bike",
+        "uid" : "Jj9R97UjAIM3mLEzcOPQyXbKmjD3",
+        "username" : "abba"
+      },
+      "-L7XaJb7ywNfRLLs-qK5" : {
+        "email" : "abba@gmail.com",
+        "imageURL" : "https://firebasestorage.googleapis.com/v0/b/rentshack-d2f8f.appspot.com/o/images%2Fimage.skreened-long-sleeve.white-black.w460h520b3z1.jpg?alt=media&token=48c800ae-6e66-4932-81c5-18bb2dd6b0c2",
+        "itemDescription" : "Party Shirt",
+        "pid" : "-L7XaJb7ywNfRLLs-qK5",
+        "pricePerHour" : "4",
+        "titlePost" : "Shirt",
+        "uid" : "Jj9R97UjAIM3mLEzcOPQyXbKmjD3",
+        "username" : "abba"
+      },
+      "-L7XabtOAbZvLqbg3unK" : {
+        "email" : "abba@gmail.com",
+        "imageURL" : "https://firebasestorage.googleapis.com/v0/b/rentshack-d2f8f.appspot.com/o/images%2FWiggle-Road-Bike-Road-Bikes-Black-1WGMY16R7048UK0001-6.jpg?alt=media&token=1a37f8bb-3750-4d90-b6c9-6dc1779be178",
+        "itemDescription" : "Nice road bike",
+        "pid" : "-L7XabtOAbZvLqbg3unK",
+        "pricePerHour" : "7",
+        "titlePost" : "Bike",
+        "uid" : "Jj9R97UjAIM3mLEzcOPQyXbKmjD3",
+        "username" : "abba"
+      }
+    },
+    "K0ValDP0OZVYXqvcBkBZzs6HAej1" : {
+      "-L7X1BZ4gCxJkG7cKjVH" : {
+        "email" : "seller@gmail.com",
+        "imageURL" : "https://firebasestorage.googleapis.com/v0/b/rentshack-d2f8f.appspot.com/o/images%2Fnikon%20d850.jpg?alt=media&token=191d9450-6ca0-4067-b79a-77bc3739250c",
+        "itemDescription" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget turpis eget arcu tincidunt sagittis quis eu augue. In hac habitasse platea dictumst. Vivamus a rhoncus elit. Nam ut suscipit.",
+        "pid" : "-L7X1BZ4gCxJkG7cKjVH",
+        "pricePerHour" : "50",
+        "titlePost" : "Nikon 850 DSLR Camera",
+        "uid" : "K0ValDP0OZVYXqvcBkBZzs6HAej1",
+        "username" : "seller"
+      }
+    },
+    "NeTnMFu0AHXjz7XgGLeepjFQBTO2" : {
+      "-L7XVtYa_EBeDOUS-B0E" : {
+        "email" : "fav@umail.edu",
+        "imageURL" : "https://firebasestorage.googleapis.com/v0/b/rentshack-d2f8f.appspot.com/o/images%2Fshirt.jpeg?alt=media&token=4258f374-8078-460f-99cf-ce2a288ddf7f",
+        "itemDescription" : "Conrad's favorite shirt",
+        "pid" : "-L7XVtYa_EBeDOUS-B0E",
+        "pricePerHour" : "5",
+        "titlePost" : "Shirt",
+        "uid" : "NeTnMFu0AHXjz7XgGLeepjFQBTO2",
+        "username" : "conradsfav"
+      },
+      "-L7XYVp2u6dQgyd9uBSA" : {
+        "email" : "fav@umail.edu",
+        "imageURL" : "https://firebasestorage.googleapis.com/v0/b/rentshack-d2f8f.appspot.com/o/images%2F9788131700075.jpg?alt=media&token=37f2ecfc-9afc-4128-b2f2-28404fc050b1",
+        "itemDescription" : "Hard copy of our favorite book.",
+        "pid" : "-L7XYVp2u6dQgyd9uBSA",
+        "pricePerHour" : "2",
+        "titlePost" : "Design Patterns Textbook",
+        "uid" : "NeTnMFu0AHXjz7XgGLeepjFQBTO2",
+        "username" : "conradsfav"
+      },
+      "-L7XZiVVv-3TfKYBxbza" : {
+        "email" : "fav@umail.edu",
+        "imageURL" : "https://firebasestorage.googleapis.com/v0/b/rentshack-d2f8f.appspot.com/o/images%2Fa7e27abf-7a38-4fdb-9492-1eef94d13606_1.344ff1008d0bcaad1c2e805772ea9a3c.jpeg?alt=media&token=9516ee23-11a9-4703-ac63-d68b471f84c4",
+        "itemDescription" : "Gets you to csil lightning fast.",
+        "pid" : "-L7XZiVVv-3TfKYBxbza",
+        "pricePerHour" : "4",
+        "titlePost" : "Bike",
+        "uid" : "NeTnMFu0AHXjz7XgGLeepjFQBTO2",
+        "username" : "conradsfav"
+      }
+    },
+    "YVsFkYTwqPYlV1nbJVjZ9peKR1l2" : {
+      "-L7XbPm-IZ0nLNn9h0Tg" : {
+        "email" : "bo@gmail.com",
+        "imageURL" : "https://www.google.com/",
+        "itemDescription" : "Great for hikes",
+        "pid" : "-L7XbPm-IZ0nLNn9h0Tg",
+        "pricePerHour" : "3",
+        "titlePost" : "Backpack",
+        "uid" : "YVsFkYTwqPYlV1nbJVjZ9peKR1l2",
+        "username" : "bo"
+      },
+      "-L7Xbqs7xcDW2VfXL2wl" : {
+        "email" : "bo@gmail.com",
+        "imageURL" : "https://firebasestorage.googleapis.com/v0/b/rentshack-d2f8f.appspot.com/o/images%2F71f0fl1dxkL._SY450_.jpg?alt=media&token=ebbf262c-4773-4914-953a-be7a801535f5",
+        "itemDescription" : "Great for hikes",
+        "pid" : "-L7Xbqs7xcDW2VfXL2wl",
+        "pricePerHour" : "3",
+        "titlePost" : "Backpack",
+        "uid" : "YVsFkYTwqPYlV1nbJVjZ9peKR1l2",
+        "username" : "bo"
+      },
+      "-L7XcSRUuXxcf8JZOIbq" : {
+        "email" : "bo@gmail.com",
+        "imageURL" : "https://firebasestorage.googleapis.com/v0/b/rentshack-d2f8f.appspot.com/o/images%2Fdownload?alt=media&token=bcda6a0d-a3c2-45ef-88e8-c40193355a6f",
+        "itemDescription" : "All the pros use this",
+        "pid" : "-L7XcSRUuXxcf8JZOIbq",
+        "pricePerHour" : "10",
+        "titlePost" : "Bike",
+        "uid" : "YVsFkYTwqPYlV1nbJVjZ9peKR1l2",
+        "username" : "bo"
+      }
+    },
+    "b79Tx3PZzdNSEGkYz6J3hNksiUS2" : {
+      "-L7VdiClrriCHGXKaLAH" : {
+        "email" : "seller@gmail.com",
+        "imageURL" : "https://firebasestorage.googleapis.com/v0/b/rentshack-d2f8f.appspot.com/o/images%2Fnikon%20d850.jpg?alt=media&token=45b8b305-9910-491c-b9cb-0e35e7737c24",
+        "itemDescription" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget turpis eget arcu tincidunt sagittis quis eu augue. In hac habitasse platea dictumst. Vivamus a rhoncus elit. Nam ut suscipit.",
+        "pid" : "-L7VdiClrriCHGXKaLAH",
+        "pricePerHour" : "40",
+        "titlePost" : "Nikon 850 DSLR Camera",
+        "uid" : "b79Tx3PZzdNSEGkYz6J3hNksiUS2",
+        "username" : "seller"
+      }
+    },
+    "kMmjwMv8YMcIoGgO0Oru5jGqWvp1" : {
+      "-L7X-EFwjYfRZT1GChH9" : {
+        "email" : "seller@gmail.com",
+        "imageURL" : "https://firebasestorage.googleapis.com/v0/b/rentshack-d2f8f.appspot.com/o/images%2Fnikon%20d850.jpg?alt=media&token=8bf84943-12dd-4532-81f1-82afea485406",
+        "itemDescription" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget turpis eget arcu tincidunt sagittis quis eu augue. In hac habitasse platea dictumst. Vivamus a rhoncus elit. Nam ut suscipit.",
+        "pid" : "-L7X-EFwjYfRZT1GChH9",
+        "pricePerHour" : "30",
+        "titlePost" : "Nikon 850 DSLR Camera",
+        "uid" : "kMmjwMv8YMcIoGgO0Oru5jGqWvp1",
+        "username" : "seller"
+      }
+    },
+    "yixugz9T64WFB1DYFSMUbjkGIMI2" : {
+      "-L7VbbQ6Q0QNd8IKsKsw" : {
+        "email" : "seller@gmail.com",
+        "imageURL" : "https://firebasestorage.googleapis.com/v0/b/rentshack-d2f8f.appspot.com/o/images%2Fnikon%20d850.jpg?alt=media&token=470b3d1e-ef3c-40b3-800a-11a0046dea54",
+        "itemDescription" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget turpis eget arcu tincidunt sagittis quis eu augue. In hac habitasse platea dictumst. Vivamus a rhoncus elit. Nam ut suscipit.",
+        "pid" : "-L7VbbQ6Q0QNd8IKsKsw",
+        "pricePerHour" : "30",
+        "titlePost" : "Nikon 850 DSLR Camera",
+        "uid" : "yixugz9T64WFB1DYFSMUbjkGIMI2",
+        "username" : "seller"
+      }
+    }
+  },
+  "users" : {
+    "FNByLB7kYnNz3pLucyS0aEiLQtB3" : {
+      "conversations" : {
+        "-L7Vl8vjBS0l4Y-XcLld" : {
+          "-L7VlAFgw_8tXvLidWY1" : {
+            "message" : "hello!",
+            "time" : "12:09pm",
+            "uid" : "FNByLB7kYnNz3pLucyS0aEiLQtB3",
+            "username" : "hingoman2222"
+          },
+          "-L7VluzBd570bAEyMRjU" : {
+            "message" : "hi",
+            "time" : "12:13pm",
+            "uid" : "FNByLB7kYnNz3pLucyS0aEiLQtB3",
+            "username" : "hingoman2222"
+          },
+          "-L7Vm5oP8qUEC2UI71yG" : {
+            "message" : "fuck you terrell",
+            "time" : "12:13pm",
+            "uid" : "HpofR6XgLIbdtimmSxTZF9Ldcj32",
+            "username" : "hingoman25"
+          },
+          "cid" : "-L7Vl8vjBS0l4Y-XcLld",
+          "profilePic1" : "https://firebasestorage.googleapis.com/v0/b/rentshack-d2f8f.appspot.com/o/images%2FPHILLL.jpg?alt=media&token=87c85193-04d3-4eac-968f-853e0ca44975",
+          "profilePic2" : "../images/user.png",
+          "uid1" : "FNByLB7kYnNz3pLucyS0aEiLQtB3",
+          "uid2" : "HpofR6XgLIbdtimmSxTZF9Ldcj32",
+          "username1" : "hingoman2222",
+          "username2" : ""
+        }
+      },
+      "email" : "hi@gmail.com",
+      "profilePic" : "https://firebasestorage.googleapis.com/v0/b/rentshack-d2f8f.appspot.com/o/images%2FPHILLL.jpg?alt=media&token=87c85193-04d3-4eac-968f-853e0ca44975",
+      "uid" : "FNByLB7kYnNz3pLucyS0aEiLQtB3",
+      "username" : "hingoman2222"
+    },
+    "HpofR6XgLIbdtimmSxTZF9Ldcj32" : {
+      "conversations" : {
+        "-L7Vl8vjBS0l4Y-XcLld" : {
+          "-L7VlAFgw_8tXvLidWY1" : {
+            "message" : "hello!",
+            "time" : "12:09pm",
+            "uid" : "FNByLB7kYnNz3pLucyS0aEiLQtB3",
+            "username" : "hingoman2222"
+          },
+          "-L7VluzBd570bAEyMRjU" : {
+            "message" : "hi",
+            "time" : "12:13pm",
+            "uid" : "FNByLB7kYnNz3pLucyS0aEiLQtB3",
+            "username" : "hingoman2222"
+          },
+          "-L7Vm5oP8qUEC2UI71yG" : {
+            "message" : "fuck you terrell",
+            "time" : "12:13pm",
+            "uid" : "HpofR6XgLIbdtimmSxTZF9Ldcj32",
+            "username" : "hingoman25"
+          },
+          "cid" : "-L7Vl8vjBS0l4Y-XcLld",
+          "profilePic1" : "https://firebasestorage.googleapis.com/v0/b/rentshack-d2f8f.appspot.com/o/images%2FPHILLL.jpg?alt=media&token=87c85193-04d3-4eac-968f-853e0ca44975",
+          "profilePic2" : "../images/user.png",
+          "uid1" : "FNByLB7kYnNz3pLucyS0aEiLQtB3",
+          "uid2" : "HpofR6XgLIbdtimmSxTZF9Ldcj32",
+          "username1" : "hingoman2222",
+          "username2" : ""
+        }
+      },
+      "email" : "s@gmail.com",
+      "profilePic" : "../images/user.png",
+      "uid" : "HpofR6XgLIbdtimmSxTZF9Ldcj32",
+      "username" : "hingoman25"
+    },
+    "Jj9R97UjAIM3mLEzcOPQyXbKmjD3" : {
+      "email" : "abba@gmail.com",
+      "profilePic" : "../images/user.png",
+      "uid" : "Jj9R97UjAIM3mLEzcOPQyXbKmjD3",
+      "username" : "abba"
+    },
+    "K0ValDP0OZVYXqvcBkBZzs6HAej1" : {
+      "conversations" : {
+        "-L7X1VVjhkd2Dv0H76Ny" : {
+          "-L7X1_4kw33rkKj7HtvK" : {
+            "message" : "Hi! I would love to rent your Nikon 850 DSLR Camera!",
+            "time" : "6:05pm",
+            "uid" : "ti1oNDqplWYBC3fHWtn25fqo7dx1",
+            "username" : "buyer"
+          },
+          "-L7X1iOXHrgWF9omU5lr" : {
+            "message" : "Of Course! Send me your phone number and lets work this out!",
+            "time" : "6:06pm",
+            "uid" : "K0ValDP0OZVYXqvcBkBZzs6HAej1",
+            "username" : "seller"
+          },
+          "cid" : "-L7X1VVjhkd2Dv0H76Ny",
+          "profilePic1" : "https://firebasestorage.googleapis.com/v0/b/rentshack-d2f8f.appspot.com/o/images%2Fpatrick.png?alt=media&token=19a053aa-41e5-4ebf-a19a-4f0e938a13c3",
+          "profilePic2" : "https://firebasestorage.googleapis.com/v0/b/rentshack-d2f8f.appspot.com/o/images%2Fspongebob.jpg?alt=media&token=8071f7ee-64d4-44da-905d-436ad33ad135",
+          "uid1" : "ti1oNDqplWYBC3fHWtn25fqo7dx1",
+          "uid2" : "K0ValDP0OZVYXqvcBkBZzs6HAej1",
+          "username1" : "buyer",
+          "username2" : "seller"
+        }
+      },
+      "email" : "seller@gmail.com",
+      "profilePic" : "https://firebasestorage.googleapis.com/v0/b/rentshack-d2f8f.appspot.com/o/images%2Fspongebob.jpg?alt=media&token=8071f7ee-64d4-44da-905d-436ad33ad135",
+      "uid" : "K0ValDP0OZVYXqvcBkBZzs6HAej1",
+      "username" : "seller"
+    },
+    "NeTnMFu0AHXjz7XgGLeepjFQBTO2" : {
+      "email" : "fav@umail.edu",
+      "profilePic" : "../images/user.png",
+      "uid" : "NeTnMFu0AHXjz7XgGLeepjFQBTO2",
+      "username" : "conradsfav"
+    },
+    "YVsFkYTwqPYlV1nbJVjZ9peKR1l2" : {
+      "email" : "bo@gmail.com",
+      "profilePic" : "../images/user.png",
+      "uid" : "YVsFkYTwqPYlV1nbJVjZ9peKR1l2",
+      "username" : "bo"
+    },
+    "ti1oNDqplWYBC3fHWtn25fqo7dx1" : {
+      "conversations" : {
+        "-L7X1VVjhkd2Dv0H76Ny" : {
+          "-L7X1_4kw33rkKj7HtvK" : {
+            "message" : "Hi! I would love to rent your Nikon 850 DSLR Camera!",
+            "time" : "6:05pm",
+            "uid" : "ti1oNDqplWYBC3fHWtn25fqo7dx1",
+            "username" : "buyer"
+          },
+          "-L7X1iOXHrgWF9omU5lr" : {
+            "message" : "Of Course! Send me your phone number and lets work this out!",
+            "time" : "6:06pm",
+            "uid" : "K0ValDP0OZVYXqvcBkBZzs6HAej1",
+            "username" : "seller"
+          },
+          "cid" : "-L7X1VVjhkd2Dv0H76Ny",
+          "profilePic1" : "https://firebasestorage.googleapis.com/v0/b/rentshack-d2f8f.appspot.com/o/images%2Fpatrick.png?alt=media&token=19a053aa-41e5-4ebf-a19a-4f0e938a13c3",
+          "profilePic2" : "https://firebasestorage.googleapis.com/v0/b/rentshack-d2f8f.appspot.com/o/images%2Fspongebob.jpg?alt=media&token=8071f7ee-64d4-44da-905d-436ad33ad135",
+          "uid1" : "ti1oNDqplWYBC3fHWtn25fqo7dx1",
+          "uid2" : "K0ValDP0OZVYXqvcBkBZzs6HAej1",
+          "username1" : "buyer",
+          "username2" : "seller"
+        }
+      },
+      "email" : "buyer@gmail.com",
+      "profilePic" : "https://firebasestorage.googleapis.com/v0/b/rentshack-d2f8f.appspot.com/o/images%2Fpatrick.png?alt=media&token=19a053aa-41e5-4ebf-a19a-4f0e938a13c3",
+      "uid" : "ti1oNDqplWYBC3fHWtn25fqo7dx1",
+      "username" : "buyer"
+    },
+    "uid" : "placeholder",
+    "ut0xwobpL8OzNAzwVqe0uuZQm0u1" : {
+      "email" : "test2@gmail.com",
+      "profilePic" : "https://firebasestorage.googleapis.com/v0/b/rentshack-d2f8f.appspot.com/o/images%2Fconrad.png?alt=media&token=fa0de0e6-9540-49df-9cd6-c30321e855b2",
+      "uid" : "ut0xwobpL8OzNAzwVqe0uuZQm0u1",
+      "username" : "KronkMeister"
+    }
+  }
+}
