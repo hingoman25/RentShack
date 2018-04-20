@@ -182,7 +182,7 @@ iframe {
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
-  padding: 77px 55px 33px 55px;
+  padding: 79px 55px 33px 55px;
 
   box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
@@ -206,6 +206,7 @@ iframe {
   color: #333333;
   line-height: 1.2;
   text-align: center;
+	margin-bottom: 5em;
 
 }
 .login100-form-title i {
@@ -261,10 +262,10 @@ iframe {
   transition: all 0.4s;
 
   background: #6a7dfe;
-  background: -webkit-linear-gradient(left, #FEE088, #F18153);
-  background: -o-linear-gradient(left, #FEE088, #F18153);
-  background: -moz-linear-gradient(left, #FEE088, #F18153);
-  background: linear-gradient(left, #FEE088, #F18153);
+  background: -webkit-linear-gradient(left, #049ceb, #04ebd3);
+  background: -o-linear-gradient(left, #049ceb, #04ebd3);
+  background: -moz-linear-gradient(left, #049ceb, #04ebd3);
+  background: linear-gradient(left, #049ceb, #04ebd3);
 }
 
 .focus-input100::after {
@@ -372,11 +373,11 @@ iframe {
   z-index: -1;
   width: 300%;
   height: 100%;
-  background: #F18153;
-  background: -webkit-linear-gradient(left, #FEE088, #FEE088, #F18153, #F18153);
-  background: -o-linear-gradient(left, #FEE088, #FEE088, #F18153, #F18153);
-  background: -moz-linear-gradient(left, #FEE088, #FEE088, #F18153, #F18153);
-  background: linear-gradient(left, #FEE088, #FEE088, #F18153, #F18153);
+  background: #049ceb;
+  background: -webkit-linear-gradient(left, #049ceb, #049ceb, #04ebd3, #04ebd3);
+  background: -o-linear-gradient(left, #049ceb, #049ceb, #04ebd3, #04ebd3);
+  background: -moz-linear-gradient(left, #049ceb, #049ceb, #04ebd3, #04ebd3);
+  background: linear-gradient(left, #049ceb, #049ceb, #04ebd3, #04ebd3);
   top: 0;
   left: -100%;
 
@@ -493,10 +494,10 @@ iframe {
 
 
 .rentshacklogo {
-	width: 170%;
+	width: 130%;
 	height:100%;
 	margin: auto;
-	margin-left: -10em;
+	margin-left: -4em;
 }
 
 #alertMessage {
