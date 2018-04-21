@@ -33,7 +33,7 @@
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
-    color: #F2784B;
+    color: #333333;
 }
 
 
@@ -45,7 +45,7 @@
     }
     .navbar-nav>.nav-item>.nav-link.active:after {
         content: "";
-        border-bottom: 2px solid #f2784b;
+        border-bottom: 2px solid #049ceb;
         left: 1rem;
         right: 1rem;
         bottom: 5px;
