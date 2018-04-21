@@ -235,10 +235,10 @@ margin-left: 17%;
   transition: all 0.4s;
 
   background: rgba(219,21,99,1);
-  background: -webkit-linear-gradient(left, #fee088, #f18153);
-  background: -o-linear-gradient(left, #fee088, #f18153);
-  background: -moz-linear-gradient(left, #fee088, #f18153);
-  background: linear-gradient(left, #fee088, #f18153);
+  background: -webkit-linear-gradient(left, #049ceb, #04ebd3);
+  background: -o-linear-gradient(left, #049ceb, #04ebd3);
+  background: -moz-linear-gradient(left, #049ceb, #04ebd3);
+  background: linear-gradient(left, #049ceb, #04ebd3);
 }
 
 .focus-input2::after {
@@ -329,10 +329,10 @@ textarea.input2 + .focus-input2::after {
   width: 300%;
   height: 100%;
   background: rgba(219,21,99,1);
-  background: -webkit-linear-gradient(left, #0FA82B, #0FA82B, #43DE5F, #43DE5F);
-  background: -o-linear-gradient(left, #0FA82B, #0FA82B, #43DE5F, #43DE5F);
-  background: -moz-linear-gradient(left, #0FA82B, #0FA82B, #43DE5F, #43DE5F);
-  background: linear-gradient(left, #0FA82B, #0FA82B, #43DE5F, #43DE5F);
+  background: -webkit-linear-gradient(left, #049ceb, #049ceb, #04ebd3, #04ebd3);
+  background: -o-linear-gradient(left, #049ceb, #049ceb, #04ebd3, #04ebd3);
+  background: -moz-linear-gradient(left, #049ceb, #049ceb, #04ebd3, #04ebd3);
+  background: linear-gradient(left, #049ceb, #049ceb, #04ebd3, #04ebd3);
   top: 0;
   left: -100%;
 
@@ -478,13 +478,13 @@ textarea.input2 + .focus-input2::after {
 }
 
 .profile-content {
-	 width: 28%;
-	margin-left: 5%;
-	margin-top: -5.5%;
+	 width: 20%;
+	margin-left: 15%;
+	margin-top: -4%;
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
-	padding-bottom: 20%;
+	padding-bottom: 25%;
 	padding-top: 2%;
 	float: left;
 

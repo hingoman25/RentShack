@@ -156,7 +156,8 @@ p.lead {
 
 .section-title {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+	margin-top: 1em;
 }
 
 .section-title small {
@@ -556,4 +557,8 @@ p.lead {
 		margin-left: 85%;
 		font-size: 15px;
 		color: #7A7A7A;
+}
+
+#logo {
+	width: 35%;
 }
