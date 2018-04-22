@@ -218,9 +218,9 @@ p.lead {
     position: absolute;
     width: 3px;
     color: #fc73b4;
-    background: -moz-linear-gradient(top, #FEE088 0%, #F18153 100%);
-    background: -webkit-linear-gradient(top, #FEE088 0%, #F18153 100%);
-    background: linear-gradient(to bottom, #FEE088 0%, #F18153 100%);
+    background: -moz-linear-gradient(top, #04ebd3 0%, #049ceb  100%);
+    background: -webkit-linear-gradient(top, #04ebd3 0%, #049ceb  100%);
+    background: linear-gradient(to bottom, #04ebd3 0%, #049ceb  100%);
     top: 0;
     bottom: 0;
     left: 0;
