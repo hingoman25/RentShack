@@ -1,4 +1,4 @@
-![alt text](https://i.imgur.com/G3rViNf.png "rentshack")
+![alt text](https://i.imgur.com/iheKkR6.png "rentshack")
 
 *Final Instructions for C++:* Type `make` in src2 directory. Then type `./main` 
 Classes placed in separate files and comments included. Tests are asserts in main.cpp.
