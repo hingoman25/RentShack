@@ -56,11 +56,13 @@
     /**
 	* Handles Sign-Up Process
      */
+	var globalUsername;
     function handleSignUp() {
       var email = document.getElementById('email').value;
       var password = document.getElementById('password').value;
       var conf_pass = document.getElementById('txt_conf_pass').value;
 	  var username = document.getElementById('user_name').value;
+		globalUsername = username;
         
       if (email.length < 4) {
         alert('Please enter an email address.');
@@ -104,6 +106,7 @@
 			  	profilePic: '../images/user.png',
 				uid: uid
 		  });
+		  console.log('username set to:' + username);
 	  }
 		 
 		 
@@ -146,10 +149,10 @@
           var uid = user.uid;
           var providerData = user.providerData;
 			console.log(uid);
-			console.log(user_name);
+			console.log(globalUsername);
 			console.log(email);
 				
-				writeUserData(email , user_name);		
+				writeUserData(email , globalUsername);		
 					
 		}
 	  
