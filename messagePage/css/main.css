@@ -481,6 +481,7 @@ textarea.input2 + .focus-input2::after {
 	 width: 20%;
 	margin-left: 15%;
 	margin-top: -4%;
+	margin-right: 2em;
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
